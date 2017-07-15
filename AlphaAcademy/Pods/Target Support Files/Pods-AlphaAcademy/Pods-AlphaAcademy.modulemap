@@ -1,0 +1,6 @@
+framework module Pods_AlphaAcademy {
+  umbrella header "Pods-AlphaAcademy-umbrella.h"
+
+  export *
+  module * { export * }
+}
