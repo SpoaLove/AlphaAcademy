@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     
+    @IBOutlet weak var viewLoadingIndicator: UIActivityIndicatorView!
+    
     var isSignIn:Bool = true
     
     override func viewDidLoad() {
@@ -51,6 +53,8 @@ class ViewController: UIViewController {
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
         
+        viewLoadingIndicator.startAnimating()
+        
         // TODO: Do some form validation on the email and password
         
         if let email = emailTextField.text, let pass = passwordTextField.text {
@@ -62,11 +66,18 @@ class ViewController: UIViewController {
                     
                     // Check that user isn't nil
                     if user != nil {
+                        
+                        self.viewLoadingIndicator.stopAnimating()
+                        
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "goToHome", sender: self)
+                        
                     }
                     else {
                         // Error: check error and show message
+                        
+                        self.viewLoadingIndicator.stopAnimating()
+                        
                     }
                     
                 })
@@ -79,11 +90,17 @@ class ViewController: UIViewController {
                     
                     // Check that user isn't nil
                     if user != nil {
+                        
+                        self.viewLoadingIndicator.stopAnimating()
+
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     }
                     else {
                         // Error: check error and show message
+                        
+                        self.viewLoadingIndicator.stopAnimating()
+
                     }
                 })
                 
