@@ -61,7 +61,7 @@ class ViewController: UIViewController {
                 Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
                     
                     // Check that user isn't nil
-                    if let u = user {
+                    if user != nil {
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     }
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
                 Auth.auth().createUser(withEmail: email, password: pass, completion: { (user, error) in
                     
                     // Check that user isn't nil
-                    if let u = user {
+                    if user != nil {
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     }
