@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HfO-Y3-trf">
-                                <rect key="frame" x="16" y="156.5" width="343" height="354.5"/>
+                                <rect key="frame" x="16" y="150.5" width="343" height="366.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="npT-mU-O87">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="227.5"/>
@@ -125,21 +125,35 @@
                                             <constraint firstItem="7CU-tx-5UI" firstAttribute="centerY" secondItem="npT-mU-O87" secondAttribute="centerY" id="Z8n-e3-v1Y"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-p2-5Do">
-                                        <rect key="frame" x="0.0" y="257.5" width="343" height="30"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="tintColor" red="0.40637598679999998" green="0.89074643779999996" blue="0.41586573669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <size key="titleShadowOffset" width="-1" height="0.0"/>
-                                        <state key="normal" title="Sign In"/>
-                                        <connections>
-                                            <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zy1-DM-Ybw"/>
-                                        </connections>
-                                    </button>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-of-Qam">
-                                        <rect key="frame" x="0.0" y="317.5" width="343" height="37"/>
-                                        <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </activityIndicatorView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-he-RXG">
+                                        <rect key="frame" x="0.0" y="257.5" width="343" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-p2-5Do">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="tintColor" red="0.40637598679999998" green="0.89074643779999996" blue="0.41586573669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <size key="titleShadowOffset" width="-1" height="0.0"/>
+                                                <state key="normal" title="Sign In"/>
+                                                <connections>
+                                                    <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zy1-DM-Ybw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puV-dH-Hh6">
+                                                <rect key="frame" x="0.0" y="36" width="343" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Sign In with Wechat"/>
+                                                <connections>
+                                                    <action selector="wechatLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pX-4U-0Qa"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-of-Qam">
+                                                <rect key="frame" x="0.0" y="72" width="343" height="37"/>
+                                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -157,6 +171,7 @@
                         <outlet property="signInButton" destination="TJ2-p2-5Do" id="f44-Ej-e4g"/>
                         <outlet property="signInLabel" destination="4M4-H8-98w" id="l7p-PB-xlb"/>
                         <outlet property="signInSelector" destination="saj-hO-KhV" id="El5-eC-qvw"/>
+                        <outlet property="signInWithWechat" destination="puV-dH-Hh6" id="qig-mz-kRG"/>
                         <outlet property="viewLoadingIndicator" destination="8tg-of-Qam" id="7CW-gx-eiZ"/>
                         <segue destination="oiv-Wi-KvX" kind="show" identifier="goToHome" id="yFi-no-3wT"/>
                     </connections>
@@ -213,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="42" y="-125"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Homepage View Controller-->
         <scene sceneID="sNz-gP-Rq7">
             <objects>
-                <viewController id="Gdb-IL-p19" customClass="HomeViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gdb-IL-p19" customClass="HomepageViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rJY-Op-SlZ"/>
                         <viewControllerLayoutGuide type="bottom" id="aOq-sU-g4P"/>
@@ -229,7 +244,7 @@
                                 <rect key="frame" x="16" y="28" width="52" height="30"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
-                                    <action selector="userDidSignOut:" destination="Gdb-IL-p19" eventType="touchUpInside" id="g3f-sV-TOn"/>
+                                    <action selector="userDidLogOut:" destination="Gdb-IL-p19" eventType="touchUpInside" id="fAd-ub-Ofe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP3-u1-Oj0">
@@ -248,7 +263,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="signOutButton" destination="KKr-Uu-Obs" id="ujS-ie-i76"/>
+                        <outlet property="logOutButton" destination="KKr-Uu-Obs" id="biV-mO-VJ6"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="Logout" id="alg-jM-f9n"/>
                     </connections>
                 </viewController>

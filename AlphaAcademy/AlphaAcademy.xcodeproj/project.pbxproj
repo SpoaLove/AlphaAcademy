@@ -14,17 +14,13 @@
 		CB99D5011F1AC112005D73B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99D4FF1F1AC112005D73B6 /* Main.storyboard */; };
 		CB99D5031F1AC112005D73B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5021F1AC112005D73B6 /* Assets.xcassets */; };
 		CB99D5061F1AC112005D73B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5041F1AC112005D73B6 /* LaunchScreen.storyboard */; };
-		CB99D5111F1AC112005D73B6 /* AlphaAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D5101F1AC112005D73B6 /* AlphaAcademyTests.swift */; };
-		CB99D51C1F1AC112005D73B6 /* AlphaAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D51B1F1AC112005D73B6 /* AlphaAcademyUITests.swift */; };
 		CB99D52A1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
 		CB99D52B1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
 		CB99D52C1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
 		CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CB99D52F1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
-		CB99D5321F1B69F9005D73B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D5311F1B69F9005D73B6 /* HomeViewController.swift */; };
-		CB99D5331F1B69F9005D73B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D5311F1B69F9005D73B6 /* HomeViewController.swift */; };
-		CB99D5341F1B69F9005D73B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D5311F1B69F9005D73B6 /* HomeViewController.swift */; };
+		CB99D5591F1BD7D9005D73B6 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D5581F1BD7D9005D73B6 /* HomepageViewController.swift */; };
 		F17702C356D27FF940E324DB /* Pods_AlphaAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC89F77F7E44137226DF436 /* Pods_AlphaAcademyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,14 +57,10 @@
 		CB99D5051F1AC112005D73B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB99D5071F1AC112005D73B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB99D50C1F1AC112005D73B6 /* AlphaAcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaAcademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB99D5101F1AC112005D73B6 /* AlphaAcademyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaAcademyTests.swift; sourceTree = "<group>"; };
-		CB99D5121F1AC112005D73B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB99D5171F1AC112005D73B6 /* AlphaAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB99D51B1F1AC112005D73B6 /* AlphaAcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaAcademyUITests.swift; sourceTree = "<group>"; };
-		CB99D51D1F1AC112005D73B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
-		CB99D5311F1B69F9005D73B6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CB99D5581F1BD7D9005D73B6 /* HomepageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		DFC89F77F7E44137226DF436 /* Pods_AlphaAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlphaAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5A4307117B90AC4C68B92 /* Pods_AlphaAcademyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlphaAcademyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,8 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				CB99D4FA1F1AC112005D73B6 /* AlphaAcademy */,
-				CB99D50F1F1AC112005D73B6 /* AlphaAcademyTests */,
-				CB99D51A1F1AC112005D73B6 /* AlphaAcademyUITests */,
 				CB99D4F91F1AC112005D73B6 /* Products */,
 				1168F7BE9E9AF7E9BCCB869E /* Pods */,
 				A0BDE23F17CD140C188FE2E8 /* Frameworks */,
@@ -153,31 +143,13 @@
 				CB99D4FD1F1AC112005D73B6 /* ViewController.swift */,
 				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
 				CB99D4FF1F1AC112005D73B6 /* Main.storyboard */,
-				CB99D5311F1B69F9005D73B6 /* HomeViewController.swift */,
+				CB99D5581F1BD7D9005D73B6 /* HomepageViewController.swift */,
 				CB99D5021F1AC112005D73B6 /* Assets.xcassets */,
 				CB99D5041F1AC112005D73B6 /* LaunchScreen.storyboard */,
 				CB99D5071F1AC112005D73B6 /* Info.plist */,
 				CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */,
 			);
 			path = AlphaAcademy;
-			sourceTree = "<group>";
-		};
-		CB99D50F1F1AC112005D73B6 /* AlphaAcademyTests */ = {
-			isa = PBXGroup;
-			children = (
-				CB99D5101F1AC112005D73B6 /* AlphaAcademyTests.swift */,
-				CB99D5121F1AC112005D73B6 /* Info.plist */,
-			);
-			path = AlphaAcademyTests;
-			sourceTree = "<group>";
-		};
-		CB99D51A1F1AC112005D73B6 /* AlphaAcademyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CB99D51B1F1AC112005D73B6 /* AlphaAcademyUITests.swift */,
-				CB99D51D1F1AC112005D73B6 /* Info.plist */,
-			);
-			path = AlphaAcademyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +442,7 @@
 				CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
 				CB99D4FE1F1AC112005D73B6 /* ViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
-				CB99D5321F1B69F9005D73B6 /* HomeViewController.swift in Sources */,
+				CB99D5591F1BD7D9005D73B6 /* HomepageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,9 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB99D5111F1AC112005D73B6 /* AlphaAcademyTests.swift in Sources */,
 				CB99D52F1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
-				CB99D5331F1B69F9005D73B6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,9 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB99D51C1F1AC112005D73B6 /* AlphaAcademyUITests.swift in Sources */,
 				CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */,
-				CB99D5341F1B69F9005D73B6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

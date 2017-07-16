@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import WechatKit
 
 class ViewController: UIViewController {
     
@@ -23,10 +24,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var viewLoadingIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var signInWithWechat: UIButton!
+    
     var isSignIn:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupWechatManager()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -109,11 +113,47 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func wechatLogin(_ sender: Any) {
+        if !WechatManager.shared.isInstalled() {
+            print("not install, it will open a webview")
+        }
+        WechatManager.shared.checkAuth { result in
+            switch result {
+            case .failure(let errCode):
+                print(errCode)
+            case .success(let value):
+                // User is found, go to home screen
+                self.performSegue(withIdentifier: "goToHome", sender: self)
+                print(value)
+            }
+        }
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Dismiss the keyboard when the view is tapped on
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        
     }
     
+
+}
+
+extension ViewController {
+    fileprivate func setupWechatManager() {
+        //设置appid
+        WechatManager.appid = "wxd930ea5d5a258f4f"
+        WechatManager.appSecret = ""//如果不设置 appSecret 则无法获取access_token 无法完成认证
+        
+        //设置分享Delegation
+        WechatManager.shared.shareDelegate = self
+    }
+}
+
+// MARK: - WechatManagerShareDelegate
+extension ViewController: WechatManagerShareDelegate {
+    //app分享之后 点击分享内容自动回到app时调用 该方法
+    public func showMessage(_ message: String) {
+        print(message)
+    }
 }

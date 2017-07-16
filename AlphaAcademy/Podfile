@@ -8,6 +8,9 @@ target 'AlphaAcademy' do
   # Pods for AlphaAcademy
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'WechatKit'
+
 
 
   target 'AlphaAcademyTests' do
