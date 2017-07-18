@@ -145,7 +145,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Sign In with Wechat"/>
                                                 <connections>
-                                                    <action selector="wechatLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pX-4U-0Qa"/>
+                                                    <action selector="wechatLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZs-gI-mW6"/>
                                                 </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-of-Qam">

@@ -57,7 +57,8 @@ extension WechatManager {
     fileprivate func sendAuth() {
 
         let req = SendAuthReq()
-        req.scope = "snsapi_userinfo"
+
+        req.scope = "snsapi_base"
         req.state = WechatManager.csrfState
 
         if !WXApi.isWXAppInstalled() {

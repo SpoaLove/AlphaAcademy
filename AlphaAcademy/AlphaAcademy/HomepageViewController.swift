@@ -44,7 +44,6 @@ class HomepageViewController: UIViewController {
     
     @IBAction func userDidLogOut(_ sender: UIButton) {
         try? Auth.auth().signOut()
-        WechatManager.shared.logout()
         self.performSegue(withIdentifier: "Logout", sender: self)
     }
 
