@@ -39,6 +39,47 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool)
+    {
+        // Auto push to HomePage if User is already Logged In
+        if let userDidLoggedIn = UserDefaults.standard.object(forKey: "userLoggedIn") as? Bool{
+            if userDidLoggedIn {
+                let email = UserDefaults.standard.object(forKey: "userEmail") as? String
+                let pass = UserDefaults.standard.object(forKey: "userPass") as? String
+                
+                // Sign in the user with Firebase
+                Auth.auth().signIn(withEmail: email!, password: pass!, completion: { (user, error) in
+                    
+                    // Check that user isn't nil
+                    if user != nil {
+                        
+                        self.viewLoadingIndicator.stopAnimating()
+                        
+                        // set user defaults to logged in
+                        UserDefaults.standard.set(true, forKey: "userLoggedIn")
+                        UserDefaults.standard.set(email, forKey: "userEmail")
+                        UserDefaults.standard.set(pass, forKey: "userPass")
+                        
+                        
+                        // User is found, go to home screen
+                        self.performSegue(withIdentifier: "memoryLogIn", sender: self)
+                        
+                    }
+                    else {
+                        // Error: check error and show message
+                        
+                        self.viewLoadingIndicator.stopAnimating()
+                        
+                    }
+                    
+                })
+                
+            }
+        }
+    }
+    
+    
+    
     @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
         
         // Flip the boolean
@@ -73,6 +114,12 @@ class ViewController: UIViewController {
                         
                         self.viewLoadingIndicator.stopAnimating()
                         
+                        // set user defaults to logged in
+                        UserDefaults.standard.set(true, forKey: "userLoggedIn")
+                        UserDefaults.standard.set(email, forKey: "userEmail")
+                        UserDefaults.standard.set(pass, forKey: "userPass")
+
+                        
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                         
@@ -96,6 +143,11 @@ class ViewController: UIViewController {
                     if user != nil {
                         
                         self.viewLoadingIndicator.stopAnimating()
+                        
+                        // set user defaults to logged in
+                        UserDefaults.standard.set(true, forKey: "userLoggedIn")
+                        UserDefaults.standard.set(email, forKey: "userEmail")
+                        UserDefaults.standard.set(pass, forKey: "userPass")
 
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "goToHome", sender: self)
@@ -111,6 +163,7 @@ class ViewController: UIViewController {
             }
             
         }
+        
     }
     
     @IBAction func wechatLogin(_ sender: Any) {
@@ -127,6 +180,7 @@ class ViewController: UIViewController {
                 print(value)
             }
         }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -135,25 +189,22 @@ class ViewController: UIViewController {
         passwordTextField.resignFirstResponder()
         
     }
-    
-
 }
 
-extension ViewController {
-    fileprivate func setupWechatManager() {
-        //设置appid
-        WechatManager.appid = "wxd930ea5d5a258f4f"
-        WechatManager.appSecret = ""//如果不设置 appSecret 则无法获取access_token 无法完成认证
-        
-        //设置分享Delegation
-        WechatManager.shared.shareDelegate = self
-    }
-}
-
-// MARK: - WechatManagerShareDelegate
 extension ViewController: WechatManagerShareDelegate {
     //app分享之后 点击分享内容自动回到app时调用 该方法
     public func showMessage(_ message: String) {
         print(message)
+    }
+}
+
+extension ViewController {
+    fileprivate func setupWechatManager(){
+        // Set appid
+        WechatManager.appid="wx32c1906354b903ae"
+        WechatManager.appSecret=""
+        
+        // Set Share Delegation
+        WechatManager.shared.shareDelegate = self
     }
 }

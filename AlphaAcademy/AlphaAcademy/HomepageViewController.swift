@@ -44,6 +44,10 @@ class HomepageViewController: UIViewController {
     
     @IBAction func userDidLogOut(_ sender: UIButton) {
         try? Auth.auth().signOut()
+        // set user defaults to logged in
+        UserDefaults.standard.set(false, forKey: "userLoggedIn")
+        UserDefaults.standard.set(nil, forKey: "userEmail")
+        UserDefaults.standard.set(nil, forKey: "userPass")
         self.performSegue(withIdentifier: "Logout", sender: self)
     }
 
