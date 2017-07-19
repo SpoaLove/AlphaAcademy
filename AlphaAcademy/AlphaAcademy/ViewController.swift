@@ -87,12 +87,12 @@ class ViewController: UIViewController {
         
         // Check the bool and set the button and labels
         if isSignIn {
-            signInLabel.text = "Sign In"
-            signInButton.setTitle("Sign In", for: .normal)
+            signInLabel.text = signInSelector.titleForSegment(at: signInSelector.selectedSegmentIndex)
+            signInButton.setTitle(signInSelector.titleForSegment(at: signInSelector.selectedSegmentIndex), for: .normal)
         }
         else {
-            signInLabel.text = "Register"
-            signInButton.setTitle("Register", for: .normal)
+            signInLabel.text = signInSelector.titleForSegment(at: signInSelector.selectedSegmentIndex)
+            signInButton.setTitle(signInSelector.titleForSegment(at: signInSelector.selectedSegmentIndex), for: .normal)
         }
     }
     

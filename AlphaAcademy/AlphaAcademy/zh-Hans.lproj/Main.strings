@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "4M4-H8-98w"; */
+"4M4-H8-98w.text" = "登录";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "7KZ-Oo-cAd"; */
+"7KZ-Oo-cAd.text" = "邮箱";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "K3Z-0E-uG3"; */
+"K3Z-0E-uG3.placeholder" = "密码";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "KKr-Uu-Obs"; */
+"KKr-Uu-Obs.normalTitle" = "登出";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "Nqe-6r-Imy"; */
+"Nqe-6r-Imy.normalTitle" = "继续";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "TJ2-p2-5Do"; */
+"TJ2-p2-5Do.normalTitle" = "登录";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "X3I-2f-bkm"; */
+"X3I-2f-bkm.placeholder" = "邮箱";
+
+/* Class = "UILabel"; text = "Welcome to Alpha Academy!"; ObjectID = "adE-at-80G"; */
+"adE-at-80G.text" = "欢迎来到 Alpha Academy!";
+
+/* Class = "UIButton"; normalTitle = "Sign In with Wechat"; ObjectID = "puV-dH-Hh6"; */
+"puV-dH-Hh6.normalTitle" = "用微信登录";
+
+/* Class = "UISegmentedControl"; saj-hO-KhV.segmentTitles[0] = "Sign in"; ObjectID = "saj-hO-KhV"; */
+"saj-hO-KhV.segmentTitles[0]" = "登录";
+
+/* Class = "UISegmentedControl"; saj-hO-KhV.segmentTitles[1] = "Register"; ObjectID = "saj-hO-KhV"; */
+"saj-hO-KhV.segmentTitles[1]" = "注册";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "tP3-u1-Oj0"; */
+"tP3-u1-Oj0.text" = "主页";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "wjJ-Ie-yXC"; */
+"wjJ-Ie-yXC.text" = "密码";
