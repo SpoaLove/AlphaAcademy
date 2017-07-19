@@ -174,6 +174,7 @@
                         <outlet property="signInWithWechat" destination="puV-dH-Hh6" id="qig-mz-kRG"/>
                         <outlet property="viewLoadingIndicator" destination="8tg-of-Qam" id="7CW-gx-eiZ"/>
                         <segue destination="oiv-Wi-KvX" kind="show" identifier="goToHome" id="yFi-no-3wT"/>
+                        <segue destination="Gdb-IL-p19" kind="show" identifier="memoryLogIn" id="JuU-uo-xCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -221,6 +222,7 @@
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="Nqe-6r-Imy" id="lia-0c-9pQ"/>
+                        <segue destination="Gdb-IL-p19" kind="show" identifier="homePage" id="Lgd-uX-ZUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5h-In-yyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -238,7 +240,20 @@
                     <view key="view" contentMode="scaleToFill" id="yKF-PM-Qgp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMZ-8J-a5y">
+                                <rect key="frame" x="160" y="318" width="55" height="30"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="userDidLogOut:" destination="Gdb-IL-p19" eventType="touchUpInside" id="5Ip-j4-V5K"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bMZ-8J-a5y" firstAttribute="centerY" secondItem="yKF-PM-Qgp" secondAttribute="centerY" id="0MA-Ui-GTI"/>
+                            <constraint firstItem="bMZ-8J-a5y" firstAttribute="centerX" secondItem="yKF-PM-Qgp" secondAttribute="centerX" id="CK6-j7-GLF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="48q-Nd-YV4">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="yn6-Qy-zt8">
@@ -253,7 +268,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="logOutButton" destination="KKr-Uu-Obs" id="biV-mO-VJ6"/>
+                        <outlet property="logOutButton" destination="bMZ-8J-a5y" id="Dib-df-9P9"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="Logout" id="alg-jM-f9n"/>
                     </connections>
                 </viewController>
@@ -270,4 +285,7 @@
             <point key="canvasLocation" x="2396" y="-143.47826086956522"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JuU-uo-xCB"/>
+    </inferredMetricsTieBreakers>
 </document>
