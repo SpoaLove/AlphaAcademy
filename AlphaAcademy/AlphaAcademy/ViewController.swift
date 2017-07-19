@@ -52,15 +52,7 @@ class ViewController: UIViewController {
                     
                     // Check that user isn't nil
                     if user != nil {
-                        
-                        self.viewLoadingIndicator.stopAnimating()
-                        
-                        // set user defaults to logged in
-                        UserDefaults.standard.set(true, forKey: "userLoggedIn")
-                        UserDefaults.standard.set(email, forKey: "userEmail")
-                        UserDefaults.standard.set(pass, forKey: "userPass")
-                        
-                        
+                    
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "memoryLogIn", sender: self)
                         
