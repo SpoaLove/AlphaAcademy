@@ -1,25 +1,20 @@
 //
-//  HomepageViewController.swift
-//  AlphaAcademy
+//  homePageViewController.swift
+//  
 //
-//  Created by Tengoku no Spoa on 2017/7/17.
-//  Copyright © 2017年 Tengoku no Spoa. All rights reserved.
+//  Created by Tengoku no Spoa on 2017/7/20.
+//
 //
 
 import UIKit
 import Firebase
-import FirebaseAuth
-import FirebaseCore
-import FirebaseStorage
+import <#module#>
 
-class HomepageViewController: UIViewController {
+class homePageViewController: UIPageViewController {
 
-    
-    @IBOutlet weak var logOutButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dataSource = self
         
         if let user = Auth.auth().currentUser {
             //user is signied in
@@ -31,8 +26,32 @@ class HomepageViewController: UIViewController {
             let storage = Storage.storage()
             let storageRef = storage.reference(forURL: "gs://alphaacademy-406a5.appspot.com")
 
+        // Do any additional setup after loading the view.
+    }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        
+            
+            
             
         }
     }
@@ -50,8 +69,5 @@ class HomepageViewController: UIViewController {
         UserDefaults.standard.set(nil, forKey: "userPass")
         self.performSegue(withIdentifier: "Logout", sender: self)
     }
-
-
-
 
 }
