@@ -143,7 +143,7 @@
                                                 <rect key="frame" x="0.0" y="36" width="343" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Sign In with Wechat"/>
+                                                <state key="normal" title="Sign In with WeChat"/>
                                                 <connections>
                                                     <action selector="wechatLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZs-gI-mW6"/>
                                                 </connections>
@@ -232,10 +232,10 @@
         <!--Page View Controller-->
         <scene sceneID="77k-hW-7OX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zEh-Dg-LBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pageViewController storyboardIdentifier="homePageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="crossDissolve" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="4qr-Zz-GBN" customClass="pageViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                 </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEh-Dg-LBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1622" y="-161"/>
         </scene>
@@ -419,10 +419,10 @@
             </objects>
             <point key="canvasLocation" x="2930" y="513"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info Page View Controller-->
         <scene sceneID="3xn-Ii-Pip">
             <objects>
-                <viewController storyboardIdentifier="UserInformation" id="ILP-MS-51z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInformation" id="ILP-MS-51z" customClass="UserInfoPageViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HcQ-70-X1f"/>
                         <viewControllerLayoutGuide type="bottom" id="bkt-l3-fcf"/>
@@ -437,13 +437,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
+                                <rect key="frame" x="161" y="617" width="52" height="30"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2O0-Y5-XSx" firstAttribute="centerY" secondItem="KRr-As-RgG" secondAttribute="centerY" id="1A9-Nx-gLT"/>
                             <constraint firstItem="2O0-Y5-XSx" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="bNh-5d-KcX"/>
+                            <constraint firstItem="aOv-eJ-I49" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="wCb-K2-mVw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogOut" id="2kM-Cd-0fE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -451,6 +462,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wfl-Ve-ZP3"/>
+        <segue reference="UTG-IT-cT9"/>
     </inferredMetricsTieBreakers>
 </document>
