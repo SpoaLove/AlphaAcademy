@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-710" y="-125"/>
+            <point key="canvasLocation" x="1561" y="-1327"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="kqy-SL-GIp">
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5h-In-yyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="286"/>
+            <point key="canvasLocation" x="2337" y="-1327"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="77k-hW-7OX">
@@ -237,7 +237,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEh-Dg-LBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="-385"/>
+            <point key="canvasLocation" x="2337" y="-530"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="O1d-7g-PGx">
@@ -259,15 +259,23 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87825727462768555" green="0.7804911732673645" blue="0.76472580432891846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="EI7-Ub-lAI" firstAttribute="centerY" secondItem="y4r-cC-UJC" secondAttribute="centerY" id="Sfj-d9-XlS"/>
                             <constraint firstItem="EI7-Ub-lAI" firstAttribute="centerX" secondItem="y4r-cC-UJC" secondAttribute="centerX" id="YtS-cu-PJf"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HsG-zX-Ppm" appends="YES" id="Q0R-mI-tdN"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson1" id="8MK-2T-ixn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7w-Rj-AcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HsG-zX-Ppm"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="289"/>
+            <point key="canvasLocation" x="1561" y="168"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uBx-62-VPx">
@@ -289,15 +297,23 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.74083185195922852" green="0.51790767908096313" blue="0.48240390419960022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="IZX-PL-tP9" firstAttribute="centerY" secondItem="4i4-fJ-sa6" secondAttribute="centerY" id="bzH-po-qfT"/>
                             <constraint firstItem="IZX-PL-tP9" firstAttribute="centerX" secondItem="4i4-fJ-sa6" secondAttribute="centerX" id="d1h-OI-Yex"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="92a-1F-wCy" appends="YES" id="umw-0p-LnY"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson3" id="c4V-np-vlf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKV-Nh-efc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="92a-1F-wCy"/>
             </objects>
-            <point key="canvasLocation" x="2431" y="287"/>
+            <point key="canvasLocation" x="2873" y="167"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="R9Q-zR-gDr">
@@ -319,15 +335,23 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.59959304332733154" green="0.25541386008262634" blue="0.20007120072841644" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ImB-wp-fzT" firstAttribute="centerX" secondItem="CFR-bS-qEh" secondAttribute="centerX" id="h8S-jb-wAg"/>
                             <constraint firstItem="ImB-wp-fzT" firstAttribute="centerY" secondItem="CFR-bS-qEh" secondAttribute="centerY" id="jgw-ZW-m41"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bbR-Lb-yyQ" appends="YES" id="tW1-p0-FiV"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson5" id="LhC-Wb-YWG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ab-hx-sof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bbR-Lb-yyQ"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="956"/>
+            <point key="canvasLocation" x="4164" y="166"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="efP-Fi-P6j">
@@ -349,15 +373,53 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.57214844226837158" green="0.20842672884464264" blue="0.15301217138767242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="aTC-l4-jdB" firstAttribute="centerY" secondItem="dWa-Pu-0uZ" secondAttribute="centerY" id="5gc-FK-bZl"/>
                             <constraint firstItem="aTC-l4-jdB" firstAttribute="centerX" secondItem="dWa-Pu-0uZ" secondAttribute="centerX" id="tOo-LT-c1B"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UKA-s7-Fpd" appends="YES" id="ssK-52-p6Q"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson6" id="r7Z-ze-Jht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7l-cE-ZlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UKA-s7-Fpd"/>
             </objects>
-            <point key="canvasLocation" x="2431" y="956"/>
+            <point key="canvasLocation" x="4804" y="166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZXg-sy-XeJ">
+            <objects>
+                <viewController id="2ib-mp-JdH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aSR-8n-sHI"/>
+                        <viewControllerLayoutGuide type="bottom" id="L0k-xA-rlR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gx9-kR-OXu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wll-br-ZSd">
+                                <rect key="frame" x="166" y="323" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="4qr-Zz-GBN" kind="show" identifier="backToHome" id="l7W-e2-G5y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hul-Og-FdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4804" y="-1327"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9JZ-Ro-X24">
@@ -379,15 +441,23 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.81149172782897949" green="0.65115773677825928" blue="0.6235649585723877" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="HEs-Km-kzI" firstAttribute="centerX" secondItem="wF8-Je-JOm" secondAttribute="centerX" id="M84-rK-GET"/>
                             <constraint firstItem="HEs-Km-kzI" firstAttribute="centerY" secondItem="wF8-Je-JOm" secondAttribute="centerY" id="lNF-aI-FNa"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0IC-Dy-00y" appends="YES" id="Lin-Tq-SlY"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson2" id="mtc-35-RxC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbH-V5-OyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0IC-Dy-00y"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="288"/>
+            <point key="canvasLocation" x="2220" y="167"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qaW-n2-HDe">
@@ -409,15 +479,23 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.6701972484588623" green="0.38859853148460388" blue="0.34124019742012024" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="h4v-Ok-eVG" firstAttribute="centerY" secondItem="geX-Ru-pFh" secondAttribute="centerY" id="1oa-Y8-WdR"/>
                             <constraint firstItem="h4v-Ok-eVG" firstAttribute="centerX" secondItem="geX-Ru-pFh" secondAttribute="centerX" id="SM4-HO-DT4"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AxA-Ab-Qob" appends="YES" id="vBs-vy-hNv"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson4" id="QaC-UY-kzO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hJ-Sd-FBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AxA-Ab-Qob"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="956"/>
+            <point key="canvasLocation" x="3521" y="166"/>
         </scene>
         <!--User Info Page View Controller-->
         <scene sceneID="3xn-Ii-Pip">
@@ -469,10 +547,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429.5999999999999" y="-385.45727136431788"/>
+            <point key="canvasLocation" x="1561" y="-530"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wfl-Ve-ZP3"/>
+        <segue reference="QaC-UY-kzO"/>
+        <segue reference="l7W-e2-G5y"/>
     </inferredMetricsTieBreakers>
 </document>
