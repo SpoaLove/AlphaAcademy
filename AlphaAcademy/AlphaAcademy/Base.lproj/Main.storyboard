@@ -237,7 +237,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEh-Dg-LBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="-161"/>
+            <point key="canvasLocation" x="1777" y="-385"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="O1d-7g-PGx">
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7w-Rj-AcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="514"/>
+            <point key="canvasLocation" x="1119" y="289"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uBx-62-VPx">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKV-Nh-efc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="512"/>
+            <point key="canvasLocation" x="2431" y="287"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="R9Q-zR-gDr">
@@ -327,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ab-hx-sof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3588" y="513"/>
+            <point key="canvasLocation" x="1778" y="956"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="efP-Fi-P6j">
@@ -357,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7l-cE-ZlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4242" y="513"/>
+            <point key="canvasLocation" x="2431" y="956"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9JZ-Ro-X24">
@@ -387,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbH-V5-OyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="513"/>
+            <point key="canvasLocation" x="1777" y="288"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qaW-n2-HDe">
@@ -417,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hJ-Sd-FBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2930" y="513"/>
+            <point key="canvasLocation" x="1119" y="956"/>
         </scene>
         <!--User Info Page View Controller-->
         <scene sceneID="3xn-Ii-Pip">
@@ -431,27 +431,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User info Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
-                                <rect key="frame" x="131.5" y="323" width="112" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
-                                <rect key="frame" x="161" y="541" width="52" height="62"/>
-                                <state key="normal" title="Log out"/>
-                                <connections>
-                                    <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
+                                <rect key="frame" x="26" y="308.5" width="323" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User info Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
+                                        <rect key="frame" x="105.5" y="0.0" width="112" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
+                                        <rect key="frame" x="10" y="20.5" width="303" height="30"/>
+                                        <color key="backgroundColor" red="0.95287656784057617" green="0.91375309228897095" blue="0.90980702638626099" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Log Out"/>
+                                        <connections>
+                                            <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aOv-eJ-I49" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" constant="10" id="PoA-LC-EOe"/>
+                                    <constraint firstAttribute="trailing" secondItem="aOv-eJ-I49" secondAttribute="trailing" constant="10" id="jgg-18-fAQ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2O0-Y5-XSx" firstAttribute="centerY" secondItem="KRr-As-RgG" secondAttribute="centerY" id="1A9-Nx-gLT"/>
-                            <constraint firstItem="aOv-eJ-I49" firstAttribute="top" secondItem="HcQ-70-X1f" secondAttribute="bottom" constant="100" id="T5g-Rm-ajw"/>
-                            <constraint firstItem="2O0-Y5-XSx" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="bNh-5d-KcX"/>
-                            <constraint firstItem="aOv-eJ-I49" firstAttribute="centerY" secondItem="KRr-As-RgG" secondAttribute="centerY" id="iyu-mw-cIy"/>
-                            <constraint firstItem="aOv-eJ-I49" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="wCb-K2-mVw"/>
+                            <constraint firstItem="tG6-zB-YO6" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="2kd-PG-Ne9"/>
+                            <constraint firstItem="tG6-zB-YO6" firstAttribute="leading" secondItem="KRr-As-RgG" secondAttribute="leadingMargin" constant="10" id="99V-55-hSV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tG6-zB-YO6" secondAttribute="trailing" constant="10" id="HLw-D4-3ba"/>
+                            <constraint firstItem="tG6-zB-YO6" firstAttribute="centerY" secondItem="KRr-As-RgG" secondAttribute="centerY" id="ajx-mv-V1z"/>
                         </constraints>
                     </view>
                     <connections>
@@ -460,10 +469,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="-161.46926536731635"/>
+            <point key="canvasLocation" x="2429.5999999999999" y="-385.45727136431788"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UTG-IT-cT9"/>
+        <segue reference="Wfl-Ve-ZP3"/>
     </inferredMetricsTieBreakers>
 </document>
