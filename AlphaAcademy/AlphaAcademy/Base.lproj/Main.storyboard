@@ -348,7 +348,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.57214844226837158" green="0.20842672884464264" blue="0.15301217138767242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="aTC-l4-jdB" firstAttribute="centerY" secondItem="dWa-Pu-0uZ" secondAttribute="centerY" id="5gc-FK-bZl"/>
                             <constraint firstItem="aTC-l4-jdB" firstAttribute="centerX" secondItem="dWa-Pu-0uZ" secondAttribute="centerX" id="tOo-LT-c1B"/>
@@ -437,8 +437,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
-                                <rect key="frame" x="161" y="617" width="52" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
+                                <rect key="frame" x="161" y="541" width="52" height="62"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
                                     <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
@@ -448,7 +448,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2O0-Y5-XSx" firstAttribute="centerY" secondItem="KRr-As-RgG" secondAttribute="centerY" id="1A9-Nx-gLT"/>
+                            <constraint firstItem="aOv-eJ-I49" firstAttribute="top" secondItem="HcQ-70-X1f" secondAttribute="bottom" constant="100" id="T5g-Rm-ajw"/>
                             <constraint firstItem="2O0-Y5-XSx" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="bNh-5d-KcX"/>
+                            <constraint firstItem="aOv-eJ-I49" firstAttribute="centerY" secondItem="KRr-As-RgG" secondAttribute="centerY" id="iyu-mw-cIy"/>
                             <constraint firstItem="aOv-eJ-I49" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="wCb-K2-mVw"/>
                         </constraints>
                     </view>
@@ -458,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="-161"/>
+            <point key="canvasLocation" x="2276" y="-161.46926536731635"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
