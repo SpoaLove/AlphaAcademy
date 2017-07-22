@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var signInWithWechat: UIButton!
     
+    @IBOutlet weak var LogInErrorLabel: UILabel!
+    
     var isSignIn:Bool = true
     
     override func viewDidLoad() {
@@ -41,6 +43,8 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool)
     {
+        LogInErrorLabel.isHidden = true
+        
         // Auto push to HomePage if User is already Logged In
         if let userDidLoggedIn = UserDefaults.standard.object(forKey: "userLoggedIn") as? Bool{
             if userDidLoggedIn {
@@ -74,6 +78,8 @@ class ViewController: UIViewController {
     
     @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
         
+        LogInErrorLabel.isHidden = true
+        
         // Flip the boolean
         isSignIn = !isSignIn
         
@@ -92,6 +98,8 @@ class ViewController: UIViewController {
         
         viewLoadingIndicator.startAnimating()
         
+        LogInErrorLabel.isHidden = true
+        
         // TODO: Do some form validation on the email and password
         
         if let email = emailTextField.text, let pass = passwordTextField.text {
@@ -108,6 +116,7 @@ class ViewController: UIViewController {
                     else {
                         // Error: check error and show message
                         
+                        self.LogInErrorLabel.isHidden = false
                         self.viewLoadingIndicator.stopAnimating()
                         
                     }

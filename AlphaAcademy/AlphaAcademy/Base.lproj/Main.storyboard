@@ -24,16 +24,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HfO-Y3-trf">
-                                <rect key="frame" x="16" y="150.5" width="343" height="366.5"/>
+                                <rect key="frame" x="16" y="130.5" width="343" height="407"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="npT-mU-O87">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="227.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="268"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7CU-tx-5UI">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="227.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="268"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sG5-cm-JPw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="227.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="268"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1fV-3w-Dqk">
                                                                 <rect key="frame" x="107" y="0.0" width="129" height="28"/>
@@ -108,6 +108,12 @@
                                                                     <constraint firstAttribute="trailing" secondItem="K3Z-0E-uG3" secondAttribute="trailing" id="ZJ7-xf-Wm5"/>
                                                                 </constraints>
                                                             </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Email or Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-fe-AaT">
+                                                                <rect key="frame" x="68" y="247.5" width="207" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -126,7 +132,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-he-RXG">
-                                        <rect key="frame" x="0.0" y="257.5" width="343" height="109"/>
+                                        <rect key="frame" x="0.0" y="298" width="343" height="109"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-p2-5Do">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -166,6 +172,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="LogInErrorLabel" destination="2Xe-fe-AaT" id="koU-W4-EdY"/>
                         <outlet property="emailTextField" destination="X3I-2f-bkm" id="V3z-8H-l2q"/>
                         <outlet property="passwordTextField" destination="K3Z-0E-uG3" id="r1P-E8-rcn"/>
                         <outlet property="signInButton" destination="TJ2-p2-5Do" id="f44-Ej-e4g"/>
@@ -552,6 +559,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QaC-UY-kzO"/>
-        <segue reference="l7W-e2-G5y"/>
+        <segue reference="UTG-IT-cT9"/>
     </inferredMetricsTieBreakers>
 </document>
