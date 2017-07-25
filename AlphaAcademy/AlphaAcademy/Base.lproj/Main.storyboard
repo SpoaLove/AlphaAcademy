@@ -259,18 +259,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                <rect key="frame" x="152.5" y="323" width="70" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
+                                <rect key="frame" x="152.5" y="323" width="81.5" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
+                                        <rect key="frame" x="6" y="0.0" width="69.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGd-Fd-WTf">
+                                        <rect key="frame" x="0.0" y="30" width="81.5" height="30"/>
+                                        <state key="normal" title="Tap to Start"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.87825727462768555" green="0.7804911732673645" blue="0.76472580432891846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="EI7-Ub-lAI" firstAttribute="centerY" secondItem="y4r-cC-UJC" secondAttribute="centerY" id="Sfj-d9-XlS"/>
-                            <constraint firstItem="EI7-Ub-lAI" firstAttribute="centerX" secondItem="y4r-cC-UJC" secondAttribute="centerX" id="YtS-cu-PJf"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="HsG-zX-Ppm" appends="YES" id="Q0R-mI-tdN"/>
                         </connections>
@@ -296,19 +303,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
-                                <rect key="frame" x="151.5" y="323" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
+                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
+                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjr-d2-jBg">
+                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
+                                        <state key="normal" title="Tap to Start"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.74083185195922852" green="0.51790767908096313" blue="0.48240390419960022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="IZX-PL-tP9" firstAttribute="centerY" secondItem="4i4-fJ-sa6" secondAttribute="centerY" id="bzH-po-qfT"/>
-                            <constraint firstItem="IZX-PL-tP9" firstAttribute="centerX" secondItem="4i4-fJ-sa6" secondAttribute="centerX" id="d1h-OI-Yex"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="92a-1F-wCy" appends="YES" id="umw-0p-LnY"/>
                         </connections>
@@ -334,19 +347,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
-                                <rect key="frame" x="151.5" y="323" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-85-osP">
+                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
+                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-Pa-lXx">
+                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
+                                        <state key="normal" title="Tap to Start"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.59959304332733154" green="0.25541386008262634" blue="0.20007120072841644" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="ImB-wp-fzT" firstAttribute="centerX" secondItem="CFR-bS-qEh" secondAttribute="centerX" id="h8S-jb-wAg"/>
-                            <constraint firstItem="ImB-wp-fzT" firstAttribute="centerY" secondItem="CFR-bS-qEh" secondAttribute="centerY" id="jgw-ZW-m41"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bbR-Lb-yyQ" appends="YES" id="tW1-p0-FiV"/>
                         </connections>
@@ -372,19 +391,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
-                                <rect key="frame" x="151.5" y="323" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-7J-cGA">
+                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
+                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-Eg-aMG">
+                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
+                                        <state key="normal" title="Tap to Start"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.57214844226837158" green="0.20842672884464264" blue="0.15301217138767242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="aTC-l4-jdB" firstAttribute="centerY" secondItem="dWa-Pu-0uZ" secondAttribute="centerY" id="5gc-FK-bZl"/>
-                            <constraint firstItem="aTC-l4-jdB" firstAttribute="centerX" secondItem="dWa-Pu-0uZ" secondAttribute="centerX" id="tOo-LT-c1B"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="UKA-s7-Fpd" appends="YES" id="ssK-52-p6Q"/>
                         </connections>
@@ -426,7 +451,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hul-Og-FdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4804" y="-1327"/>
+            <point key="canvasLocation" x="1561" y="1033"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9JZ-Ro-X24">
@@ -440,19 +465,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                <rect key="frame" x="151.5" y="323" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
+                                <rect key="frame" x="151.5" y="323" width="81.5" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
+                                        <rect key="frame" x="5" y="0.0" width="71.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbt-Vx-0lr">
+                                        <rect key="frame" x="0.0" y="20.5" width="81.5" height="30"/>
+                                        <state key="normal" title="Tap to Start"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.81149172782897949" green="0.65115773677825928" blue="0.6235649585723877" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="HEs-Km-kzI" firstAttribute="centerX" secondItem="wF8-Je-JOm" secondAttribute="centerX" id="M84-rK-GET"/>
-                            <constraint firstItem="HEs-Km-kzI" firstAttribute="centerY" secondItem="wF8-Je-JOm" secondAttribute="centerY" id="lNF-aI-FNa"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="0IC-Dy-00y" appends="YES" id="Lin-Tq-SlY"/>
                         </connections>
@@ -464,7 +495,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbH-V5-OyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0IC-Dy-00y"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="167"/>
+            <point key="canvasLocation" x="2220" y="166.8665667166417"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qaW-n2-HDe">
@@ -478,19 +509,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
-                                <rect key="frame" x="151.5" y="323" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
+                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
+                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYv-ZV-w4i">
+                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
+                                        <state key="normal" title="Tap to Start"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.6701972484588623" green="0.38859853148460388" blue="0.34124019742012024" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="h4v-Ok-eVG" firstAttribute="centerY" secondItem="geX-Ru-pFh" secondAttribute="centerY" id="1oa-Y8-WdR"/>
-                            <constraint firstItem="h4v-Ok-eVG" firstAttribute="centerX" secondItem="geX-Ru-pFh" secondAttribute="centerX" id="SM4-HO-DT4"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="AxA-Ab-Qob" appends="YES" id="vBs-vy-hNv"/>
                         </connections>
@@ -558,7 +595,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QaC-UY-kzO"/>
-        <segue reference="UTG-IT-cT9"/>
+        <segue reference="r7Z-ze-Jht"/>
+        <segue reference="l7W-e2-G5y"/>
     </inferredMetricsTieBreakers>
 </document>
