@@ -29,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>WechatKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>148CA598DF43F7C4A4652D2081D1BE7E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>466DFDF4CC5C3FAAC8A7A8ED3D05938D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>919F42E15168C2CC0BB70CB1E37DB230</key>
+		<key>6DAC0F37222C2117EAFCE408F83D1500</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import WechatKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         FirebaseApp.configure()
-        return WechatManager.shared.handleOpenURL(url)
         // 如需要使用其他第三方可以 使用 || 连接 其他第三方库的handleOpenURL
         // return WechatManager.shared.handleOpenURL(url) || TencentOAuth.HandleOpenURL(url) || WeiboSDK.handleOpenURL(url, delegate: SinaWeiboManager.shared) ......
     }

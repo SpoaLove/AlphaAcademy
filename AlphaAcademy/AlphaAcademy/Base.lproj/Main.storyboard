@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HfO-Y3-trf">
-                                <rect key="frame" x="16" y="130.5" width="343" height="407"/>
+                                <rect key="frame" x="16" y="148.5" width="343" height="371"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="npT-mU-O87">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="268"/>
@@ -132,7 +132,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-he-RXG">
-                                        <rect key="frame" x="0.0" y="298" width="343" height="109"/>
+                                        <rect key="frame" x="0.0" y="298" width="343" height="73"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-p2-5Do">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -145,17 +145,8 @@
                                                     <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zy1-DM-Ybw"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puV-dH-Hh6">
-                                                <rect key="frame" x="0.0" y="36" width="343" height="30"/>
-                                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Sign In with WeChat"/>
-                                                <connections>
-                                                    <action selector="wechatLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZs-gI-mW6"/>
-                                                </connections>
-                                            </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-of-Qam">
-                                                <rect key="frame" x="0.0" y="72" width="343" height="37"/>
+                                                <rect key="frame" x="0.0" y="36" width="343" height="37"/>
                                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -178,7 +169,6 @@
                         <outlet property="signInButton" destination="TJ2-p2-5Do" id="f44-Ej-e4g"/>
                         <outlet property="signInLabel" destination="4M4-H8-98w" id="l7p-PB-xlb"/>
                         <outlet property="signInSelector" destination="saj-hO-KhV" id="El5-eC-qvw"/>
-                        <outlet property="signInWithWechat" destination="puV-dH-Hh6" id="qig-mz-kRG"/>
                         <outlet property="viewLoadingIndicator" destination="8tg-of-Qam" id="7CW-gx-eiZ"/>
                         <segue destination="oiv-Wi-KvX" kind="show" identifier="goToHome" id="yFi-no-3wT"/>
                         <segue destination="4qr-Zz-GBN" kind="show" identifier="memoryLogIn" id="UTG-IT-cT9"/>
@@ -258,7 +248,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
                                 <rect key="frame" x="152.5" y="323" width="81.5" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -596,6 +585,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="r7Z-ze-Jht"/>
-        <segue reference="l7W-e2-G5y"/>
+        <segue reference="UTG-IT-cT9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -41,13 +41,11 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - WechatKit (0.3.2)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Storage
-  - WechatKit
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -59,8 +57,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
-  WechatKit: c819d7654bf59f8780ab7b414cc8803956885ab6
 
-PODFILE CHECKSUM: 6388a6621949ae025ae68478288bb9969f2e2f72
+PODFILE CHECKSUM: f270fa346722d718f0a5646de3ae9f5d7261e096
 
 COCOAPODS: 1.2.1

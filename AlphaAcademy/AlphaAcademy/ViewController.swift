@@ -8,7 +8,6 @@
 
 import UIKit
 import FirebaseAuth
-import WechatKit
 
 class ViewController: UIViewController {
     
@@ -24,7 +23,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var viewLoadingIndicator: UIActivityIndicatorView!
     
-    @IBOutlet weak var signInWithWechat: UIButton!
     
     @IBOutlet weak var LogInErrorLabel: UILabel!
     
@@ -32,13 +30,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupWechatManager()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -159,20 +154,7 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "goToHome", sender: self)
     }
     
-    @IBAction func wechatLogin(_ sender: Any) {
-        if !WechatManager.shared.isInstalled() {
-            print("not install, it will open a webview")
-        }
-        WechatManager.shared.checkAuth { result in
-            switch result {
-            case .failure(let errCode):
-                print(errCode)
-            case .success(let value):
-                // User is found, go to home screen
-                self.performSegue(withIdentifier: "goToHome", sender: self)
-                print(value)
-            }
-        }
+
         
     }
     
@@ -181,23 +163,5 @@ class ViewController: UIViewController {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         
-    }
-}
-
-extension ViewController: WechatManagerShareDelegate {
-    //app分享之后 点击分享内容自动回到app时调用 该方法
-    public func showMessage(_ message: String) {
-        print(message)
-    }
-}
-
-extension ViewController {
-    fileprivate func setupWechatManager(){
-        // Set appid
-        WechatManager.appid="wx32c1906354b903ae"
-        WechatManager.appSecret=""
-        
-        // Set Share Delegation
-        WechatManager.shared.shareDelegate = self
     }
 }
