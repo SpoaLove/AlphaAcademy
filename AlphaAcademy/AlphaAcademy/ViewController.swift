@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseAuth
 
 class ViewController: UIViewController {
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var LogInErrorLabel: UILabel!
     
     var isSignIn:Bool = true
+    
+    let ref = Database().reference(fromURL: "https://alphaacademy-406a5.firebaseio.com/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +103,28 @@ class ViewController: UIViewController {
             // Check if it's sign in or register
             if isSignIn {
                 // Sign in the user with Firebase
-                Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+                Auth.auth().signIn(withEmail: email, password: pass, completion: { (user: User?, error) in
+                    
+                    if error != nil {
+                        print(error!)
+                        return
+                    }
+                    
+                    guard let uid = user?.uid else {
+                        return
+                    }
+                    
+                    let userReference = self.ref.child("Users").child(uid)
+                    
+                    let userDataDictionary = ["Email":email]
+                    
+                    userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+                        if err != nil {
+                            print(err!)
+                            return
+                        }
+                        print("User Data is updated to database")
+                    })
                     
                     // Check that user isn't nil
                     if user != nil {
@@ -122,6 +146,27 @@ class ViewController: UIViewController {
                 
                 Auth.auth().createUser(withEmail: email, password: pass, completion: { (user, error) in
                     
+                    if error != nil {
+                        print(error!)
+                        return
+                    }
+                    
+                    guard let uid = user?.uid else {
+                        return
+                    }
+                    
+                    let userReference = self.ref.child("Users").child(uid)
+                    
+                    let userDataDictionary = ["Email":email]
+                    
+                    userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+                        if err != nil {
+                            print(err!)
+                            return
+                        }
+                        print("User Data is updated to database")
+                    })
+                    
                     // Check that user isn't nil
                     if user != nil {
                         self.authCheck(user: user!, email: email, pass: pass)
@@ -142,6 +187,7 @@ class ViewController: UIViewController {
     
     func authCheck(user:User, email:String, pass:String){
         self.viewLoadingIndicator.stopAnimating()
+        
         
         // set user defaults to logged in
         UserDefaults.standard.set(true, forKey: "userLoggedIn")
