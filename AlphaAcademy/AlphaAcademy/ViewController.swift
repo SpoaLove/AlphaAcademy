@@ -32,9 +32,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+
     
     override func viewDidAppear(_ animated: Bool)
     {
@@ -154,14 +152,18 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "goToHome", sender: self)
     }
     
-
-        
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Dismiss the keyboard when the view is tapped on
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
-        
     }
+
+        
 }
+    
+
+

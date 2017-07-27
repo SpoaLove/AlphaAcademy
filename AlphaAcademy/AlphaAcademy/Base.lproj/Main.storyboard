@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,33 +35,18 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sG5-cm-JPw">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="268"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1fV-3w-Dqk">
-                                                                <rect key="frame" x="107" y="0.0" width="129" height="28"/>
-                                                                <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gw8-U2-2Rg">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="28"/>
-                                                                        <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OMJ-Q8-94v">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="129" height="28"/>
-                                                                                <subviews>
-                                                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="saj-hO-KhV" propertyAccessControl="none">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="29"/>
-                                                                                        <segments>
-                                                                                            <segment title="Sign in"/>
-                                                                                            <segment title="Register"/>
-                                                                                        </segments>
-                                                                                        <connections>
-                                                                                            <action selector="signInSelectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Da1-sn-7GF"/>
-                                                                                        </connections>
-                                                                                    </segmentedControl>
-                                                                                </subviews>
-                                                                            </stackView>
-                                                                        </subviews>
-                                                                    </stackView>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="saj-hO-KhV" propertyAccessControl="none">
+                                                                <rect key="frame" x="10" y="0.0" width="323" height="29"/>
+                                                                <segments>
+                                                                    <segment title="Sign in"/>
+                                                                    <segment title="Register"/>
+                                                                </segments>
+                                                                <connections>
+                                                                    <action selector="signInSelectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Da1-sn-7GF"/>
+                                                                </connections>
+                                                            </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M4-H8-98w">
-                                                                <rect key="frame" x="127.5" y="48" width="88.5" height="38.5"/>
+                                                                <rect key="frame" x="128" y="48" width="87.5" height="38.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -111,7 +96,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Email or Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-fe-AaT">
                                                                 <rect key="frame" x="68" y="247.5" width="207" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -119,7 +104,8 @@
                                                         <constraints>
                                                             <constraint firstItem="9BZ-la-eSf" firstAttribute="leading" secondItem="sG5-cm-JPw" secondAttribute="leading" id="JgX-qj-yuZ"/>
                                                             <constraint firstItem="c5i-NY-hFJ" firstAttribute="leading" secondItem="sG5-cm-JPw" secondAttribute="leading" id="Nvt-bA-MGf"/>
-                                                            <constraint firstItem="1fV-3w-Dqk" firstAttribute="centerX" secondItem="sG5-cm-JPw" secondAttribute="centerX" id="VD7-cD-F2l"/>
+                                                            <constraint firstAttribute="trailing" secondItem="saj-hO-KhV" secondAttribute="trailing" constant="10" id="Ogb-Wl-Kaf"/>
+                                                            <constraint firstItem="saj-hO-KhV" firstAttribute="leading" secondItem="sG5-cm-JPw" secondAttribute="leading" constant="10" id="mgM-7v-sSQ"/>
                                                             <constraint firstAttribute="trailing" secondItem="9BZ-la-eSf" secondAttribute="trailing" id="pLX-JV-v5J"/>
                                                             <constraint firstAttribute="trailing" secondItem="c5i-NY-hFJ" secondAttribute="trailing" id="vWC-eq-iqS"/>
                                                         </constraints>
@@ -138,7 +124,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <color key="tintColor" red="0.40637598679999998" green="0.89074643779999996" blue="0.41586573669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <size key="titleShadowOffset" width="-1" height="0.0"/>
                                                 <state key="normal" title="Sign In"/>
                                                 <connections>
@@ -249,19 +235,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
-                                <rect key="frame" x="152.5" y="323" width="81.5" height="60"/>
+                                <rect key="frame" x="152.5" y="323" width="69.5" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                        <rect key="frame" x="6" y="0.0" width="69.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGd-Fd-WTf">
-                                        <rect key="frame" x="0.0" y="30" width="81.5" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -292,20 +274,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
+                                <rect key="frame" x="151.5" y="323" width="72" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjr-d2-jBg">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -337,19 +315,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-85-osP">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                                <rect key="frame" x="151.5" y="323" width="72" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-Pa-lXx">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -381,19 +355,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-7J-cGA">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                                <rect key="frame" x="151.5" y="323" width="72" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-Eg-aMG">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -455,19 +425,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
-                                <rect key="frame" x="151.5" y="323" width="81.5" height="50.5"/>
+                                <rect key="frame" x="151.5" y="323" width="71.5" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                        <rect key="frame" x="5" y="0.0" width="71.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbt-Vx-0lr">
-                                        <rect key="frame" x="0.0" y="20.5" width="81.5" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -499,19 +465,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
+                                <rect key="frame" x="151.5" y="323" width="72" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYv-ZV-w4i">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -584,7 +546,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r7Z-ze-Jht"/>
+        <segue reference="8MK-2T-ixn"/>
         <segue reference="UTG-IT-cT9"/>
     </inferredMetricsTieBreakers>
 </document>
