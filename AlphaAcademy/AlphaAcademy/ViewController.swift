@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     
     var isSignIn:Bool = true
     
-    let ref = Database().reference(fromURL: "https://alphaacademy-406a5.firebaseio.com/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +102,7 @@ class ViewController: UIViewController {
             // Check if it's sign in or register
             if isSignIn {
                 // Sign in the user with Firebase
-                Auth.auth().signIn(withEmail: email, password: pass, completion: { (user: User?, error) in
+                Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
                     
                     if error != nil {
                         print(error!)
@@ -114,7 +113,11 @@ class ViewController: UIViewController {
                         return
                     }
                     
-                    let userReference = self.ref.child("Users").child(uid)
+                    var ref: DatabaseReference!
+                    
+                    ref = Database.database().reference()
+
+                    let userReference = ref.child("Users").child(uid)
                     
                     let userDataDictionary = ["Email":email]
                     
@@ -155,7 +158,12 @@ class ViewController: UIViewController {
                         return
                     }
                     
-                    let userReference = self.ref.child("Users").child(uid)
+                    
+                    var ref: DatabaseReference!
+                    
+                    ref = Database.database().reference()
+                    
+                    let userReference = ref.child("Users").child(uid)
                     
                     let userDataDictionary = ["Email":email]
                     
