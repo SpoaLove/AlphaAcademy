@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     
     override func viewDidAppear(_ animated: Bool)
     {
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
                     
                     // Check that user isn't nil
                     if user != nil {
-                    
+                        
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "memoryLogIn", sender: self)
                         
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
                     var ref: DatabaseReference!
                     
                     ref = Database.database().reference()
-
+                    
                     let userReference = ref.child("Users").child(uid)
                     
                     let userDataDictionary = ["Email":email]
@@ -183,7 +183,7 @@ class ViewController: UIViewController {
                         // Error: check error and show message
                         
                         self.viewLoadingIndicator.stopAnimating()
-
+                        
                     }
                 })
                 
@@ -215,9 +215,9 @@ class ViewController: UIViewController {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
-
-        
-}
     
+    
+}
+
 
 
