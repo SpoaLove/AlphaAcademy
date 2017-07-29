@@ -7,10 +7,10 @@ target 'AlphaAcademy' do
 
   # Pods for AlphaAcademy
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
-  pod 'WechatKit'
-
+  pod 'JSQMessagesViewController'
 
 
   target 'AlphaAcademyTests' do

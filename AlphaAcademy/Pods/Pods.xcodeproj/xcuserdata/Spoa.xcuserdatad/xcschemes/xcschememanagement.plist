@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AlphaAcademy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,11 +39,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>WechatKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -41,42 +46,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>148CA598DF43F7C4A4652D2081D1BE7E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>466DFDF4CC5C3FAAC8A7A8ED3D05938D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>919F42E15168C2CC0BB70CB1E37DB230</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AAC05675BC8565FD3C9C5FA5F3FE9A49</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

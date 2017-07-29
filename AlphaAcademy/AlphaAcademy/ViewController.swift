@@ -7,8 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseAuth
-import WechatKit
 
 class ViewController: UIViewController {
     
@@ -24,22 +24,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var viewLoadingIndicator: UIActivityIndicatorView!
     
-    @IBOutlet weak var signInWithWechat: UIButton!
     
     @IBOutlet weak var LogInErrorLabel: UILabel!
     
     var isSignIn:Bool = true
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupWechatManager()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewDidAppear(_ animated: Bool)
     {
@@ -56,7 +51,7 @@ class ViewController: UIViewController {
                     
                     // Check that user isn't nil
                     if user != nil {
-                    
+                        
                         // User is found, go to home screen
                         self.performSegue(withIdentifier: "memoryLogIn", sender: self)
                         
@@ -109,6 +104,31 @@ class ViewController: UIViewController {
                 // Sign in the user with Firebase
                 Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
                     
+                    if error != nil {
+                        print(error!)
+                        return
+                    }
+                    
+                    guard let uid = user?.uid else {
+                        return
+                    }
+                    
+                    var ref: DatabaseReference!
+                    
+                    ref = Database.database().reference()
+                    
+                    let userReference = ref.child("Users").child(uid)
+                    
+                    let userDataDictionary = ["Email":email]
+                    
+                    userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+                        if err != nil {
+                            print(err!)
+                            return
+                        }
+                        print("User Data is updated to database")
+                    })
+                    
                     // Check that user isn't nil
                     if user != nil {
                         self.authCheck(user: user!, email: email, pass: pass)
@@ -129,6 +149,32 @@ class ViewController: UIViewController {
                 
                 Auth.auth().createUser(withEmail: email, password: pass, completion: { (user, error) in
                     
+                    if error != nil {
+                        print(error!)
+                        return
+                    }
+                    
+                    guard let uid = user?.uid else {
+                        return
+                    }
+                    
+                    
+                    var ref: DatabaseReference!
+                    
+                    ref = Database.database().reference()
+                    
+                    let userReference = ref.child("Users").child(uid)
+                    
+                    let userDataDictionary = ["Email":email]
+                    
+                    userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+                        if err != nil {
+                            print(err!)
+                            return
+                        }
+                        print("User Data is updated to database")
+                    })
+                    
                     // Check that user isn't nil
                     if user != nil {
                         self.authCheck(user: user!, email: email, pass: pass)
@@ -137,7 +183,7 @@ class ViewController: UIViewController {
                         // Error: check error and show message
                         
                         self.viewLoadingIndicator.stopAnimating()
-
+                        
                     }
                 })
                 
@@ -150,6 +196,7 @@ class ViewController: UIViewController {
     func authCheck(user:User, email:String, pass:String){
         self.viewLoadingIndicator.stopAnimating()
         
+        
         // set user defaults to logged in
         UserDefaults.standard.set(true, forKey: "userLoggedIn")
         UserDefaults.standard.set(email, forKey: "userEmail")
@@ -159,45 +206,18 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "goToHome", sender: self)
     }
     
-    @IBAction func wechatLogin(_ sender: Any) {
-        if !WechatManager.shared.isInstalled() {
-            print("not install, it will open a webview")
-        }
-        WechatManager.shared.checkAuth { result in
-            switch result {
-            case .failure(let errCode):
-                print(errCode)
-            case .success(let value):
-                // User is found, go to home screen
-                self.performSegue(withIdentifier: "goToHome", sender: self)
-                print(value)
-            }
-        }
-        
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Dismiss the keyboard when the view is tapped on
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
-        
     }
+    
+    
 }
 
-extension ViewController: WechatManagerShareDelegate {
-    //app分享之后 点击分享内容自动回到app时调用 该方法
-    public func showMessage(_ message: String) {
-        print(message)
-    }
-}
 
-extension ViewController {
-    fileprivate func setupWechatManager(){
-        // Set appid
-        WechatManager.appid="wx32c1906354b903ae"
-        WechatManager.appSecret=""
-        
-        // Set Share Delegation
-        WechatManager.shared.shareDelegate = self
-    }
-}
+

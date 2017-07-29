@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HfO-Y3-trf">
-                                <rect key="frame" x="16" y="130.5" width="343" height="407"/>
+                                <rect key="frame" x="16" y="148.5" width="343" height="371"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="npT-mU-O87">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="268"/>
@@ -35,33 +35,18 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sG5-cm-JPw">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="268"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1fV-3w-Dqk">
-                                                                <rect key="frame" x="107" y="0.0" width="129" height="28"/>
-                                                                <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gw8-U2-2Rg">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="28"/>
-                                                                        <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OMJ-Q8-94v">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="129" height="28"/>
-                                                                                <subviews>
-                                                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="saj-hO-KhV" propertyAccessControl="none">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="29"/>
-                                                                                        <segments>
-                                                                                            <segment title="Sign in"/>
-                                                                                            <segment title="Register"/>
-                                                                                        </segments>
-                                                                                        <connections>
-                                                                                            <action selector="signInSelectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Da1-sn-7GF"/>
-                                                                                        </connections>
-                                                                                    </segmentedControl>
-                                                                                </subviews>
-                                                                            </stackView>
-                                                                        </subviews>
-                                                                    </stackView>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="saj-hO-KhV" propertyAccessControl="none">
+                                                                <rect key="frame" x="10" y="0.0" width="323" height="29"/>
+                                                                <segments>
+                                                                    <segment title="Sign in"/>
+                                                                    <segment title="Register"/>
+                                                                </segments>
+                                                                <connections>
+                                                                    <action selector="signInSelectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Da1-sn-7GF"/>
+                                                                </connections>
+                                                            </segmentedControl>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M4-H8-98w">
-                                                                <rect key="frame" x="127.5" y="48" width="88.5" height="38.5"/>
+                                                                <rect key="frame" x="128" y="48" width="87.5" height="38.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -111,7 +96,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Email or Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-fe-AaT">
                                                                 <rect key="frame" x="68" y="247.5" width="207" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -119,7 +104,8 @@
                                                         <constraints>
                                                             <constraint firstItem="9BZ-la-eSf" firstAttribute="leading" secondItem="sG5-cm-JPw" secondAttribute="leading" id="JgX-qj-yuZ"/>
                                                             <constraint firstItem="c5i-NY-hFJ" firstAttribute="leading" secondItem="sG5-cm-JPw" secondAttribute="leading" id="Nvt-bA-MGf"/>
-                                                            <constraint firstItem="1fV-3w-Dqk" firstAttribute="centerX" secondItem="sG5-cm-JPw" secondAttribute="centerX" id="VD7-cD-F2l"/>
+                                                            <constraint firstAttribute="trailing" secondItem="saj-hO-KhV" secondAttribute="trailing" constant="10" id="Ogb-Wl-Kaf"/>
+                                                            <constraint firstItem="saj-hO-KhV" firstAttribute="leading" secondItem="sG5-cm-JPw" secondAttribute="leading" constant="10" id="mgM-7v-sSQ"/>
                                                             <constraint firstAttribute="trailing" secondItem="9BZ-la-eSf" secondAttribute="trailing" id="pLX-JV-v5J"/>
                                                             <constraint firstAttribute="trailing" secondItem="c5i-NY-hFJ" secondAttribute="trailing" id="vWC-eq-iqS"/>
                                                         </constraints>
@@ -132,30 +118,21 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-he-RXG">
-                                        <rect key="frame" x="0.0" y="298" width="343" height="109"/>
+                                        <rect key="frame" x="0.0" y="298" width="343" height="73"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-p2-5Do">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <color key="tintColor" red="0.40637598679999998" green="0.89074643779999996" blue="0.41586573669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <size key="titleShadowOffset" width="-1" height="0.0"/>
                                                 <state key="normal" title="Sign In"/>
                                                 <connections>
                                                     <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zy1-DM-Ybw"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puV-dH-Hh6">
-                                                <rect key="frame" x="0.0" y="36" width="343" height="30"/>
-                                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Sign In with WeChat"/>
-                                                <connections>
-                                                    <action selector="wechatLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZs-gI-mW6"/>
-                                                </connections>
-                                            </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-of-Qam">
-                                                <rect key="frame" x="0.0" y="72" width="343" height="37"/>
+                                                <rect key="frame" x="0.0" y="36" width="343" height="37"/>
                                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -178,7 +155,6 @@
                         <outlet property="signInButton" destination="TJ2-p2-5Do" id="f44-Ej-e4g"/>
                         <outlet property="signInLabel" destination="4M4-H8-98w" id="l7p-PB-xlb"/>
                         <outlet property="signInSelector" destination="saj-hO-KhV" id="El5-eC-qvw"/>
-                        <outlet property="signInWithWechat" destination="puV-dH-Hh6" id="qig-mz-kRG"/>
                         <outlet property="viewLoadingIndicator" destination="8tg-of-Qam" id="7CW-gx-eiZ"/>
                         <segue destination="oiv-Wi-KvX" kind="show" identifier="goToHome" id="yFi-no-3wT"/>
                         <segue destination="4qr-Zz-GBN" kind="show" identifier="memoryLogIn" id="UTG-IT-cT9"/>
@@ -186,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="-1327"/>
+            <point key="canvasLocation" x="1561" y="-530"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="kqy-SL-GIp">
@@ -246,10 +222,10 @@
             </objects>
             <point key="canvasLocation" x="2337" y="-530"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapters View Controller-->
         <scene sceneID="O1d-7g-PGx">
             <objects>
-                <viewController storyboardIdentifier="Chapter1" id="Laa-iQ-CTj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chapter1" id="Laa-iQ-CTj" customClass="chaptersViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ILF-v1-sPN"/>
                         <viewControllerLayoutGuide type="bottom" id="oIE-qP-plJ"/>
@@ -258,43 +234,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
-                                <rect key="frame" x="152.5" y="323" width="81.5" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
+                                <rect key="frame" x="152.5" y="303.5" width="69.5" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                        <rect key="frame" x="6" y="0.0" width="69.5" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGd-Fd-WTf">
-                                        <rect key="frame" x="0.0" y="30" width="81.5" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Cu-5Ns">
+                                        <rect key="frame" x="12" y="30" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="chapterSelected1:" destination="Laa-iQ-CTj" eventType="touchUpInside" id="Yey-Yj-PUs"/>
+                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt1" id="XcG-If-rPs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.87825727462768555" green="0.7804911732673645" blue="0.76472580432891846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="FE4-gv-qQM" firstAttribute="centerY" secondItem="y4r-cC-UJC" secondAttribute="centerY" id="HQt-Kr-lYI"/>
+                            <constraint firstItem="FE4-gv-qQM" firstAttribute="centerX" secondItem="y4r-cC-UJC" secondAttribute="centerX" id="LeN-rl-nI0"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="HsG-zX-Ppm" appends="YES" id="Q0R-mI-tdN"/>
                         </connections>
                     </view>
-                    <connections>
-                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson1" id="8MK-2T-ixn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7w-Rj-AcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="HsG-zX-Ppm"/>
             </objects>
             <point key="canvasLocation" x="1561" y="168"/>
         </scene>
-        <!--View Controller-->
+        <!--Lessons View Controller-->
+        <scene sceneID="OW5-lR-xEs">
+            <objects>
+                <viewController id="X1W-D2-R8A" customClass="LessonsViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Xm-5e-Pmg"/>
+                        <viewControllerLayoutGuide type="bottom" id="VaQ-sI-pwF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sPM-PD-uzk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="4qr-Zz-GBN" kind="show" identifier="quit" id="73z-al-KkI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAB-jz-QPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3521" y="-989"/>
+        </scene>
+        <!--Chapters View Controller-->
         <scene sceneID="uBx-62-VPx">
             <objects>
-                <viewController storyboardIdentifier="Chapter3" id="ZXX-tU-395" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chapter3" id="ZXX-tU-395" customClass="chaptersViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RDg-g9-gbB"/>
                         <viewControllerLayoutGuide type="bottom" id="Vuj-Xm-Pit"/>
@@ -303,42 +303,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
+                                <rect key="frame" x="151.5" y="307.5" width="72" height="52.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjr-d2-jBg">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwf-iT-1ow">
+                                        <rect key="frame" x="13" y="22.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="chapterSelected3:" destination="ZXX-tU-395" eventType="touchUpInside" id="y9p-Me-dlU"/>
+                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt3" id="78Y-Xq-DxT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.74083185195922852" green="0.51790767908096313" blue="0.48240390419960022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="aKA-XJ-ysa" firstAttribute="centerX" secondItem="4i4-fJ-sa6" secondAttribute="centerX" id="KXB-bl-anF"/>
+                            <constraint firstItem="aKA-XJ-ysa" firstAttribute="centerY" secondItem="4i4-fJ-sa6" secondAttribute="centerY" id="jzL-ez-U93"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="92a-1F-wCy" appends="YES" id="umw-0p-LnY"/>
                         </connections>
                     </view>
-                    <connections>
-                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson3" id="c4V-np-vlf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKV-Nh-efc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="92a-1F-wCy"/>
             </objects>
             <point key="canvasLocation" x="2873" y="167"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapters View Controller-->
         <scene sceneID="R9Q-zR-gDr">
             <objects>
-                <viewController storyboardIdentifier="Chapter5" id="RMQ-dx-zZI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chapter5" id="RMQ-dx-zZI" customClass="chaptersViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F9T-7S-JdU"/>
                         <viewControllerLayoutGuide type="bottom" id="EOX-QF-XUK"/>
@@ -347,42 +351,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-85-osP">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-85-osP">
+                                <rect key="frame" x="151.5" y="308.5" width="72" height="50.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-Pa-lXx">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-FU-KEI">
+                                        <rect key="frame" x="13" y="20.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="chapterSelected5:" destination="PLU-c5-9xp" eventType="touchUpInside" id="1bq-2B-7u2"/>
+                                            <action selector="chapterSelected5:" destination="RMQ-dx-zZI" eventType="touchUpInside" id="afR-jZ-7CE"/>
+                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt5" id="gl0-LH-mWc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.59959304332733154" green="0.25541386008262634" blue="0.20007120072841644" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="jqY-85-osP" firstAttribute="centerX" secondItem="CFR-bS-qEh" secondAttribute="centerX" id="973-g3-c5v"/>
+                            <constraint firstItem="jqY-85-osP" firstAttribute="centerY" secondItem="CFR-bS-qEh" secondAttribute="centerY" id="etq-r7-gGr"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bbR-Lb-yyQ" appends="YES" id="tW1-p0-FiV"/>
                         </connections>
                     </view>
-                    <connections>
-                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson5" id="LhC-Wb-YWG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ab-hx-sof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PLU-c5-9xp" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="bbR-Lb-yyQ"/>
             </objects>
             <point key="canvasLocation" x="4164" y="166"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapters View Controller-->
         <scene sceneID="efP-Fi-P6j">
             <objects>
-                <viewController storyboardIdentifier="Chapter6" id="c38-Eo-haU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chapter6" id="c38-Eo-haU" customClass="chaptersViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w8R-ou-NjZ"/>
                         <viewControllerLayoutGuide type="bottom" id="gMn-TG-ujw"/>
@@ -391,72 +401,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-7J-cGA">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-7J-cGA">
+                                <rect key="frame" x="151.5" y="308.5" width="72" height="50.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-Eg-aMG">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-dm-9wk">
+                                        <rect key="frame" x="13" y="20.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="chapterSelected6:" destination="1h3-gq-ZVQ" eventType="touchUpInside" id="UZ7-ZE-8Tu"/>
+                                            <action selector="chapterSelected6:" destination="c38-Eo-haU" eventType="touchUpInside" id="f1U-ZV-bg1"/>
+                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt6" id="j3z-Vf-Ocz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.57214844226837158" green="0.20842672884464264" blue="0.15301217138767242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="e0J-7J-cGA" firstAttribute="centerX" secondItem="dWa-Pu-0uZ" secondAttribute="centerX" id="1Hk-FQ-Mz2"/>
+                            <constraint firstItem="e0J-7J-cGA" firstAttribute="centerY" secondItem="dWa-Pu-0uZ" secondAttribute="centerY" id="sKh-cV-ZYa"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="UKA-s7-Fpd" appends="YES" id="ssK-52-p6Q"/>
                         </connections>
                     </view>
-                    <connections>
-                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson6" id="r7Z-ze-Jht"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7l-cE-ZlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1h3-gq-ZVQ" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="UKA-s7-Fpd"/>
             </objects>
             <point key="canvasLocation" x="4804" y="166"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ZXg-sy-XeJ">
-            <objects>
-                <viewController id="2ib-mp-JdH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aSR-8n-sHI"/>
-                        <viewControllerLayoutGuide type="bottom" id="L0k-xA-rlR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gx9-kR-OXu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wll-br-ZSd">
-                                <rect key="frame" x="166" y="323" width="55" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="4qr-Zz-GBN" kind="show" identifier="backToHome" id="l7W-e2-G5y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hul-Og-FdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1561" y="1033"/>
-        </scene>
-        <!--View Controller-->
+        <!--Chapters View Controller-->
         <scene sceneID="9JZ-Ro-X24">
             <objects>
-                <viewController storyboardIdentifier="Chapter2" id="GCn-Io-dtM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chapter2" id="GCn-Io-dtM" customClass="chaptersViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ROb-jU-Sal"/>
                         <viewControllerLayoutGuide type="bottom" id="Wvu-45-S5o"/>
@@ -465,42 +451,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
-                                <rect key="frame" x="151.5" y="323" width="81.5" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
+                                <rect key="frame" x="151.5" y="308.5" width="71.5" height="50.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                        <rect key="frame" x="5" y="0.0" width="71.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbt-Vx-0lr">
-                                        <rect key="frame" x="0.0" y="20.5" width="81.5" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-MG-L7x">
+                                        <rect key="frame" x="13" y="20.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="chapterSelected2:" destination="GCn-Io-dtM" eventType="touchUpInside" id="CVS-zW-4Dt"/>
+                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt2" id="kvU-XT-gED"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.81149172782897949" green="0.65115773677825928" blue="0.6235649585723877" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Jvg-V1-XdW" firstAttribute="centerX" secondItem="wF8-Je-JOm" secondAttribute="centerX" id="8rz-Hn-VtK"/>
+                            <constraint firstItem="Jvg-V1-XdW" firstAttribute="centerY" secondItem="wF8-Je-JOm" secondAttribute="centerY" id="Dtw-Ix-jtI"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="0IC-Dy-00y" appends="YES" id="Lin-Tq-SlY"/>
                         </connections>
                     </view>
-                    <connections>
-                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson2" id="mtc-35-RxC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbH-V5-OyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0IC-Dy-00y"/>
             </objects>
             <point key="canvasLocation" x="2220" y="166.8665667166417"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapters View Controller-->
         <scene sceneID="qaW-n2-HDe">
             <objects>
-                <viewController storyboardIdentifier="Chapter4" id="Ajr-Ld-t9O" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chapter4" id="Ajr-Ld-t9O" customClass="chaptersViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9ba-hS-mf6"/>
                         <viewControllerLayoutGuide type="bottom" id="sKL-4w-ZmN"/>
@@ -509,32 +499,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
-                                <rect key="frame" x="151.5" y="323" width="81" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
+                                <rect key="frame" x="151.5" y="308.5" width="72" height="50.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
-                                        <rect key="frame" x="4.5" y="0.0" width="72" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYv-ZV-w4i">
-                                        <rect key="frame" x="0.0" y="20.5" width="81" height="30"/>
-                                        <state key="normal" title="Tap to Start"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaL-Ml-biS">
+                                        <rect key="frame" x="13" y="20.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="chapterSelected4:" destination="Ajr-Ld-t9O" eventType="touchUpInside" id="Xd2-EB-f9Y"/>
+                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt4" id="BPj-qM-tiW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.6701972484588623" green="0.38859853148460388" blue="0.34124019742012024" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bpr-Tc-BtN" firstAttribute="centerX" secondItem="geX-Ru-pFh" secondAttribute="centerX" id="TFQ-ko-xGc"/>
+                            <constraint firstItem="bpr-Tc-BtN" firstAttribute="centerY" secondItem="geX-Ru-pFh" secondAttribute="centerY" id="t4w-S2-bd3"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="AxA-Ab-Qob" appends="YES" id="vBs-vy-hNv"/>
                         </connections>
                     </view>
-                    <connections>
-                        <segue destination="2ib-mp-JdH" kind="show" identifier="Lesson4" id="QaC-UY-kzO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hJ-Sd-FBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="AxA-Ab-Qob"/>
@@ -591,11 +585,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="-530"/>
+            <point key="canvasLocation" x="796" y="166"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r7Z-ze-Jht"/>
-        <segue reference="l7W-e2-G5y"/>
+        <segue reference="j3z-Vf-Ocz"/>
+        <segue reference="73z-al-KkI"/>
     </inferredMetricsTieBreakers>
 </document>

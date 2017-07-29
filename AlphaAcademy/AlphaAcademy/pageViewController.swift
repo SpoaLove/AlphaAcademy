@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseStorage
 
 class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-
+    
     var pageControl = UIPageControl()
     
     // MARK: UIPageViewControllerDataSource
@@ -41,8 +41,8 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             let storage = Storage.storage()
             let storageRef = storage.reference(forURL: "gs://alphaacademy-406a5.appspot.com")
         }
-
-    
+        
+        
         
         // This sets up the first view that will show up on our page control
         if let firstViewController = orderedViewControllers.first {
