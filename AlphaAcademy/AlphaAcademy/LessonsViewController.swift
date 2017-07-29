@@ -24,6 +24,8 @@ class LessonsViewController: JSQMessagesViewController {
         return user2
     }
     
+
+    
     // all messages
     var messages = [JSQMessage]()
     
@@ -50,6 +52,29 @@ class LessonsViewController: JSQMessagesViewController {
 }
 
 extension LessonsViewController {
+    override func didPressAccessoryButton(_ sender: UIButton!) {
+        quitLesson()
+    }
+
+}
+
+extension LessonsViewController {
+    func quitLesson(){
+        let selector = UIAlertController(title: "Quit", message: "Do You Really Want to Quit? Progress will be lost!", preferredStyle: .actionSheet)
+        let yes = UIAlertAction(title: "Yes", style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            self.performSegue(withIdentifier: "quit", sender: self)
+        })
+        let no = UIAlertAction(title: "no", style: .default, handler: {
+            (action:UIAlertAction) -> () in
+        })
+        selector.addAction(yes)
+        selector.addAction(no)
+        self.present(selector, animated: true, completion: nil)
+    }
+}
+
+extension LessonsViewController {
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
@@ -69,9 +94,7 @@ extension LessonsViewController {
             self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
             
         }else if text == "quit"{
-            
-            self.performSegue(withIdentifier: "quit", sender: self)
-            
+            quitLesson()
         }else{
             
             let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
