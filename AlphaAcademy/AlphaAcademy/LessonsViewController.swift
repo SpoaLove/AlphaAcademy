@@ -65,12 +65,19 @@ class LessonsViewController: JSQMessagesViewController {
 
 extension LessonsViewController {
     override func didPressAccessoryButton(_ sender: UIButton!) {
+        if atEndOfRoute {
+            atEndOfRoute = false
+            self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
+            return
+        }else{
         quitLesson()
+        }
     }
 
 }
 
 extension LessonsViewController {
+    
     func quitLesson(){
         let selector = UIAlertController(title: "Quit", message: "Do You Really Want to Quit? Progress will be lost!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
@@ -91,28 +98,25 @@ extension LessonsViewController {
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
         if atEndOfRoute {
-            atEndOfRoute = false
-            self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
-            finishSendingMessage()
+            appendMessage(text: "tap the button on the left to answer", senderId: "1", senderDisplayName: "A-Chan")
             return
         }
         
         if text.caseInsensitiveCompare("continue") == ComparisonResult.orderedSame{
             print("continue")
             
-            if messagesCount>currentMessages.count {
-                let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
-                messages.append(message!)
-                
-            }else if messagesCount==currentMessages.count{
+            if messagesCount<currentMessages.count {
                 messages.append(currentMessages[messagesCount])
                 messagesCount += 1
+                
+            }else if messagesCount==currentMessages.count && messagesCount != 0{
+                appendMessage(text: "tap the button on the left to answer", senderId: "1", senderDisplayName: "A-Chan")
+
                 atEndOfRoute = true
                 
             }else{
+                appendMessage(text: text, senderId: senderId, senderDisplayName: senderDisplayName)
 
-                messages.append(currentMessages[messagesCount])
-                messagesCount += 1
             }
             
         }else if text.caseInsensitiveCompare("route") == ComparisonResult.orderedSame{
@@ -124,10 +128,7 @@ extension LessonsViewController {
             messages += alotOfTestMessages
         }else{
             
-            let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
-            
-            
-            messages.append(message!)
+            appendMessage(text: text, senderId: senderId, senderDisplayName: senderDisplayName)
         }
         
         
@@ -146,6 +147,7 @@ extension LessonsViewController {
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
+        
         let bubbleFactory = JSQMessagesBubbleImageFactory()
         
         let message = messages[indexPath.row]
@@ -167,6 +169,7 @@ extension LessonsViewController {
 
     }
     
+    
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         return nil
     }
@@ -181,7 +184,7 @@ extension LessonsViewController {
     
 }
 
-
+//When View is loaded
 extension LessonsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -190,6 +193,10 @@ extension LessonsViewController {
         // who is the current user
         self.senderId = currentUser.id
         self.senderDisplayName = currentUser.name
+        
+        //append initial messages
+        messages += alotOfTestMessages
+
     }
 }
 
@@ -217,10 +224,12 @@ extension LessonsViewController {
         let selector = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: action1title, style: .default, handler: {
             (action:UIAlertAction) -> () in
+            self.appendMessage(text: action1title, senderId: "2", senderDisplayName: "You")
             self.setChapter(chapter: self.testRoute)
             })
         let action2 = UIAlertAction(title: action2title, style: .default, handler: {
             (action:UIAlertAction) -> () in
+            self.appendMessage(text: action2title, senderId: "2", senderDisplayName: "You")
             self.setChapter(chapter: self.testRoute2)
         })
         selector.addAction(action1)
@@ -229,3 +238,12 @@ extension LessonsViewController {
     }
 
 }
+
+extension LessonsViewController {
+    func appendMessage(text: String!, senderId: String!, senderDisplayName: String!){
+        let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
+        messages.append(message!)
+        finishSendingMessage()
+    }
+}
+
