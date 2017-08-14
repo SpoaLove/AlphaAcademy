@@ -8,30 +8,40 @@
 
 import UIKit
 import JSQMessagesViewController
+import FirebaseDatabase
+import FirebaseAuth
 
 struct ChatUser{
     let id: String
-    let name: String
+    var name: String
 }
 
 class LessonsViewController: JSQMessagesViewController {
     
     
     let user1 = ChatUser(id: "1", name: "A-Chan")
-    let user2 = ChatUser(id: "2", name: "You")
+    var user2 = ChatUser(id: "2", name: "You")
     let user3 = ChatUser(id: "3", name: "Console")
     let user4 = ChatUser(id: "4", name: "Code")
     
+
+    
     var atEndOfRoute:Bool = false
     
+    var name:String {
+        return user2.name
+    }
+
+    
     var currentUser: ChatUser {
+
         return user2
     }
     
-
     
     // all messages
     var messages = [JSQMessage]()
+    
     
     // Test Messages
     let chapter1Messages:[JSQMessage] = [
@@ -51,7 +61,7 @@ class LessonsViewController: JSQMessagesViewController {
     
     let alotOfTestMessages:[JSQMessage] = [
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hello, World!"),
-        JSQMessage(senderId: "2", displayName: "You", text: "This is an Test of lots of Messages"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "This is an Test of lots of Messages"),
         JSQMessage(senderId: "4", displayName: "Code", text: "print(\"Hello,World!\")"),
         JSQMessage(senderId: "3", displayName: "Console", text: "Hello,World!")
 
@@ -122,13 +132,17 @@ extension LessonsViewController {
         }else if text.caseInsensitiveCompare("route") == ComparisonResult.orderedSame{
             self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
             
+        }else if text.caseInsensitiveCompare("setName") == ComparisonResult.orderedSame{
+            setNameTest()
         }else if text.caseInsensitiveCompare("quit") == ComparisonResult.orderedSame{
             quitLesson()
         }else if text.caseInsensitiveCompare("more") == ComparisonResult.orderedSame{
             messages += alotOfTestMessages
+        }else if text.caseInsensitiveCompare("test") == ComparisonResult.orderedSame{
+            test()
         }else{
             
-            appendMessage(text: text, senderId: senderId, senderDisplayName: senderDisplayName)
+            appendMessage(text: text, senderId: senderId, senderDisplayName: user2.name)
         }
         
         
@@ -190,11 +204,17 @@ extension LessonsViewController {
         super.viewDidLoad()
         
         // tell JSQMessageViewController
+
+        
         // who is the current user
         self.senderId = currentUser.id
         self.senderDisplayName = currentUser.name
         
+        
+
+        
         //append initial messages
+        user2.name = getName()
         messages += alotOfTestMessages
 
     }
@@ -247,3 +267,74 @@ extension LessonsViewController {
     }
 }
 
+extension LessonsViewController {
+
+    
+    func setNameTest(){
+        
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Name?", message: "Please Enter Your Name:", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.text = "Some default text"
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            print("Text field: \(String(describing: textField?.text))")
+            let name = (textField?.text)!
+            print(name)
+            UserDefaults.standard.set(name, forKey: "userName")
+            self.setNameComplete()
+            
+            
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            
+            let userID = Auth.auth().currentUser?.uid
+
+            let userReference = ref.child("Users").child(userID!)
+            
+            let userDataDictionary = ["UserName":self.getName()]
+
+            userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+                if err != nil {
+                    print(err!)
+                    return
+                }
+                print("User Data is updated to database")
+            })
+            
+            
+
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+}
+
+extension LessonsViewController {
+    func setNameComplete(){
+        user2.name = getName()
+    }
+    func getName()->String{
+        if let username = UserDefaults.standard.object(forKey: "userName") as? String {
+            return username
+        }else{
+            return "You"
+        }
+    }
+}
+
+extension LessonsViewController {
+    func test(){
+        print(user2.name)
+        appendMessage(text: user2.name, senderId: "1", senderDisplayName: user2.name)
+    }
+}

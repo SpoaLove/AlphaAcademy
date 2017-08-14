@@ -8,15 +8,24 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class UserInfoPageViewController: UIViewController {
     
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
+    
+    var ref: DatabaseReference! = Database.database().reference()
+    
+    let userID = Auth.auth().currentUser?.uid
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        loadDatabase()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,4 +52,22 @@ class UserInfoPageViewController: UIViewController {
         self.performSegue(withIdentifier: "LogOut", sender: self)
     }
     
+}
+
+extension UserInfoPageViewController {
+    func loadDatabase(){
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let username = value?["UserName"] as? String ?? "Name"
+            let email = value?["Email"] as? String ?? "Email"
+
+            
+            self.userNameLabel.text = username
+            self.userEmailLabel.text = email
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
 }
