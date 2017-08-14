@@ -19,6 +19,10 @@ class LessonsViewController: JSQMessagesViewController {
     
     let user1 = ChatUser(id: "1", name: "A-Chan")
     let user2 = ChatUser(id: "2", name: "You")
+    let user3 = ChatUser(id: "3", name: "Console")
+    let user4 = ChatUser(id: "4", name: "Code")
+    
+    var atEndOfRoute:Bool = false
     
     var currentUser: ChatUser {
         return user2
@@ -43,6 +47,14 @@ class LessonsViewController: JSQMessagesViewController {
     let testRoute2:[JSQMessage] = [
         JSQMessage(senderId: "2", displayName: "You", text: "Test Route2"),
         JSQMessage(senderId: "2", displayName: "You", text: "Test Route2!")
+    ]
+    
+    let alotOfTestMessages:[JSQMessage] = [
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hello, World!"),
+        JSQMessage(senderId: "2", displayName: "You", text: "This is an Test of lots of Messages"),
+        JSQMessage(senderId: "4", displayName: "Code", text: "print(\"Hello,World!\")"),
+        JSQMessage(senderId: "3", displayName: "Console", text: "Hello,World!")
+
     ]
     
     
@@ -78,23 +90,38 @@ extension LessonsViewController {
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
-        if text == "continue" {
+        if atEndOfRoute {
+            atEndOfRoute = false
+            self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
+            finishSendingMessage()
+            return
+        }
+        
+        if text.caseInsensitiveCompare("continue") == ComparisonResult.orderedSame{
             print("continue")
-            if messagesCount>=currentMessages.count {
+            
+            if messagesCount>currentMessages.count {
                 let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
-                
                 messages.append(message!)
+                
+            }else if messagesCount==currentMessages.count{
+                messages.append(currentMessages[messagesCount])
+                messagesCount += 1
+                atEndOfRoute = true
+                
             }else{
 
                 messages.append(currentMessages[messagesCount])
                 messagesCount += 1
             }
             
-        }else if text == "route"{
+        }else if text.caseInsensitiveCompare("route") == ComparisonResult.orderedSame{
             self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
             
-        }else if text == "quit"{
+        }else if text.caseInsensitiveCompare("quit") == ComparisonResult.orderedSame{
             quitLesson()
+        }else if text.caseInsensitiveCompare("more") == ComparisonResult.orderedSame{
+            messages += alotOfTestMessages
         }else{
             
             let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
@@ -102,6 +129,7 @@ extension LessonsViewController {
             
             messages.append(message!)
         }
+        
         
         finishSendingMessage()
         
@@ -122,11 +150,21 @@ extension LessonsViewController {
         
         let message = messages[indexPath.row]
         
-        if currentUser.id == message.senderId {
-            return bubbleFactory?.outgoingMessagesBubbleImage(with: .gray)
-        } else {
+        switch message.senderId {
+        case "2":
+            return bubbleFactory?.outgoingMessagesBubbleImage(with: .blue)
+        case "1":
+            return bubbleFactory?.incomingMessagesBubbleImage(with: .red)
+        case "3":
             return bubbleFactory?.incomingMessagesBubbleImage(with: .orange)
+        case "4":
+            return bubbleFactory?.incomingMessagesBubbleImage(with: .gray)
+        default:
+            return bubbleFactory?.incomingMessagesBubbleImage(with: .orange)
+
         }
+        
+
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {

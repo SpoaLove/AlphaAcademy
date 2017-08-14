@@ -11,6 +11,7 @@
 		941A56E6D14943E0C9331E77 /* Pods_AlphaAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795279CDE0943DF6B0AABF1D /* Pods_AlphaAcademy.framework */; };
 		CB2B1C0E1F2CCDC1002EE08C /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */; };
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
+		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
 		CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */; };
 		CB99D4FE1F1AC112005D73B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FD1F1AC112005D73B6 /* ViewController.swift */; };
 		CB99D5011F1AC112005D73B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99D4FF1F1AC112005D73B6 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		A98B4371B62968AFAE0A6B1A /* Pods-AlphaAcademyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlphaAcademyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlphaAcademyUITests/Pods-AlphaAcademyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
+		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
 		CB99D4F81F1AC112005D73B6 /* AlphaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB99D4FD1F1AC112005D73B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				CB99D5041F1AC112005D73B6 /* LaunchScreen.storyboard */,
 				CB99D5071F1AC112005D73B6 /* Info.plist */,
 				CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */,
+				CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */,
 			);
 			path = AlphaAcademy;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */,
 				CB99D5061F1AC112005D73B6 /* LaunchScreen.storyboard in Resources */,
 				CB99D52A1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */,
 				CB99D5031F1AC112005D73B6 /* Assets.xcassets in Resources */,
