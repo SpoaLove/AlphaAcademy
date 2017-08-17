@@ -194,6 +194,7 @@
                                 </state>
                                 <connections>
                                     <action selector="continueButtonDidPressed:" destination="oiv-Wi-KvX" eventType="touchUpInside" id="LvW-tY-y1b"/>
+                                    <segue destination="L2g-MU-gVk" kind="showDetail" identifier="toTutor" id="7Yv-L8-bhq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -207,12 +208,33 @@
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="Nqe-6r-Imy" id="lia-0c-9pQ"/>
-                        <segue destination="4qr-Zz-GBN" kind="show" identifier="homePage" id="Wfl-Ve-ZP3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5h-In-yyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2337" y="-1327"/>
+            <point key="canvasLocation" x="-81" y="-530"/>
+        </scene>
+        <!--Tutorio View Controller-->
+        <scene sceneID="BI8-uF-u80">
+            <objects>
+                <viewController id="L2g-MU-gVk" customClass="TutorioViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lKI-Ko-pMU"/>
+                        <viewControllerLayoutGuide type="bottom" id="I4W-2m-Hxh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TutorioPage" id="ilW-4q-8VB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9UC-Nq-hkA"/>
+                    <connections>
+                        <segue destination="ILP-MS-51z" kind="show" identifier="goToHome" id="QuI-hy-cbS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kTo-Wx-o8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82" y="338"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="77k-hW-7OX">
@@ -292,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAB-jz-QPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3521" y="-989"/>
+            <point key="canvasLocation" x="4164" y="-504"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="uBx-62-VPx">
@@ -551,7 +573,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
-                                <rect key="frame" x="26" y="277" width="323" height="114.5"/>
+                                <rect key="frame" x="26" y="247" width="323" height="174.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
                                         <rect key="frame" x="99.5" y="0.0" width="124" height="45.5"/>
@@ -567,15 +589,36 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
                                         <rect key="frame" x="10" y="84.5" width="303" height="30"/>
-                                        <color key="backgroundColor" red="0.95287656784057617" green="0.91375309228897095" blue="0.90980702638626099" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.49803921569999998" green="0.95686274510000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Log Out"/>
                                         <connections>
                                             <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-u5-jnL">
+                                        <rect key="frame" x="10" y="114.5" width="303" height="30"/>
+                                        <color key="backgroundColor" red="0.59331905841827393" green="0.92525660991668701" blue="0.98824584484100342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Set Name"/>
+                                        <connections>
+                                            <action selector="setNameButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="4WP-b6-t2v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-RK-ONo">
+                                        <rect key="frame" x="10" y="144.5" width="303" height="30"/>
+                                        <color key="backgroundColor" red="0.49803921569999998" green="0.95686274510000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Tutorio"/>
+                                        <connections>
+                                            <action selector="tutorioButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="zS5-Wp-bpf"/>
+                                            <segue destination="L2g-MU-gVk" kind="modal" identifier="redoTutorio" id="aWn-EY-qWs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="L67-RK-ONo" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" constant="10" id="1e5-78-mDX"/>
+                                    <constraint firstItem="7t7-u5-jnL" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" constant="10" id="FUO-He-epU"/>
+                                    <constraint firstAttribute="trailing" secondItem="L67-RK-ONo" secondAttribute="trailing" constant="10" id="N9Z-nU-ikl"/>
                                     <constraint firstItem="aOv-eJ-I49" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" constant="10" id="PoA-LC-EOe"/>
+                                    <constraint firstAttribute="trailing" secondItem="7t7-u5-jnL" secondAttribute="trailing" constant="10" id="fAY-D5-XAn"/>
                                     <constraint firstAttribute="trailing" secondItem="aOv-eJ-I49" secondAttribute="trailing" constant="10" id="jgg-18-fAQ"/>
                                 </constraints>
                             </stackView>
@@ -589,6 +632,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logOutButton" destination="aOv-eJ-I49" id="WkX-HI-B5N"/>
+                        <outlet property="redoTutorioButton" destination="L67-RK-ONo" id="ICQ-0C-m9E"/>
+                        <outlet property="setNameButton" destination="L67-RK-ONo" id="hXX-ku-m0A"/>
                         <outlet property="userEmailLabel" destination="0Mb-ta-6qX" id="PlW-sF-6Rr"/>
                         <outlet property="userNameLabel" destination="2O0-Y5-XSx" id="p2V-3F-spO"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LogOut" id="2kM-Cd-0fE"/>
@@ -596,11 +642,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="166"/>
+            <point key="canvasLocation" x="698" y="-313"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UTG-IT-cT9"/>
+        <segue reference="aWn-EY-qWs"/>
         <segue reference="XcG-If-rPs"/>
+        <segue reference="73z-al-KkI"/>
     </inferredMetricsTieBreakers>
 </document>
