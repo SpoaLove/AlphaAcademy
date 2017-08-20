@@ -12,7 +12,7 @@
 		CB2B1C0E1F2CCDC1002EE08C /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */; };
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
 		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
-		CB7870B11F464C9800E4ACBD /* TutorioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7870B01F464C9800E4ACBD /* TutorioViewController.swift */; };
+		CB7870B71F49915800E4ACBD /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7870B61F49915800E4ACBD /* TutorialViewController.swift */; };
 		CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */; };
 		CB99D4FE1F1AC112005D73B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FD1F1AC112005D73B6 /* ViewController.swift */; };
 		CB99D5011F1AC112005D73B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99D4FF1F1AC112005D73B6 /* Main.storyboard */; };
@@ -57,7 +57,7 @@
 		CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
 		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
-		CB7870B01F464C9800E4ACBD /* TutorioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorioViewController.swift; sourceTree = "<group>"; };
+		CB7870B61F49915800E4ACBD /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		CB99D4F81F1AC112005D73B6 /* AlphaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB99D4FD1F1AC112005D73B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
-				CB7870B01F464C9800E4ACBD /* TutorioViewController.swift */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
 				CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */,
+				CB7870B61F49915800E4ACBD /* TutorialViewController.swift */,
 				CB99D4FD1F1AC112005D73B6 /* ViewController.swift */,
 				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
 				CBE925751F207CF900C69C6C /* pageViewController.swift */,
@@ -468,8 +468,8 @@
 			files = (
 				CB2B1C0E1F2CCDC1002EE08C /* LessonsViewController.swift in Sources */,
 				CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
+				CB7870B71F49915800E4ACBD /* TutorialViewController.swift in Sources */,
 				CB99D4FE1F1AC112005D73B6 /* ViewController.swift in Sources */,
-				CB7870B11F464C9800E4ACBD /* TutorioViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,

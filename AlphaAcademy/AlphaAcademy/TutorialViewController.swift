@@ -1,5 +1,5 @@
 //
-//  TutorioViewController.swift
+//  TutorialViewController.swift
 //  AlphaAcademy
 //
 //  Created by Tengoku no Spoa on 2017/8/18.
@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseAuth
 
 
-class TutorioViewController: JSQMessagesViewController {
+class TutorialViewController: JSQMessagesViewController {
     
     
     let user1 = ChatUser(id: "1", name: "A-Chan")
@@ -38,7 +38,7 @@ class TutorioViewController: JSQMessagesViewController {
     
     // all messages
     var messages = [JSQMessage]()
-
+    
     
     // Tutorio Messages!
     let initailMessages:[JSQMessage] = [
@@ -49,14 +49,14 @@ class TutorioViewController: JSQMessagesViewController {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "My name is Alpha, You can call me A-Chan"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start I want to know what is your name?")
     ]
-
+    
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
     
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     override func didPressAccessoryButton(_ sender: UIButton!) {
         if atEndOfRoute {
             atEndOfRoute = false
@@ -69,7 +69,7 @@ extension TutorioViewController {
     
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     
     func quitLesson(){
         let selector = UIAlertController(title: "Quit Tutorio", message: "Press 'quit' to Quit Tutorio!", preferredStyle: .actionSheet)
@@ -86,7 +86,7 @@ extension TutorioViewController {
     }
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
@@ -95,11 +95,6 @@ extension TutorioViewController {
             return
         }
         
-        if messagesCount==currentMessages.count && !finishedSettingName {
-            
-            self.settingName(text)
-            return
-        }
         
         if text.caseInsensitiveCompare("continue") == ComparisonResult.orderedSame{
             print("continue")
@@ -112,7 +107,7 @@ extension TutorioViewController {
                 
                 if finishedSettingName{
                     appendMessage(text: "tap the button on the left to quit Tutorio Lesson", senderId: "1", senderDisplayName: "A-Chan")
-                
+                    
                     atEndOfRoute = true
                 }else{
                     setNameTest()
@@ -126,7 +121,11 @@ extension TutorioViewController {
         }else if text.caseInsensitiveCompare("setName") == ComparisonResult.orderedSame{
             setNameTest()
         }else{
-            
+            if messagesCount==currentMessages.count && !finishedSettingName {
+                
+                self.settingName(text)
+                return
+            }
             appendMessage(text: text, senderId: senderId, senderDisplayName: user2.name)
         }
         
@@ -184,7 +183,7 @@ extension TutorioViewController {
 }
 
 //When View is loaded
-extension TutorioViewController {
+extension TutorialViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -207,7 +206,7 @@ extension TutorioViewController {
 }
 
 // Append Messages
-extension TutorioViewController {
+extension TutorialViewController {
     func getMessages(chapter:[JSQMessage]) -> [JSQMessage]{
         
         var messages = [JSQMessage]()
@@ -218,14 +217,14 @@ extension TutorioViewController {
     }
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     func setChapter(chapter:[JSQMessage]){
         self.currentMessages += getMessages(chapter: chapter)
         
     }
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     func selectRoute(title:String, message:String, action1title:String, action2title:String, route1:[JSQMessage], route2:[JSQMessage]){
         let selector = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: action1title, style: .default, handler: {
@@ -245,7 +244,7 @@ extension TutorioViewController {
     
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     func appendMessage(text: String!, senderId: String!, senderDisplayName: String!){
         let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
         messages.append(message!)
@@ -253,7 +252,7 @@ extension TutorioViewController {
     }
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     
     
     fileprivate func updateDatabase() {
@@ -310,14 +309,14 @@ extension TutorioViewController {
     }
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     func setNameComplete(){
         user2.name = getName()
         finishedSettingName = true
         let nameIsSetMessage:String = "My name is \(self.getName())!"
         appendMessage(text: nameIsSetMessage, senderId: "2", senderDisplayName: self.getName())
         currentMessages.append(JSQMessage(senderId: "1", displayName: self.getName(), text: "Hi \(self.getName())! What a nice name!"))
-
+        
     }
     func getName()->String{
         if let username = UserDefaults.standard.object(forKey: "userName") as? String {
@@ -328,7 +327,7 @@ extension TutorioViewController {
     }
 }
 
-extension TutorioViewController {
+extension TutorialViewController {
     func test(){
         print(user2.name)
         appendMessage(text: user2.name, senderId: "1", senderDisplayName: user2.name)
