@@ -40,11 +40,11 @@ class TutorialViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     
     
-    // Tutorio Messages!
+    // Tutorial Messages!
     let initailMessages:[JSQMessage] = [
         JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'continue' and press the send button to start the conversation!")
     ]
-    let tutorioMessages1:[JSQMessage] = [
+    let tutorialMessages1:[JSQMessage] = [
         JSQMessage(senderId: "1", displayName: "??", text: "Welcome to Alpha Academy!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "My name is Alpha, You can call me A-Chan"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start I want to know what is your name?")
@@ -72,7 +72,7 @@ extension TutorialViewController {
 extension TutorialViewController {
     
     func quitLesson(){
-        let selector = UIAlertController(title: "Quit Tutorio", message: "Press 'quit' to Quit Tutorio!", preferredStyle: .actionSheet)
+        let selector = UIAlertController(title: "Quit Tutorial", message: "Press 'quit' to Quit Tutorial!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
             (action:UIAlertAction) -> () in
             self.performSegue(withIdentifier: "goToHome", sender: self)
@@ -106,7 +106,7 @@ extension TutorialViewController {
             }else if messagesCount==currentMessages.count && messagesCount != 0{
                 
                 if finishedSettingName{
-                    appendMessage(text: "tap the button on the left to quit Tutorio Lesson", senderId: "1", senderDisplayName: "A-Chan")
+                    appendMessage(text: "tap the button on the left to quit Tutorial Lesson", senderId: "1", senderDisplayName: "A-Chan")
                     
                     atEndOfRoute = true
                 }else{
@@ -200,8 +200,8 @@ extension TutorialViewController {
         user2.name = getName()
         messages += initailMessages
         
-        // add tutorioMessages into currentMessages
-        currentMessages += tutorioMessages1
+        // add tutorialMessages into currentMessages
+        currentMessages += tutorialMessages1
     }
 }
 
