@@ -164,7 +164,7 @@ class ViewController: UIViewController {
                     ref = Database.database().reference()
                     
                     let userReference = ref.child("Users").child(uid)
-
+                    
                     let userDataDictionary = ["Email":email]
                     
                     userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in

@@ -70,7 +70,7 @@ extension UserInfoPageViewController {
             let value = snapshot.value as? NSDictionary
             let username = value?["UserName"] as? String ?? "NotSet"
             let email = value?["Email"] as? String ?? "Email"
-
+            
             
             self.userNameLabel.text = username
             self.userEmailLabel.text = email
@@ -94,7 +94,15 @@ extension UserInfoPageViewController {
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
-            textField.text = "Name?"
+            var text:String
+            
+            if let username = UserDefaults.standard.object(forKey: "userName") as? String {
+                text = username
+            }else{
+                text = "name?"
+            }
+            
+            textField.text = text
         }
         
         // 3. Grab the value from the text field, and print it when the user clicks OK.

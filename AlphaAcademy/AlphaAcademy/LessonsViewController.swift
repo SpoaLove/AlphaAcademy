@@ -24,17 +24,17 @@ class LessonsViewController: JSQMessagesViewController {
     let user3 = ChatUser(id: "3", name: "Console")
     let user4 = ChatUser(id: "4", name: "Code")
     
-
+    
     
     var atEndOfRoute:Bool = false
     
     var name:String {
         return user2.name
     }
-
+    
     
     var currentUser: ChatUser {
-
+        
         return user2
     }
     
@@ -64,7 +64,7 @@ class LessonsViewController: JSQMessagesViewController {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "This is an Test of lots of Messages"),
         JSQMessage(senderId: "4", displayName: "Code", text: "print(\"Hello,World!\")"),
         JSQMessage(senderId: "3", displayName: "Console", text: "Hello,World!")
-
+        
     ]
     
     
@@ -80,10 +80,10 @@ extension LessonsViewController {
             self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
             return
         }else{
-        quitLesson()
+            quitLesson()
         }
     }
-
+    
 }
 
 extension LessonsViewController {
@@ -121,12 +121,12 @@ extension LessonsViewController {
                 
             }else if messagesCount==currentMessages.count && messagesCount != 0{
                 appendMessage(text: "tap the button on the left to answer", senderId: "1", senderDisplayName: "A-Chan")
-
+                
                 atEndOfRoute = true
                 
             }else{
                 appendMessage(text: text, senderId: senderId, senderDisplayName: senderDisplayName)
-
+                
             }
             
         }else if text.caseInsensitiveCompare("route") == ComparisonResult.orderedSame{
@@ -177,10 +177,10 @@ extension LessonsViewController {
             return bubbleFactory?.incomingMessagesBubbleImage(with: .gray)
         default:
             return bubbleFactory?.incomingMessagesBubbleImage(with: .orange)
-
+            
         }
         
-
+        
     }
     
     
@@ -204,19 +204,19 @@ extension LessonsViewController {
         super.viewDidLoad()
         
         // tell JSQMessageViewController
-
+        
         
         // who is the current user
         self.senderId = currentUser.id
         self.senderDisplayName = currentUser.name
         
         
-
+        
         
         //append initial messages
         user2.name = getName()
         messages += alotOfTestMessages
-
+        
     }
 }
 
@@ -246,7 +246,7 @@ extension LessonsViewController {
             (action:UIAlertAction) -> () in
             self.appendMessage(text: action1title, senderId: "2", senderDisplayName: "You")
             self.setChapter(chapter: self.testRoute)
-            })
+        })
         let action2 = UIAlertAction(title: action2title, style: .default, handler: {
             (action:UIAlertAction) -> () in
             self.appendMessage(text: action2title, senderId: "2", senderDisplayName: "You")
@@ -256,7 +256,7 @@ extension LessonsViewController {
         selector.addAction(action2)
         self.present(selector, animated: true, completion: nil)
     }
-
+    
 }
 
 extension LessonsViewController {
@@ -268,7 +268,7 @@ extension LessonsViewController {
 }
 
 extension LessonsViewController {
-
+    
     
     func setNameTest(){
         
@@ -295,11 +295,11 @@ extension LessonsViewController {
             ref = Database.database().reference()
             
             let userID = Auth.auth().currentUser?.uid
-
+            
             let userReference = ref.child("Users").child(userID!)
             
             let userDataDictionary = ["UserName":self.getName()]
-
+            
             userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
                 if err != nil {
                     print(err!)
@@ -309,7 +309,7 @@ extension LessonsViewController {
             })
             
             
-
+            
         }))
         
         // 4. Present the alert.
