@@ -24,6 +24,7 @@ class TutorioViewController: JSQMessagesViewController {
     
     var atEndOfRoute:Bool = false
     var finishedSettingName:Bool = false
+    var setNamebyTyping = false
     
     var name:String {
         return user2.name
@@ -31,7 +32,6 @@ class TutorioViewController: JSQMessagesViewController {
     
     
     var currentUser: ChatUser {
-        
         return user2
     }
     
@@ -42,17 +42,14 @@ class TutorioViewController: JSQMessagesViewController {
     
     // Tutorio Messages!
     let initailMessages:[JSQMessage] = [
-        JSQMessage(senderId: "3", displayName: "Tip!", text: """
-            Welcome to Alpha Academy!
-            please type in 'continue' and press the send button to start the conversation!
-        """)
+        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'continue' and press the send button to start the conversation!")
     ]
     let tutorioMessages1:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "??", text: "Nice to meet you!"),
+        JSQMessage(senderId: "1", displayName: "??", text: "Welcome to Alpha Academy!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "My name is Alpha, You can call me A-Chan"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start I want to know what is your name?")
     ]
-    
+
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
@@ -94,10 +91,15 @@ extension TutorioViewController {
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
         if atEndOfRoute {
-            self.performSegue(withIdentifier: "goToHome", sender: self)
+            atEndOfRoute = false
             return
         }
         
+        if messagesCount==currentMessages.count && !finishedSettingName {
+            
+            self.settingName(text)
+            return
+        }
         
         if text.caseInsensitiveCompare("continue") == ComparisonResult.orderedSame{
             print("continue")
@@ -109,7 +111,7 @@ extension TutorioViewController {
             }else if messagesCount==currentMessages.count && messagesCount != 0{
                 
                 if finishedSettingName{
-                    appendMessage(text: "tap the button on the left to answer", senderId: "1", senderDisplayName: "A-Chan")
+                    appendMessage(text: "tap the button on the left to quit Tutorio Lesson", senderId: "1", senderDisplayName: "A-Chan")
                 
                     atEndOfRoute = true
                 }else{
@@ -254,6 +256,32 @@ extension TutorioViewController {
 extension TutorioViewController {
     
     
+    fileprivate func updateDatabase() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        let userID = Auth.auth().currentUser?.uid
+        
+        let userReference = ref.child("Users").child(userID!)
+        
+        let userDataDictionary = ["UserName":self.getName()]
+        
+        userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+            if err != nil {
+                print(err!)
+                return
+            }
+            print("User Data is updated to database")
+        })
+    }
+    
+    fileprivate func settingName(_ name: String) {
+        print(name)
+        UserDefaults.standard.set(name, forKey: "userName")
+        self.setNameComplete()
+        self.updateDatabase()
+    }
+    
     func setNameTest(){
         
         //1. Create the alert controller.
@@ -269,28 +297,7 @@ extension TutorioViewController {
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             print("Text field: \(String(describing: textField?.text))")
             let name = (textField?.text)!
-            print(name)
-            UserDefaults.standard.set(name, forKey: "userName")
-            self.setNameComplete()
-            
-            
-            
-            var ref: DatabaseReference!
-            ref = Database.database().reference()
-            
-            let userID = Auth.auth().currentUser?.uid
-            
-            let userReference = ref.child("Users").child(userID!)
-            
-            let userDataDictionary = ["UserName":self.getName()]
-            
-            userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
-                if err != nil {
-                    print(err!)
-                    return
-                }
-                print("User Data is updated to database")
-            })
+            self.settingName(name)
             
             
             
@@ -307,8 +314,10 @@ extension TutorioViewController {
     func setNameComplete(){
         user2.name = getName()
         finishedSettingName = true
-        let nameIsSetMessage:String = "Hi, \(self.getName())! Welcome to Alpha Academy!"
-        appendMessage(text: nameIsSetMessage, senderId: "1", senderDisplayName: "A-Chan")
+        let nameIsSetMessage:String = "My name is \(self.getName())!"
+        appendMessage(text: nameIsSetMessage, senderId: "2", senderDisplayName: self.getName())
+        currentMessages.append(JSQMessage(senderId: "1", displayName: self.getName(), text: "Hi \(self.getName())! What a nice name!"))
+
     }
     func getName()->String{
         if let username = UserDefaults.standard.object(forKey: "userName") as? String {
