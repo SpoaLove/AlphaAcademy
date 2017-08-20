@@ -31,16 +31,16 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.dataSource = self
         self.delegate = self
         
-        if let user = Auth.auth().currentUser {
-            //user is signied in
-            let name = user.displayName
-            let email = user.email
-            let photoUrl = user.photoURL
-            let uid = user.uid
-            
-            let storage = Storage.storage()
-            let storageRef = storage.reference(forURL: "gs://alphaacademy-406a5.appspot.com")
-        }
+//        if let user = Auth.auth().currentUser {
+//            //user is signied in
+//            let name = user.displayName
+//            let email = user.email
+//            let photoUrl = user.photoURL
+//            let uid = user.uid
+//
+//            let storage = Storage.storage()
+//            let storageRef = storage.reference(forURL: "gs://alphaacademy-406a5.appspot.com")
+//        }
         
         
         

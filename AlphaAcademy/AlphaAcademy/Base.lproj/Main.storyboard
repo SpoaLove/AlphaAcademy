@@ -186,8 +186,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqe-6r-Imy">
-                                <rect key="frame" x="145" y="598" width="87" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqe-6r-Imy">
+                                <rect key="frame" x="16" y="598" width="343" height="49"/>
                                 <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="28"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -203,7 +203,9 @@
                             <constraint firstItem="Nqe-6r-Imy" firstAttribute="centerY" secondItem="NnQ-1h-JSd" secondAttribute="centerY" constant="289" id="06G-sa-N3H"/>
                             <constraint firstItem="adE-at-80G" firstAttribute="centerX" secondItem="NnQ-1h-JSd" secondAttribute="centerX" id="DvW-Hr-F1W"/>
                             <constraint firstItem="adE-at-80G" firstAttribute="centerY" secondItem="NnQ-1h-JSd" secondAttribute="centerY" id="Mln-dY-ha5"/>
-                            <constraint firstItem="Nqe-6r-Imy" firstAttribute="centerX" secondItem="NnQ-1h-JSd" secondAttribute="centerX" id="yhi-sO-3h6"/>
+                            <constraint firstItem="QrE-Sy-sCZ" firstAttribute="top" secondItem="Nqe-6r-Imy" secondAttribute="bottom" constant="20" id="bnQ-Aa-kJG"/>
+                            <constraint firstItem="Nqe-6r-Imy" firstAttribute="leading" secondItem="NnQ-1h-JSd" secondAttribute="leadingMargin" id="hux-N6-plr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nqe-6r-Imy" secondAttribute="trailing" id="w1A-oY-9Sc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -580,13 +582,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
                                 <rect key="frame" x="26" y="247" width="323" height="174.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
                                         <rect key="frame" x="99.5" y="0.0" width="124" height="45.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ta-6qX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ta-6qX">
                                         <rect key="frame" x="134" y="45.5" width="55.5" height="39"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -614,7 +616,7 @@
                                         <state key="normal" title="Tutorial"/>
                                         <connections>
                                             <action selector="tutorioButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="zS5-Wp-bpf"/>
-                                            <segue destination="L2g-MU-gVk" kind="modal" identifier="redoTutorio" id="aWn-EY-qWs"/>
+                                            <segue destination="L2g-MU-gVk" kind="presentation" identifier="redoTutorio" id="aWn-EY-qWs"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -651,8 +653,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="j3z-Vf-Ocz"/>
         <segue reference="aWn-EY-qWs"/>
-        <segue reference="cSH-p9-l60"/>
+        <segue reference="UTG-IT-cT9"/>
+        <segue reference="gl0-LH-mWc"/>
     </inferredMetricsTieBreakers>
 </document>

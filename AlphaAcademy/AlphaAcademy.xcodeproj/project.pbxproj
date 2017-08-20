@@ -13,11 +13,11 @@
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
 		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
 		CB7870B71F49915800E4ACBD /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7870B61F49915800E4ACBD /* TutorialViewController.swift */; };
+		CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */; };
 		CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */; };
 		CB99D4FE1F1AC112005D73B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FD1F1AC112005D73B6 /* ViewController.swift */; };
 		CB99D5011F1AC112005D73B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99D4FF1F1AC112005D73B6 /* Main.storyboard */; };
 		CB99D5031F1AC112005D73B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5021F1AC112005D73B6 /* Assets.xcassets */; };
-		CB99D5061F1AC112005D73B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5041F1AC112005D73B6 /* LaunchScreen.storyboard */; };
 		CB99D52A1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
 		CB99D52B1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
 		CB99D52C1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
@@ -58,12 +58,12 @@
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
 		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
 		CB7870B61F49915800E4ACBD /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewLaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB99D4F81F1AC112005D73B6 /* AlphaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB99D4FD1F1AC112005D73B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB99D5001F1AC112005D73B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB99D5021F1AC112005D73B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB99D5051F1AC112005D73B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB99D5071F1AC112005D73B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB99D50C1F1AC112005D73B6 /* AlphaAcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaAcademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D5171F1AC112005D73B6 /* AlphaAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,9 +71,7 @@
 		CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlphaAcademy.entitlements; sourceTree = "<group>"; };
 		CBE9256F1F1F5DAA00C69C6C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		CBE925701F1F5DAB00C69C6C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CBE925711F1F60D600C69C6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		CBE925721F1F60D600C69C6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CBE925751F207CF900C69C6C /* pageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pageViewController.swift; sourceTree = "<group>"; };
 		CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoPageViewController.swift; sourceTree = "<group>"; };
 		DFC89F77F7E44137226DF436 /* Pods_AlphaAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlphaAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +152,7 @@
 		CB99D4FA1F1AC112005D73B6 /* AlphaAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */,
 				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
 				CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */,
@@ -165,7 +164,6 @@
 				CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */,
 				CB99D4FF1F1AC112005D73B6 /* Main.storyboard */,
 				CB99D5021F1AC112005D73B6 /* Assets.xcassets */,
-				CB99D5041F1AC112005D73B6 /* LaunchScreen.storyboard */,
 				CB99D5071F1AC112005D73B6 /* Info.plist */,
 				CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */,
 				CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */,
@@ -298,9 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */,
-				CB99D5061F1AC112005D73B6 /* LaunchScreen.storyboard in Resources */,
 				CB99D52A1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */,
 				CB99D5031F1AC112005D73B6 /* Assets.xcassets in Resources */,
+				CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */,
 				CB99D5011F1AC112005D73B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,16 +515,6 @@
 				CBE925711F1F60D600C69C6C /* ja */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CB99D5041F1AC112005D73B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB99D5051F1AC112005D73B6 /* Base */,
-				CBE925701F1F5DAB00C69C6C /* zh-Hans */,
-				CBE925721F1F60D600C69C6C /* ja */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
