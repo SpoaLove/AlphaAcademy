@@ -207,7 +207,7 @@ extension LessonsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2846327842273691/3685042222")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
         // Do any additional setup after loading the view.
         let request = GADRequest()
         interstitial.load(request)
@@ -354,7 +354,7 @@ extension LessonsViewController {
 extension LessonsViewController {
     
     func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-2846327842273691/3685042222")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
         interstitial.delegate = self as! GADInterstitialDelegate
         interstitial.load(GADRequest())
         return interstitial

@@ -15,7 +15,7 @@ class chaptersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2846327842273691/3685042222")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
         // Do any additional setup after loading the view.
         let request = GADRequest()
         interstitial.load(request)
