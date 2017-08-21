@@ -11,6 +11,7 @@ target 'AlphaAcademy' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'JSQMessagesViewController'
+  pod 'Google-Mobile-Ads-SDK'
 
 
   target 'AlphaAcademyTests' do
