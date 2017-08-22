@@ -24,7 +24,7 @@ class welcomeViewController: UIViewController {
     }
     
     @IBAction func continueButtonDidPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "homePage", sender: self)
+        self.performSegue(withIdentifier: "toTutor", sender: self)
     }
     
     /*

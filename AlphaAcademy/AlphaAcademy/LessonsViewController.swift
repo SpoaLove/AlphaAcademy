@@ -8,8 +8,7 @@
 
 import UIKit
 import JSQMessagesViewController
-import FirebaseDatabase
-import FirebaseAuth
+import GoogleMobileAds
 
 struct ChatUser{
     let id: String
@@ -24,17 +23,17 @@ class LessonsViewController: JSQMessagesViewController {
     let user3 = ChatUser(id: "3", name: "Console")
     let user4 = ChatUser(id: "4", name: "Code")
     
-
+    
     
     var atEndOfRoute:Bool = false
     
     var name:String {
         return user2.name
     }
-
+    
     
     var currentUser: ChatUser {
-
+        
         return user2
     }
     
@@ -64,12 +63,14 @@ class LessonsViewController: JSQMessagesViewController {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "This is an Test of lots of Messages"),
         JSQMessage(senderId: "4", displayName: "Code", text: "print(\"Hello,World!\")"),
         JSQMessage(senderId: "3", displayName: "Console", text: "Hello,World!")
-
+        
     ]
     
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
+    
+    var interstitial: GADInterstitial!
     
 }
 
@@ -80,15 +81,16 @@ extension LessonsViewController {
             self.selectRoute(title: "Which Route Do you Prefer", message: "message", action1title: "Route1", action2title: "Route2")
             return
         }else{
-        quitLesson()
+            quitLesson()
         }
     }
-
+    
 }
 
 extension LessonsViewController {
     
     func quitLesson(){
+        showAd()
         let selector = UIAlertController(title: "Quit", message: "Do You Really Want to Quit? Progress will be lost!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
             (action:UIAlertAction) -> () in
@@ -121,12 +123,12 @@ extension LessonsViewController {
                 
             }else if messagesCount==currentMessages.count && messagesCount != 0{
                 appendMessage(text: "tap the button on the left to answer", senderId: "1", senderDisplayName: "A-Chan")
-
+                
                 atEndOfRoute = true
                 
             }else{
                 appendMessage(text: text, senderId: senderId, senderDisplayName: senderDisplayName)
-
+                
             }
             
         }else if text.caseInsensitiveCompare("route") == ComparisonResult.orderedSame{
@@ -177,10 +179,10 @@ extension LessonsViewController {
             return bubbleFactory?.incomingMessagesBubbleImage(with: .gray)
         default:
             return bubbleFactory?.incomingMessagesBubbleImage(with: .orange)
-
+            
         }
         
-
+        
     }
     
     
@@ -203,20 +205,28 @@ extension LessonsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // tell JSQMessageViewController
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+        // Do any additional setup after loading the view.
+        let request = GADRequest()
+        interstitial.load(request)
+        
+        interstitial.delegate = self as? GADInterstitialDelegate
 
+        
+        // tell JSQMessageViewController
+        
         
         // who is the current user
         self.senderId = currentUser.id
         self.senderDisplayName = currentUser.name
         
         
-
+        
         
         //append initial messages
         user2.name = getName()
         messages += alotOfTestMessages
-
+        
     }
 }
 
@@ -246,7 +256,7 @@ extension LessonsViewController {
             (action:UIAlertAction) -> () in
             self.appendMessage(text: action1title, senderId: "2", senderDisplayName: "You")
             self.setChapter(chapter: self.testRoute)
-            })
+        })
         let action2 = UIAlertAction(title: action2title, style: .default, handler: {
             (action:UIAlertAction) -> () in
             self.appendMessage(text: action2title, senderId: "2", senderDisplayName: "You")
@@ -256,7 +266,7 @@ extension LessonsViewController {
         selector.addAction(action2)
         self.present(selector, animated: true, completion: nil)
     }
-
+    
 }
 
 extension LessonsViewController {
@@ -268,16 +278,16 @@ extension LessonsViewController {
 }
 
 extension LessonsViewController {
-
+    
     
     func setNameTest(){
         
         //1. Create the alert controller.
-        let alert = UIAlertController(title: "Name?", message: "Please Enter Your Name:", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Rename", message: "Please Enter Your Name:", preferredStyle: .alert)
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
-            textField.text = "Some default text"
+            textField.text = "Name?"
         }
         
         // 3. Grab the value from the text field, and print it when the user clicks OK.
@@ -288,28 +298,8 @@ extension LessonsViewController {
             print(name)
             UserDefaults.standard.set(name, forKey: "userName")
             self.setNameComplete()
+ 
             
-            
-            
-            var ref: DatabaseReference!
-            ref = Database.database().reference()
-            
-            let userID = Auth.auth().currentUser?.uid
-
-            let userReference = ref.child("Users").child(userID!)
-            
-            let userDataDictionary = ["UserName":self.getName()]
-
-            userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
-                if err != nil {
-                    print(err!)
-                    return
-                }
-                print("User Data is updated to database")
-            })
-            
-            
-
         }))
         
         // 4. Present the alert.
@@ -336,5 +326,56 @@ extension LessonsViewController {
     func test(){
         print(user2.name)
         appendMessage(text: user2.name, senderId: "1", senderDisplayName: user2.name)
+    }
+}
+
+extension LessonsViewController {
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+        interstitial.delegate = self as! GADInterstitialDelegate
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
+    }
+    
+    func showAd(){
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+        print("Ad")
+    }
+    
+    /// Tells the delegate an ad request succeeded.
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("interstitialDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that an interstitial will be presented.
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+        print("interstitialWillPresentScreen")
+    }
+    
+    /// Tells the delegate the interstitial is to be animated off the screen.
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialWillDismissScreen")
+    }
+    
+
+    
+    /// Tells the delegate that a user click will open another app
+    /// (such as the App Store), backgrounding the current app.
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        print("interstitialWillLeaveApplication")
     }
 }
