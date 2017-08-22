@@ -45,9 +45,11 @@ class TutorialViewController: JSQMessagesViewController {
     let tutorialMessages1:[JSQMessage] = [
         JSQMessage(senderId: "1", displayName: "??", text: "Welcome to Alpha Academy!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "My name is Alpha, You can call me A-Chan"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start I want to know what is your name?")
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
     ]
-    
+    let tutorialMessages2:[JSQMessage]=[
+        
+    ]
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
@@ -131,6 +133,8 @@ extension TutorialViewController {
         finishSendingMessage()
         
     }
+    
+    // Message sender Display Name
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
         let message = messages[indexPath.row]
         let messageUsername = message.senderDisplayName
@@ -138,10 +142,12 @@ extension TutorialViewController {
         return NSAttributedString(string: messageUsername!)
     }
     
+    
+    // Message Bubble Height
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return 15
     }
-    
+    // Message Bubble Image
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         
         let bubbleFactory = JSQMessagesBubbleImageFactory()
@@ -165,10 +171,31 @@ extension TutorialViewController {
         
     }
     
-    
+    // Message Avatar Image
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
+        
+//        let avatarFactory = JSQMessagesAvatarImageFactory()
+//
+//        let message = messages[indexPath.row]
+//
+//        switch message.senderId {
+//        case "2":
+//            return UIImage.init(named: <#T##String#>)
+//        case "1":
+//            return avatarFactory?.incomingMessagesBubbleImage(with: .red)
+//        case "3":
+//            return avatarFactory?.incomingMessagesBubbleImage(with: .orange)
+//        case "4":
+//            return avatarFactory?.incomingMessagesBubbleImage(with: .gray)
+//        default:
+//            return avatarFactory?.incomingMessagesBubbleImage(with: .orange)
+//
+//        }
+        
         return nil
     }
+    
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count

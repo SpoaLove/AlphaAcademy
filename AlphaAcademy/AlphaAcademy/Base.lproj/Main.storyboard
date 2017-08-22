@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5h-In-yyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="-1079"/>
+            <point key="canvasLocation" x="2873" y="-509"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="BI8-uF-u80">
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTo-Wx-o8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4279" y="-1008"/>
+            <point key="canvasLocation" x="3519" y="-509"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="77k-hW-7OX">
@@ -107,7 +107,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEh-Dg-LBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2873" y="-509"/>
+            <point key="canvasLocation" x="4804" y="-509"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="O1d-7g-PGx">
@@ -122,16 +122,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
-                                <rect key="frame" x="108.5" y="238.5" width="103.5" height="91"/>
+                                <rect key="frame" x="108.5" y="237.5" width="103.5" height="93"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="46.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Cu-5Ns">
-                                        <rect key="frame" x="28" y="45.5" width="48" height="45.5"/>
+                                        <rect key="frame" x="28" y="46.5" width="48" height="46.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -177,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAB-jz-QPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="877"/>
+            <point key="canvasLocation" x="3519" y="889"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="uBx-62-VPx">
@@ -192,16 +193,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
-                                <rect key="frame" x="106.5" y="238" width="107.5" height="92.5"/>
+                                <rect key="frame" x="106.5" y="237.5" width="107.5" height="93.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
-                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="46.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwf-iT-1ow">
-                                        <rect key="frame" x="30" y="47.5" width="48" height="45"/>
+                                        <rect key="frame" x="30" y="48.5" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -241,16 +243,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-85-osP">
-                                <rect key="frame" x="105.5" y="239" width="109" height="90.5"/>
+                                <rect key="frame" x="105.5" y="238.5" width="109" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="46.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-FU-KEI">
-                                        <rect key="frame" x="24.5" y="45.5" width="60" height="45"/>
+                                        <rect key="frame" x="24.5" y="46.5" width="60" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -292,16 +295,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-7J-cGA">
-                                <rect key="frame" x="104.5" y="239" width="111" height="90.5"/>
+                                <rect key="frame" x="104.5" y="238.5" width="111" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
-                                        <rect key="frame" x="0.0" y="0.0" width="111" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="46.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-dm-9wk">
-                                        <rect key="frame" x="25.5" y="45.5" width="60" height="45"/>
+                                        <rect key="frame" x="25.5" y="46.5" width="60" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -343,16 +347,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
-                                <rect key="frame" x="106" y="239" width="108" height="90.5"/>
+                                <rect key="frame" x="106" y="238.5" width="108" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="46.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-MG-L7x">
-                                        <rect key="frame" x="30" y="45.5" width="48" height="45"/>
+                                        <rect key="frame" x="30" y="46.5" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -392,16 +397,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
-                                <rect key="frame" x="105" y="239" width="110.5" height="90.5"/>
+                                <rect key="frame" x="105" y="238.5" width="110.5" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
-                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="46.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaL-Ml-biS">
-                                        <rect key="frame" x="31.5" y="45.5" width="48" height="45"/>
+                                        <rect key="frame" x="31.5" y="46.5" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -443,8 +449,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
                                 <rect key="frame" x="26" y="197" width="268" height="174.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
-                                        <rect key="frame" x="72" y="0.0" width="124" height="45.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
+                                        <rect key="frame" x="130.5" y="0.0" width="7" height="45.5"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -510,7 +516,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3154" y="-978"/>
+            <point key="canvasLocation" x="5451" y="166"/>
         </scene>
         <!--Title Page View Controller-->
         <scene sceneID="dVB-DG-F0g">
@@ -521,7 +527,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-A5-54F">
-                                <rect key="frame" x="10" y="52.5" width="300" height="463"/>
+                                <rect key="frame" x="10" y="55.5" width="300" height="457"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mt4-2C-m0Q">
                                         <rect key="frame" x="20" y="0.0" width="260" height="46"/>
@@ -536,7 +542,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m4-C8-XWN">
-                                        <rect key="frame" x="102" y="386" width="96" height="77"/>
+                                        <rect key="frame" x="89.5" y="386" width="121" height="71"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="50"/>
                                         <state key="normal" title="Start!">
                                             <color key="titleColor" red="0.59215686270000001" green="0.20784313730000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -569,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6g-aE-W5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="-543"/>
+            <point key="canvasLocation" x="2220" y="-509"/>
         </scene>
     </scenes>
     <resources>

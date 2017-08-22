@@ -15,13 +15,13 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     // MARK: UIPageViewControllerDataSource
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "UserInformation"),
-                self.newVc(viewController: "Chapter1"),
+        return [self.newVc(viewController: "Chapter1"),
                 self.newVc(viewController: "Chapter2"),
                 self.newVc(viewController: "Chapter3"),
                 self.newVc(viewController: "Chapter4"),
                 self.newVc(viewController: "Chapter5"),
-                self.newVc(viewController: "Chapter6")]
+                self.newVc(viewController: "Chapter6"),
+                self.newVc(viewController: "UserInformation")]
     }()
     
     override func viewDidLoad() {
