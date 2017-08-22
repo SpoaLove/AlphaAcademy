@@ -14,9 +14,9 @@ class UserInfoPageViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userLevelLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
-    @IBOutlet weak var redoTutorioButton: UIButton!
+    @IBOutlet weak var redoTutorialButton: UIButton!
     @IBOutlet weak var setNameButton: UIButton!
-    
+    @IBOutlet weak var beretsCollectionButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +51,11 @@ class UserInfoPageViewController: UIViewController {
     @IBAction func setNameButtonDidPressed(_ sender: Any) {
         setName()
     }
-    @IBAction func tutorioButtonDidPressed(_ sender: Any) {
+    @IBAction func tutorialButtonDidPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "redoTutorio", sender: self)
+    }
+    @IBAction func beretsCollectionButtonDidPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "Berets", sender: self)
     }
 }
 
