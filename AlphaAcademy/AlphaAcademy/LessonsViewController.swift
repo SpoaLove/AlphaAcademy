@@ -8,8 +8,6 @@
 
 import UIKit
 import JSQMessagesViewController
-import FirebaseDatabase
-import FirebaseAuth
 import GoogleMobileAds
 
 struct ChatUser{
@@ -300,27 +298,7 @@ extension LessonsViewController {
             print(name)
             UserDefaults.standard.set(name, forKey: "userName")
             self.setNameComplete()
-            
-            
-            
-            var ref: DatabaseReference!
-            ref = Database.database().reference()
-            
-            let userID = Auth.auth().currentUser?.uid
-            
-            let userReference = ref.child("Users").child(userID!)
-            
-            let userDataDictionary = ["UserName":self.getName()]
-            
-            userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
-                if err != nil {
-                    print(err!)
-                    return
-                }
-                print("User Data is updated to database")
-            })
-            
-            
+ 
             
         }))
         
