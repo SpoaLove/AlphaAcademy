@@ -33,7 +33,6 @@ class LessonsViewController: JSQMessagesViewController {
     
     
     var currentUser: ChatUser {
-        
         return user2
     }
     
@@ -69,6 +68,9 @@ class LessonsViewController: JSQMessagesViewController {
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
+    
+    private let avatarSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
+
     
     var interstitial: GADInterstitial!
     
@@ -151,6 +153,7 @@ extension LessonsViewController {
         finishSendingMessage()
         
     }
+    // Message sender Display Name
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
         let message = messages[indexPath.row]
         let messageUsername = message.senderDisplayName
@@ -158,10 +161,12 @@ extension LessonsViewController {
         return NSAttributedString(string: messageUsername!)
     }
     
+    
+    // Message Bubble Height
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return 15
     }
-    
+    // Message Bubble Image
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         
         let bubbleFactory = JSQMessagesBubbleImageFactory()
@@ -185,9 +190,31 @@ extension LessonsViewController {
         
     }
     
-    
+    // Message Avatar Image
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
-        return nil
+        
+        let avatarImageFactory = JSQMessagesAvatarImageFactory.self
+        
+        let message = messages[indexPath.item]
+        
+        switch message.senderId {
+        case "1":
+            // Sender is A-Chan
+            return avatarImageFactory.avatarImage(with: UIImage(named: "Title.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        case "2":
+            // Sender is Yourself
+            return avatarImageFactory.avatarImage(with: UIImage(named: "userWhiteBeret.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        case "3":
+            // Sender is Console
+            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.black, textColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        case "4":
+            // Sender is Code
+            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.orange, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        default:
+            // Sender is Code
+            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: "?", backgroundColor: UIColor.white, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        }
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

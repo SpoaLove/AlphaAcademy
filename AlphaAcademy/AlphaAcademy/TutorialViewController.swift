@@ -200,7 +200,7 @@ extension TutorialViewController {
             return avatarImageFactory.avatarImage(with: UIImage(named: "Title.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         case "2":
             // Sender is Yourself
-            return avatarImageFactory.avatarImage(with: UIImage(named: "0White.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+            return avatarImageFactory.avatarImage(with: UIImage(named: "userWhiteBeret.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         case "3":
             // Sender is Console
             return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.black, textColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
