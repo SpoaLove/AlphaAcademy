@@ -72,7 +72,16 @@ extension TutorialViewController {
 
 extension TutorialViewController {
     
+    // quit lesson function
     func quitLesson(){
+        
+        guard finishedSettingName else {
+            let alertController = UIAlertController(title: "Wait!", message:"The tutorial is not over yet!", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
         let selector = UIAlertController(title: "Quit Tutorial", message: "Press 'quit' to Quit Tutorial!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
             (action:UIAlertAction) -> () in
@@ -84,6 +93,7 @@ extension TutorialViewController {
         selector.addAction(yes)
         selector.addAction(no)
         self.present(selector, animated: true, completion: nil)
+        
     }
 }
 
@@ -98,7 +108,7 @@ extension TutorialViewController {
             return
         }
         
-        
+        // If user entered Continue
         if text.caseInsensitiveCompare("continue") == ComparisonResult.orderedSame{
             print("continue")
             
@@ -121,9 +131,12 @@ extension TutorialViewController {
                 
             }
             
+        // debug Setname
         }else if text.caseInsensitiveCompare("setName") == ComparisonResult.orderedSame{
             setNameTest()
         }else{
+            
+            // Other Inputs
             if messagesCount==currentMessages.count && !finishedSettingName {
                 
                 self.settingName(text)
