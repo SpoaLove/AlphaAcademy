@@ -12,7 +12,6 @@
 		CB2B1C0E1F2CCDC1002EE08C /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */; };
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
 		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
-		CB6239671F4CC2140057E968 /* AlphaAcademy in Resources */ = {isa = PBXBuildFile; fileRef = CB6239661F4CC2140057E968 /* AlphaAcademy */; };
 		CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */; };
 		CB7870B71F49915800E4ACBD /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7870B61F49915800E4ACBD /* TutorialViewController.swift */; };
 		CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */; };
@@ -59,7 +58,6 @@
 		CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
 		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
-		CB6239661F4CC2140057E968 /* AlphaAcademy */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AlphaAcademy; sourceTree = "<group>"; };
 		CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeretsCollectionViewController.swift; sourceTree = "<group>"; };
 		CB7870B61F49915800E4ACBD /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewLaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		CB99D4FA1F1AC112005D73B6 /* AlphaAcademy */ = {
 			isa = PBXGroup;
 			children = (
-				CB6239661F4CC2140057E968 /* AlphaAcademy */,
 				CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */,
 				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
@@ -305,7 +302,6 @@
 				CB99D52A1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */,
 				CB99D5031F1AC112005D73B6 /* Assets.xcassets in Resources */,
 				CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */,
-				CB6239671F4CC2140057E968 /* AlphaAcademy in Resources */,
 				CB99D5011F1AC112005D73B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

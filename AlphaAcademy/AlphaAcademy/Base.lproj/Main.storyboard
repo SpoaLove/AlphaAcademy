@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAB-jz-QPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3519" y="889"/>
+            <point key="canvasLocation" x="3341" y="1267"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="uBx-62-VPx">
@@ -481,10 +481,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-RK-ONo">
                                         <rect key="frame" x="0.0" y="144.5" width="268" height="30"/>
                                         <color key="backgroundColor" red="0.49803921569999998" green="0.95686274510000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Tutorial"/>
+                                        <state key="normal" title="Redo Tutorial"/>
                                         <connections>
-                                            <action selector="tutorialButtonDidPressed" destination="ILP-MS-51z" eventType="touchUpInside" id="zS5-Wp-bpf"/>
-                                            <segue destination="L2g-MU-gVk" kind="presentation" identifier="redoTutorio" id="aWn-EY-qWs"/>
+                                            <action selector="tutorialButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="dSI-Iu-o3J"/>
+                                            <segue destination="L2g-MU-gVk" kind="presentation" identifier="redoTutorial" id="For-Cq-UGP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-Vs-WfR">
@@ -492,8 +492,8 @@
                                         <color key="backgroundColor" red="0.59331905839999999" green="0.92525660990000003" blue="0.9882458448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Berets Collection"/>
                                         <connections>
-                                            <action selector="beretsCollectionButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="G2F-2d-G0J"/>
-                                            <segue destination="bd3-wz-aVK" kind="show" identifier="Berets" id="fOx-hi-8zO"/>
+                                            <action selector="beretsCollectionButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="gKu-7c-Y2x"/>
+                                            <segue destination="bd3-wz-aVK" kind="presentation" identifier="Berets" id="l1T-mv-5dS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -518,22 +518,22 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="beretsCollectionButton" destination="CEm-Vs-WfR" id="lpC-wF-hTH"/>
+                        <outlet property="beretsCollectionButton" destination="CEm-Vs-WfR" id="QRb-VH-3Af"/>
                         <outlet property="logOutButton" destination="aOv-eJ-I49" id="WkX-HI-B5N"/>
-                        <outlet property="redoTutorialButton" destination="L67-RK-ONo" id="ICQ-0C-m9E"/>
-                        <outlet property="setNameButton" destination="L67-RK-ONo" id="hXX-ku-m0A"/>
+                        <outlet property="redoTutorialButton" destination="L67-RK-ONo" id="gVp-ma-Qa0"/>
+                        <outlet property="setNameButton" destination="7t7-u5-jnL" id="xyM-Yr-dYI"/>
                         <outlet property="userLevelLabel" destination="0Mb-ta-6qX" id="PlW-sF-6Rr"/>
                         <outlet property="userNameLabel" destination="2O0-Y5-XSx" id="p2V-3F-spO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s7-tB-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5451" y="166"/>
+            <point key="canvasLocation" x="5807" y="540"/>
         </scene>
         <!--Berets Collection View Controller-->
         <scene sceneID="pdQ-4g-sH1">
             <objects>
-                <viewController id="bd3-wz-aVK" customClass="BeretsCollectionViewController" sceneMemberID="viewController">
+                <viewController id="bd3-wz-aVK" customClass="BeretsCollectionViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7nz-0E-OHm"/>
                         <viewControllerLayoutGuide type="bottom" id="LcB-EJ-FMv"/>
@@ -542,9 +542,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-OX-KWj">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-OX-KWj">
+                                <rect key="frame" x="143" y="269" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="quitButtonIsTapped:" destination="bd3-wz-aVK" eventType="touchUpInside" id="Cbp-ss-lRq"/>
@@ -553,14 +552,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Sc-OX-KWj" firstAttribute="centerY" secondItem="kpL-Xf-aZX" secondAttribute="centerY" id="ITi-hI-XV2"/>
+                            <constraint firstItem="8Sc-OX-KWj" firstAttribute="centerX" secondItem="kpL-Xf-aZX" secondAttribute="centerX" id="id0-ZB-pR9"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="quitButton" destination="8Sc-OX-KWj" id="fAW-4Q-yfU"/>
+                        <outlet property="quitButton" destination="8Sc-OX-KWj" id="fDl-v2-QoD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7t-aw-QKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5451" y="888"/>
+            <point key="canvasLocation" x="4913" y="1143"/>
         </scene>
         <!--Title Page View Controller-->
         <scene sceneID="dVB-DG-F0g">
@@ -627,8 +630,8 @@
         <image name="Title" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Yv-L8-bhq"/>
-        <segue reference="d2Y-lW-sHu"/>
         <segue reference="gl0-LH-mWc"/>
+        <segue reference="73z-al-KkI"/>
+        <segue reference="For-Cq-UGP"/>
     </inferredMetricsTieBreakers>
 </document>

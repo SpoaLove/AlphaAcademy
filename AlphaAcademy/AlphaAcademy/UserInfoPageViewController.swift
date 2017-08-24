@@ -41,19 +41,19 @@ class UserInfoPageViewController: UIViewController {
      }
      */
     @IBAction func userDidPressedLogOutButton(_ sender: Any) {
-        // set user defaults to logged in
-        UserDefaults.standard.set(false, forKey: "userLoggedIn")
-        UserDefaults.standard.set(nil, forKey: "userEmail")
-        UserDefaults.standard.set(nil, forKey: "userPass")
         self.performSegue(withIdentifier: "LogOut", sender: self)
     }
     
     @IBAction func setNameButtonDidPressed(_ sender: Any) {
         setName()
     }
+    
+    
     @IBAction func tutorialButtonDidPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "redoTutorio", sender: self)
+        self.performSegue(withIdentifier: "redoTutorial", sender: self)
     }
+    
+    
     @IBAction func beretsCollectionButtonDidPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "Berets", sender: self)
     }

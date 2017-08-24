@@ -43,8 +43,7 @@ class TutorialViewController: JSQMessagesViewController {
         JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'continue' and press the send button to start the conversation!")
     ]
     let tutorialMessages1:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "??", text: "Welcome to Alpha Academy!"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "My name is Alpha, You can call me A-Chan"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
     ]
     let tutorialMessages2:[JSQMessage]=[
@@ -53,6 +52,8 @@ class TutorialViewController: JSQMessagesViewController {
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
+    
+    private let avatarSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
     
 }
 
@@ -87,6 +88,8 @@ extension TutorialViewController {
 }
 
 extension TutorialViewController {
+    
+
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
@@ -174,28 +177,29 @@ extension TutorialViewController {
     // Message Avatar Image
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         
-//        let avatarFactory = JSQMessagesAvatarImageFactory()
-//
-//        let message = messages[indexPath.row]
-//
-//        switch message.senderId {
-//        case "2":
-//            return UIImage.init(named: <#T##String#>)
-//        case "1":
-//            return avatarFactory?.incomingMessagesBubbleImage(with: .red)
-//        case "3":
-//            return avatarFactory?.incomingMessagesBubbleImage(with: .orange)
-//        case "4":
-//            return avatarFactory?.incomingMessagesBubbleImage(with: .gray)
-//        default:
-//            return avatarFactory?.incomingMessagesBubbleImage(with: .orange)
-//
-//        }
+        let avatarImageFactory = JSQMessagesAvatarImageFactory.self
         
-        return nil
+        let message = messages[indexPath.item]
+        
+        switch message.senderId {
+        case "1":
+            // Sender is A-Chan
+            return avatarImageFactory.avatarImage(with: UIImage(named: "Title.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        case "2":
+            // Sender is Yourself
+            return avatarImageFactory.avatarImage(with: UIImage(named: "0White.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        case "3":
+            // Sender is Console
+            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.black, textColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        case "4":
+            // Sender is Code
+            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.orange, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        default:
+            // Sender is Code
+            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: "?", backgroundColor: UIColor.white, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        }
+
     }
-    
-    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
