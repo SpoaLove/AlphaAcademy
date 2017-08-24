@@ -345,7 +345,7 @@ extension TutorialViewController {
         finishedSettingName = true
         let nameIsSetMessage:String = "My name is \(self.getName())!"
         appendMessage(text: nameIsSetMessage, senderId: "2", senderDisplayName: self.getName())
-        currentMessages.append(JSQMessage(senderId: "1", displayName: self.getName(), text: "Hi \(self.getName())! What a nice name!"))
+        currentMessages.append(JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hi \(self.getName())! What a nice name!"))
         
     }
     func getName()->String{
