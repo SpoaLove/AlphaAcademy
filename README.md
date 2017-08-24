@@ -5,9 +5,6 @@
 
 Alpha Academy is an iOS application that teaches people programing!
 
-## Learn and collect your Berets!
-![](docs/images/Berets.jpg?raw=true)
-
 ## Built With
 * [JSQMessagesViewController](https://github.com/jessesquires/JSQMessagesViewController) - An elegant messages UI library for iOS
 * [CocoaPods](https://cocoapods.org/) - The Cocoa Dependency Manager

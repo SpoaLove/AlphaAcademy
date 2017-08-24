@@ -7,22 +7,28 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseDatabase
 
 class UserInfoPageViewController: UIViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userLevelLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
-    @IBOutlet weak var redoTutorialButton: UIButton!
+    @IBOutlet weak var redoTutorioButton: UIButton!
     @IBOutlet weak var setNameButton: UIButton!
-    @IBOutlet weak var beretsCollectionButton: UIButton!
+    
+    
+    var ref: DatabaseReference! = Database.database().reference()
+    
+    let userID = Auth.auth().currentUser?.uid
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Load User Info
-        loadUserInfo()
         
+        // Do any additional setup after loading the view.
+        loadDatabase()
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,29 +47,37 @@ class UserInfoPageViewController: UIViewController {
      }
      */
     @IBAction func userDidPressedLogOutButton(_ sender: Any) {
+        try? Auth.auth().signOut()
+        // set user defaults to logged in
+        UserDefaults.standard.set(false, forKey: "userLoggedIn")
+        UserDefaults.standard.set(nil, forKey: "userEmail")
+        UserDefaults.standard.set(nil, forKey: "userPass")
         self.performSegue(withIdentifier: "LogOut", sender: self)
     }
     
     @IBAction func setNameButtonDidPressed(_ sender: Any) {
         setName()
     }
-    
-    
-    @IBAction func tutorialButtonDidPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "redoTutorial", sender: self)
-    }
-    
-    
-    @IBAction func beretsCollectionButtonDidPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "Berets", sender: self)
+    @IBAction func tutorioButtonDidPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "redoTutorio", sender: self)
     }
 }
 
 extension UserInfoPageViewController {
-    func loadUserInfo(){
-        // set Username tag to userName
-        self.userNameLabel.text = getName()
-        self.userLevelLabel.text = getLevel()
+    func loadDatabase(){
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let username = value?["UserName"] as? String ?? "NotSet"
+            let email = value?["Email"] as? String ?? "Email"
+            
+            
+            self.userNameLabel.text = username
+            self.userEmailLabel.text = email
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 }
 
@@ -102,6 +116,25 @@ extension UserInfoPageViewController {
             
             
             
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            
+            let userID = Auth.auth().currentUser?.uid
+            
+            let userReference = ref.child("Users").child(userID!)
+            
+            let userDataDictionary = ["UserName":self.getName()]
+            
+            userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+                if err != nil {
+                    print(err!)
+                    return
+                }
+                print("User Data is updated to database")
+            })
+            
+            
+            
         }))
         
         // 4. Present the alert.
@@ -120,13 +153,6 @@ extension UserInfoPageViewController {
             return username
         }else{
             return "Name"
-        }
-    }
-    func getLevel()->String{
-        if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
-            return "Lv:\(String(userLevel))"
-        }else{
-            return "Lv:0"
         }
     }
 }

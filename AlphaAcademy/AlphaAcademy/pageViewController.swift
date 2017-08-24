@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseStorage
 
 class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
@@ -15,13 +17,13 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     // MARK: UIPageViewControllerDataSource
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "Chapter1"),
+        return [self.newVc(viewController: "UserInformation"),
+                self.newVc(viewController: "Chapter1"),
                 self.newVc(viewController: "Chapter2"),
                 self.newVc(viewController: "Chapter3"),
                 self.newVc(viewController: "Chapter4"),
                 self.newVc(viewController: "Chapter5"),
-                self.newVc(viewController: "Chapter6"),
-                self.newVc(viewController: "UserInformation")]
+                self.newVc(viewController: "Chapter6")]
     }()
     
     override func viewDidLoad() {
@@ -29,7 +31,16 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.dataSource = self
         self.delegate = self
         
-
+//        if let user = Auth.auth().currentUser {
+//            //user is signied in
+//            let name = user.displayName
+//            let email = user.email
+//            let photoUrl = user.photoURL
+//            let uid = user.uid
+//
+//            let storage = Storage.storage()
+//            let storageRef = storage.reference(forURL: "gs://alphaacademy-406a5.appspot.com")
+//        }
         
         
         

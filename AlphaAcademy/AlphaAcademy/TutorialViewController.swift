@@ -8,6 +8,8 @@
 
 import UIKit
 import JSQMessagesViewController
+import FirebaseDatabase
+import FirebaseAuth
 
 
 class TutorialViewController: JSQMessagesViewController {
@@ -43,17 +45,14 @@ class TutorialViewController: JSQMessagesViewController {
         JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'continue' and press the send button to start the conversation!")
     ]
     let tutorialMessages1:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
+        JSQMessage(senderId: "1", displayName: "??", text: "Welcome to Alpha Academy!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "My name is Alpha, You can call me A-Chan"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start I want to know what is your name?")
     ]
-    let tutorialMessages2:[JSQMessage]=[
-        
-    ]
+    
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
-    
-    private let avatarSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
     
 }
 
@@ -72,16 +71,7 @@ extension TutorialViewController {
 
 extension TutorialViewController {
     
-    // quit lesson function
     func quitLesson(){
-        
-        guard finishedSettingName else {
-            let alertController = UIAlertController(title: "Wait!", message:"The tutorial is not over yet!", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-            return
-        }
-        
         let selector = UIAlertController(title: "Quit Tutorial", message: "Press 'quit' to Quit Tutorial!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
             (action:UIAlertAction) -> () in
@@ -93,13 +83,10 @@ extension TutorialViewController {
         selector.addAction(yes)
         selector.addAction(no)
         self.present(selector, animated: true, completion: nil)
-        
     }
 }
 
 extension TutorialViewController {
-    
-
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
@@ -108,7 +95,7 @@ extension TutorialViewController {
             return
         }
         
-        // If user entered Continue
+        
         if text.caseInsensitiveCompare("continue") == ComparisonResult.orderedSame{
             print("continue")
             
@@ -131,12 +118,9 @@ extension TutorialViewController {
                 
             }
             
-        // debug Setname
         }else if text.caseInsensitiveCompare("setName") == ComparisonResult.orderedSame{
             setNameTest()
         }else{
-            
-            // Other Inputs
             if messagesCount==currentMessages.count && !finishedSettingName {
                 
                 self.settingName(text)
@@ -149,8 +133,6 @@ extension TutorialViewController {
         finishSendingMessage()
         
     }
-    
-    // Message sender Display Name
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
         let message = messages[indexPath.row]
         let messageUsername = message.senderDisplayName
@@ -158,12 +140,10 @@ extension TutorialViewController {
         return NSAttributedString(string: messageUsername!)
     }
     
-    
-    // Message Bubble Height
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return 15
     }
-    // Message Bubble Image
+    
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         
         let bubbleFactory = JSQMessagesBubbleImageFactory()
@@ -187,31 +167,9 @@ extension TutorialViewController {
         
     }
     
-    // Message Avatar Image
+    
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
-        
-        let avatarImageFactory = JSQMessagesAvatarImageFactory.self
-        
-        let message = messages[indexPath.item]
-        
-        switch message.senderId {
-        case "1":
-            // Sender is A-Chan
-            return avatarImageFactory.avatarImage(with: UIImage(named: "Title.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        case "2":
-            // Sender is Yourself
-            return avatarImageFactory.avatarImage(with: UIImage(named: "0White.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        case "3":
-            // Sender is Console
-            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.black, textColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        case "4":
-            // Sender is Code
-            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.orange, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        default:
-            // Sender is Code
-            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: "?", backgroundColor: UIColor.white, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        }
-
+        return nil
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -297,10 +255,30 @@ extension TutorialViewController {
 extension TutorialViewController {
     
     
+    fileprivate func updateDatabase() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        let userID = Auth.auth().currentUser?.uid
+        
+        let userReference = ref.child("Users").child(userID!)
+        
+        let userDataDictionary = ["UserName":self.getName()]
+        
+        userReference.updateChildValues(userDataDictionary, withCompletionBlock: { (err, userReference ) in
+            if err != nil {
+                print(err!)
+                return
+            }
+            print("User Data is updated to database")
+        })
+    }
+    
     fileprivate func settingName(_ name: String) {
         print(name)
         UserDefaults.standard.set(name, forKey: "userName")
         self.setNameComplete()
+        self.updateDatabase()
     }
     
     func setNameTest(){

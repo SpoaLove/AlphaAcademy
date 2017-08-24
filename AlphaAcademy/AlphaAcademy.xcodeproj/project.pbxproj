@@ -12,11 +12,10 @@
 		CB2B1C0E1F2CCDC1002EE08C /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */; };
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
 		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
-		CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */; };
 		CB7870B71F49915800E4ACBD /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7870B61F49915800E4ACBD /* TutorialViewController.swift */; };
 		CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */; };
-		CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */; };
 		CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */; };
+		CB99D4FE1F1AC112005D73B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D4FD1F1AC112005D73B6 /* ViewController.swift */; };
 		CB99D5011F1AC112005D73B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99D4FF1F1AC112005D73B6 /* Main.storyboard */; };
 		CB99D5031F1AC112005D73B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5021F1AC112005D73B6 /* Assets.xcassets */; };
 		CB99D52A1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
@@ -58,12 +57,11 @@
 		CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
 		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
-		CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeretsCollectionViewController.swift; sourceTree = "<group>"; };
 		CB7870B61F49915800E4ACBD /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewLaunchScreen.storyboard; sourceTree = "<group>"; };
-		CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePageViewController.swift; sourceTree = "<group>"; };
 		CB99D4F81F1AC112005D73B6 /* AlphaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB99D4FD1F1AC112005D73B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB99D5001F1AC112005D73B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB99D5021F1AC112005D73B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB99D5071F1AC112005D73B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,14 +155,13 @@
 				CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */,
 				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
-				CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */,
 				CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */,
 				CB7870B61F49915800E4ACBD /* TutorialViewController.swift */,
+				CB99D4FD1F1AC112005D73B6 /* ViewController.swift */,
 				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
 				CBE925751F207CF900C69C6C /* pageViewController.swift */,
 				CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */,
 				CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */,
-				CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */,
 				CB99D4FF1F1AC112005D73B6 /* Main.storyboard */,
 				CB99D5021F1AC112005D73B6 /* Assets.xcassets */,
 				CB99D5071F1AC112005D73B6 /* Info.plist */,
@@ -469,11 +466,10 @@
 			files = (
 				CB2B1C0E1F2CCDC1002EE08C /* LessonsViewController.swift in Sources */,
 				CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
-				CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */,
 				CB7870B71F49915800E4ACBD /* TutorialViewController.swift in Sources */,
+				CB99D4FE1F1AC112005D73B6 /* ViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
-				CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,
 				CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */,
 			);
