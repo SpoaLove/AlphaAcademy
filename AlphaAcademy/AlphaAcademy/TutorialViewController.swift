@@ -8,6 +8,7 @@
 
 import UIKit
 import JSQMessagesViewController
+import AVKit
 
 
 class TutorialViewController: JSQMessagesViewController {
@@ -46,9 +47,16 @@ class TutorialViewController: JSQMessagesViewController {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
     ]
+    
     let tutorialMessages2:[JSQMessage]=[
-        
+        JSQMessage(senderId: "1", displayName: "A", text: "Test Text!"),
+        JSQMessage(senderId: "1", displayName: "TestMedia", media: JSQPhotoMediaItem.init(image: UIImage(named: "Title.png")))
+        //JSQMessage(senderId: "1", displayName: "TestVideo", media: JSQVideoMediaItem.init(fileURL: URL!, isReadyToPlay: true))
+//        JSQMessage(senderId: "1", displayName: "A", media: JSQMessageMediaData.self(#imageLiteral(resourceName: "bubble_regular.png")))
     ]
+    
+    
+    
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
@@ -134,6 +142,14 @@ extension TutorialViewController {
         // debug Setname
         }else if text.caseInsensitiveCompare("setName") == ComparisonResult.orderedSame{
             setNameTest()
+         
+        // debug
+        }else if text.caseInsensitiveCompare("Debug") == ComparisonResult.orderedSame{
+            appendMessageWithJSQMessage(message: tutorialMessages2[1])
+            
+        // debug video message
+        }else if text.caseInsensitiveCompare("Video") == ComparisonResult.orderedSame{
+            playVideo()
         }else{
             
             // Other Inputs
@@ -142,7 +158,7 @@ extension TutorialViewController {
                 self.settingName(text)
                 return
             }
-            appendMessage(text: text, senderId: senderId, senderDisplayName: user2.name)
+            appendMessage(text: "please type continue to continue", senderId: "3", senderDisplayName: "System")
         }
         
         
@@ -168,7 +184,13 @@ extension TutorialViewController {
         
         let bubbleFactory = JSQMessagesBubbleImageFactory()
         
+        
         let message = messages[indexPath.row]
+        
+        if message.isMediaMessage {
+            print(message.media.description)
+            print(message.isMediaMessage.description)
+        }
         
         switch message.senderId {
         case "2":
@@ -187,9 +209,11 @@ extension TutorialViewController {
         
     }
     
+    // Media Message Bubble Image
+    
+    
     // Message Avatar Image
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
-        
         let avatarImageFactory = JSQMessagesAvatarImageFactory.self
         
         let message = messages[indexPath.item]
@@ -292,6 +316,11 @@ extension TutorialViewController {
         messages.append(message!)
         finishSendingMessage()
     }
+    
+    func appendMessageWithJSQMessage(message: JSQMessage){
+        messages.append(message)
+        finishSendingMessage()
+    }
 }
 
 extension TutorialViewController {
@@ -362,4 +391,22 @@ extension TutorialViewController {
         print(user2.name)
         appendMessage(text: user2.name, senderId: "1", senderDisplayName: user2.name)
     }
+}
+
+// play Video Functions
+extension TutorialViewController {
+    
+    func playVideo() {
+        guard let path = Bundle.main.path(forResource: "TeachingVideos/AGintro", ofType:"mp4") else {
+            debugPrint("video notfound not found")
+            return
+        }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        present(playerController, animated: true) {
+            player.play()
+        }
+    }
+    
 }
