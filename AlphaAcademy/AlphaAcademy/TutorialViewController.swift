@@ -41,10 +41,10 @@ class TutorialViewController: JSQMessagesViewController {
     
     // Tutorial Messages!
     let initailMessages:[JSQMessage] = [
-        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'continue' and press the send button to start the conversation!")
+        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' and press the send button to start the conversation!")
     ]
     let tutorialMessages1:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan, please type 'next' to continue.s"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
     ]
     
@@ -55,13 +55,24 @@ class TutorialViewController: JSQMessagesViewController {
 //        JSQMessage(senderId: "1", displayName: "A", media: JSQMessageMediaData.self(#imageLiteral(resourceName: "bubble_regular.png")))
     ]
     
+    let tutorialMessages1_1:[JSQMessage]=[
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Alright! You have just cleared the first quiz!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "The future lessons will consists of 2 parts: a Video Lesson and a quiz"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Watch the video, clear the quiz and collect your berets!")
+    ]
+    let tutorialMessages1_2:[JSQMessage]=[
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Come on! I know that you are intrested!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Let's try again!")
     
+    ]
     
     
     var currentMessages = [JSQMessage]()
     var messagesCount=0
     
     private let avatarSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
+    
+    var choosenRouteName:String = ""
     
 }
 
@@ -116,9 +127,9 @@ extension TutorialViewController {
             return
         }
         
-        // If user entered Continue
-        if text.caseInsensitiveCompare("continue") == ComparisonResult.orderedSame{
-            print("continue")
+        // If user entered Next
+        if text.caseInsensitiveCompare("next") == ComparisonResult.orderedSame{
+            print("Next Button is pressed")
             
             if messagesCount<currentMessages.count {
                 messages.append(currentMessages[messagesCount])
@@ -127,11 +138,14 @@ extension TutorialViewController {
             }else if messagesCount==currentMessages.count && messagesCount != 0{
                 
                 if finishedSettingName{
-                    appendMessage(text: "tap the button on the left to quit Tutorial Lesson", senderId: "1", senderDisplayName: "A-Chan")
-                    
+                    if choosenRouteName == "" {
+                        selectRoute(title: "Ready?", message: "Are You Ready for Alpha Academy?", action1title: "Yes!", action2title: "Not Yet", route1: tutorialMessages1_1, route2: tutorialMessages1_2)
+                    }else{
+                        appendMessage(text: "tap the button on the left to quit Tutorial Lesson", senderId: "1", senderDisplayName: "A-Chan")
+                    }
                     atEndOfRoute = true
                 }else{
-                    setNameTest()
+                    setName()
                 }
                 
             }else{
@@ -141,7 +155,7 @@ extension TutorialViewController {
             
         // debug Setname
         }else if text.caseInsensitiveCompare("setName") == ComparisonResult.orderedSame{
-            setNameTest()
+            setName()
          
         // debug
         }else if text.caseInsensitiveCompare("Debug") == ComparisonResult.orderedSame{
@@ -158,7 +172,7 @@ extension TutorialViewController {
                 self.settingName(text)
                 return
             }
-            appendMessage(text: "please type continue to continue", senderId: "3", senderDisplayName: "System")
+            appendMessage(text: "please type next to continue", senderId: "3", senderDisplayName: "System")
         }
         
         
@@ -188,8 +202,7 @@ extension TutorialViewController {
         let message = messages[indexPath.row]
         
         if message.isMediaMessage {
-            print(message.media.description)
-            print(message.isMediaMessage.description)
+            playVideo()
         }
         
         switch message.senderId {
@@ -291,16 +304,20 @@ extension TutorialViewController {
 }
 
 extension TutorialViewController {
+    
+    // Route Selection with 2 routes
     func selectRoute(title:String, message:String, action1title:String, action2title:String, route1:[JSQMessage], route2:[JSQMessage]){
         let selector = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: action1title, style: .default, handler: {
             (action:UIAlertAction) -> () in
-            self.appendMessage(text: action1title, senderId: "2", senderDisplayName: "You")
+            self.choosenRouteName = action1title
+            self.appendMessage(text: action1title, senderId: "2", senderDisplayName: self.getName())
             self.setChapter(chapter: route1)
         })
         let action2 = UIAlertAction(title: action2title, style: .default, handler: {
             (action:UIAlertAction) -> () in
-            self.appendMessage(text: action2title, senderId: "2", senderDisplayName: "You")
+            self.choosenRouteName = action2title
+            self.appendMessage(text: action2title, senderId: "2", senderDisplayName: self.getName())
             self.setChapter(chapter: route2)
         })
         selector.addAction(action1)
@@ -332,7 +349,7 @@ extension TutorialViewController {
         self.setNameComplete()
     }
     
-    func setNameTest(){
+    func setName(){
         
         //1. Create the alert controller.
         let alert = UIAlertController(title: "Setting Name", message: "Please Enter Your Name:", preferredStyle: .alert)
@@ -407,6 +424,7 @@ extension TutorialViewController {
         present(playerController, animated: true) {
             player.play()
         }
+    
     }
     
 }
