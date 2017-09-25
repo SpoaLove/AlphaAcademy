@@ -24,6 +24,7 @@ class TutorialViewController: JSQMessagesViewController {
     var atEndOfRoute:Bool = false
     var finishedSettingName:Bool = false
     var setNamebyTyping = false
+    var userRefuse = false
     
     var name:String {
         return user2.name
@@ -44,7 +45,7 @@ class TutorialViewController: JSQMessagesViewController {
         JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' and press the send button to start the conversation!")
     ]
     let tutorialMessages1:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan, please type 'next' to continue.s"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan, please type 'next' to continue."),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
     ]
     
@@ -52,7 +53,7 @@ class TutorialViewController: JSQMessagesViewController {
         JSQMessage(senderId: "1", displayName: "A", text: "Test Text!"),
         JSQMessage(senderId: "1", displayName: "TestMedia", media: JSQPhotoMediaItem.init(image: UIImage(named: "Title.png")))
         //JSQMessage(senderId: "1", displayName: "TestVideo", media: JSQVideoMediaItem.init(fileURL: URL!, isReadyToPlay: true))
-//        JSQMessage(senderId: "1", displayName: "A", media: JSQMessageMediaData.self(#imageLiteral(resourceName: "bubble_regular.png")))
+        //JSQMessage(senderId: "1", displayName: "A", media: JSQMessageMediaData.self(#imageLiteral(resourceName: "bubble_regular.png")))
     ]
     
     let tutorialMessages1_1:[JSQMessage]=[
@@ -138,7 +139,7 @@ extension TutorialViewController {
             }else if messagesCount==currentMessages.count && messagesCount != 0{
                 
                 if finishedSettingName{
-                    if choosenRouteName == "" {
+                    if choosenRouteName == "" || userRefuse {
                         selectRoute(title: "Ready?", message: "Are You Ready for Alpha Academy?", action1title: "Yes!", action2title: "Not Yet", route1: tutorialMessages1_1, route2: tutorialMessages1_2)
                     }else{
                         appendMessage(text: "tap the button on the left to quit Tutorial Lesson", senderId: "1", senderDisplayName: "A-Chan")
@@ -310,12 +311,22 @@ extension TutorialViewController {
         let selector = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: action1title, style: .default, handler: {
             (action:UIAlertAction) -> () in
+            
+            if(action1title == "Yes!"){
+                self.userRefuse = false
+            }
+            
             self.choosenRouteName = action1title
             self.appendMessage(text: action1title, senderId: "2", senderDisplayName: self.getName())
             self.setChapter(chapter: route1)
         })
         let action2 = UIAlertAction(title: action2title, style: .default, handler: {
             (action:UIAlertAction) -> () in
+            
+            if(action2title == "Not Yet"){
+                self.userRefuse = true
+            }
+            
             self.choosenRouteName = action2title
             self.appendMessage(text: action2title, senderId: "2", senderDisplayName: self.getName())
             self.setChapter(chapter: route2)
