@@ -42,10 +42,10 @@ class TutorialViewController: JSQMessagesViewController {
     
     // Tutorial Messages!
     let initailMessages:[JSQMessage] = [
-        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' and press the send button to start the conversation!")
+        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' or 'n' and press the send button to start the conversation!")
     ]
     let tutorialMessages1:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan, please type 'next' to continue."),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan, please type 'next' or 'n' to continue."),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
     ]
     
@@ -129,7 +129,7 @@ extension TutorialViewController {
         }
         
         // If user entered Next
-        if text.caseInsensitiveCompare("next") == ComparisonResult.orderedSame{
+        if text.caseInsensitiveCompare("next") == ComparisonResult.orderedSame || text.caseInsensitiveCompare("N") == ComparisonResult.orderedSame{
             print("Next Button is pressed")
             
             if messagesCount<currentMessages.count {
@@ -173,7 +173,7 @@ extension TutorialViewController {
                 self.settingName(text)
                 return
             }
-            appendMessage(text: "please type next to continue", senderId: "3", senderDisplayName: "System")
+            appendMessage(text: "please type 'next' or 'n' to continue", senderId: "3", senderDisplayName: "System")
         }
         
         

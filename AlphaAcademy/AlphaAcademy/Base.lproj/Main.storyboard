@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i2X-7o-nAP">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i2X-7o-nAP">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,20 +26,20 @@
                         <viewControllerLayoutGuide type="bottom" id="QrE-Sy-sCZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NnQ-1h-JSd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-Aw-bW5">
-                                <rect key="frame" x="36" y="40" width="248" height="508"/>
+                                <rect key="frame" x="36" y="64" width="303" height="694"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Alpha Academy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adE-at-80G">
-                                        <rect key="frame" x="0.0" y="0.0" width="248" height="488"/>
+                                        <rect key="frame" x="19" y="0.0" width="265" height="674"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="27"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqe-6r-Imy">
-                                        <rect key="frame" x="0.0" y="488" width="248" height="20"/>
+                                        <rect key="frame" x="0.0" y="674" width="303" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="3aL-z4-ZWa"/>
                                         </constraints>
@@ -86,7 +86,7 @@
                         <viewControllerLayoutGuide type="bottom" id="I4W-2m-Hxh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="TutorioPage" id="ilW-4q-8VB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -118,21 +118,21 @@
                         <viewControllerLayoutGuide type="bottom" id="oIE-qP-plJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y4r-cC-UJC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
-                                <rect key="frame" x="108.5" y="237.5" width="103.5" height="93"/>
+                                <rect key="frame" x="136" y="359.33333333333331" width="103.33333333333331" height="93.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Cu-5Ns">
-                                        <rect key="frame" x="28" y="46.5" width="48" height="46.5"/>
+                                        <rect key="frame" x="27.666666666666657" y="46.666666666666686" width="48" height="46.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -168,7 +168,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VaQ-sI-pwF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sPM-PD-uzk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -189,21 +189,21 @@
                         <viewControllerLayoutGuide type="bottom" id="Vuj-Xm-Pit"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4i4-fJ-sa6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
-                                <rect key="frame" x="106.5" y="237.5" width="107.5" height="93.5"/>
+                                <rect key="frame" x="134" y="359.33333333333331" width="107.33333333333331" height="93.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
-                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwf-iT-1ow">
-                                        <rect key="frame" x="30" y="48.5" width="48" height="45"/>
+                                        <rect key="frame" x="29.666666666666657" y="48.666666666666686" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -239,21 +239,21 @@
                         <viewControllerLayoutGuide type="bottom" id="EOX-QF-XUK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CFR-bS-qEh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-85-osP">
-                                <rect key="frame" x="105.5" y="238.5" width="109" height="91.5"/>
+                                <rect key="frame" x="133" y="360.33333333333331" width="109" height="91.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-FU-KEI">
-                                        <rect key="frame" x="24.5" y="46.5" width="60" height="45"/>
+                                        <rect key="frame" x="24.666666666666657" y="46.666666666666686" width="60" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -291,21 +291,21 @@
                         <viewControllerLayoutGuide type="bottom" id="gMn-TG-ujw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dWa-Pu-0uZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-7J-cGA">
-                                <rect key="frame" x="104.5" y="238.5" width="111" height="91.5"/>
+                                <rect key="frame" x="132" y="360.33333333333331" width="111" height="91.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
-                                        <rect key="frame" x="0.0" y="0.0" width="111" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-dm-9wk">
-                                        <rect key="frame" x="25.5" y="46.5" width="60" height="45"/>
+                                        <rect key="frame" x="25.666666666666657" y="46.666666666666686" width="60" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -343,21 +343,21 @@
                         <viewControllerLayoutGuide type="bottom" id="Wvu-45-S5o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wF8-Je-JOm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
-                                <rect key="frame" x="106" y="238.5" width="108" height="91.5"/>
+                                <rect key="frame" x="133.66666666666666" y="360.33333333333331" width="108" height="91.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-MG-L7x">
-                                        <rect key="frame" x="30" y="46.5" width="48" height="45"/>
+                                        <rect key="frame" x="30" y="46.666666666666686" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -393,21 +393,21 @@
                         <viewControllerLayoutGuide type="bottom" id="sKL-4w-ZmN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="geX-Ru-pFh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
-                                <rect key="frame" x="105" y="238.5" width="110.5" height="91.5"/>
+                                <rect key="frame" x="132.33333333333334" y="360.33333333333331" width="110.33333333333334" height="91.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
-                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110.33333333333333" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaL-Ml-biS">
-                                        <rect key="frame" x="31.5" y="46.5" width="48" height="45"/>
+                                        <rect key="frame" x="31.333333333333314" y="46.666666666666686" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -443,26 +443,26 @@
                         <viewControllerLayoutGuide type="bottom" id="bkt-l3-fcf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KRr-As-RgG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
-                                <rect key="frame" x="26" y="182" width="268" height="204.5"/>
+                                <rect key="frame" x="26" y="303.66666666666669" width="323" height="204.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
-                                        <rect key="frame" x="130.5" y="0.0" width="7" height="45.5"/>
+                                        <rect key="frame" x="158.33333333333334" y="0.0" width="6.6666666666666572" height="45.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ta-6qX">
-                                        <rect key="frame" x="111" y="45.5" width="46.5" height="39"/>
+                                        <rect key="frame" x="138.33333333333334" y="45.666666666666629" width="46.333333333333343" height="39"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
-                                        <rect key="frame" x="0.0" y="84.5" width="268" height="30"/>
+                                        <rect key="frame" x="0.0" y="84.666666666666629" width="323" height="30"/>
                                         <color key="backgroundColor" red="0.49803921569999998" green="0.95686274510000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Back to Title"/>
                                         <connections>
@@ -471,7 +471,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-u5-jnL">
-                                        <rect key="frame" x="0.0" y="114.5" width="268" height="30"/>
+                                        <rect key="frame" x="0.0" y="114.66666666666663" width="323" height="30"/>
                                         <color key="backgroundColor" red="0.59331905841827393" green="0.92525660991668701" blue="0.98824584484100342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Rename"/>
                                         <connections>
@@ -479,7 +479,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-RK-ONo">
-                                        <rect key="frame" x="0.0" y="144.5" width="268" height="30"/>
+                                        <rect key="frame" x="0.0" y="144.66666666666663" width="323" height="30"/>
                                         <color key="backgroundColor" red="0.49803921569999998" green="0.95686274510000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Redo Tutorial"/>
                                         <connections>
@@ -488,7 +488,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-Vs-WfR">
-                                        <rect key="frame" x="0.0" y="174.5" width="268" height="30"/>
+                                        <rect key="frame" x="0.0" y="174.66666666666663" width="323" height="30"/>
                                         <color key="backgroundColor" red="0.59331905839999999" green="0.92525660990000003" blue="0.9882458448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Berets Collection"/>
                                         <connections>
@@ -539,11 +539,11 @@
                         <viewControllerLayoutGuide type="bottom" id="LcB-EJ-FMv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kpL-Xf-aZX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-OX-KWj">
-                                <rect key="frame" x="143" y="269" width="34" height="30"/>
+                                <rect key="frame" x="170.66666666666666" y="391" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="quitButtonIsTapped:" destination="bd3-wz-aVK" eventType="touchUpInside" id="Cbp-ss-lRq"/>
@@ -570,26 +570,26 @@
             <objects>
                 <viewController id="i2X-7o-nAP" customClass="TitlePageViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rZx-aI-Y7U" customClass="Title">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-A5-54F">
-                                <rect key="frame" x="10" y="55.5" width="300" height="457"/>
+                                <rect key="frame" x="10" y="142" width="355" height="528"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mt4-2C-m0Q">
-                                        <rect key="frame" x="20" y="0.0" width="260" height="46"/>
+                                        <rect key="frame" x="20" y="0.0" width="315" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Mt4-2C-m0Q" secondAttribute="height" multiplier="45:8" id="wl8-8S-dxq"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="yFX-G9-blv">
-                                        <rect key="frame" x="0.0" y="66" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="76" width="355" height="355"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yFX-G9-blv" secondAttribute="height" multiplier="1:1" id="jbG-A4-XY5"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m4-C8-XWN">
-                                        <rect key="frame" x="89.5" y="386" width="121" height="71"/>
+                                        <rect key="frame" x="129.66666666666666" y="451" width="96" height="77"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="50"/>
                                         <state key="normal" title="Start!">
                                             <color key="titleColor" red="0.59215686270000001" green="0.20784313730000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -630,8 +630,8 @@
         <image name="Title" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Yv-L8-bhq"/>
         <segue reference="gl0-LH-mWc"/>
         <segue reference="73z-al-KkI"/>
+        <segue reference="7Yv-L8-bhq"/>
     </inferredMetricsTieBreakers>
 </document>
