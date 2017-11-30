@@ -45,8 +45,8 @@ class TutorialViewController: JSQMessagesViewController {
         JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' or 'n' and press the send button to start the conversation!")
     ]
     let tutorialMessages1:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is Alpha, You can call me A-Chan, please type 'next' or 'n' to continue."),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name")
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is A-Chan, your classmate in the Alpha Academy! Please type 'next' or 'n' to continue."),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name?")
     ]
     
     let tutorialMessages2:[JSQMessage]=[
@@ -57,9 +57,10 @@ class TutorialViewController: JSQMessagesViewController {
     ]
     
     let tutorialMessages1_1:[JSQMessage]=[
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Alright! You have just cleared the first quiz!"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "The future lessons will consists of 2 parts: a Video Lesson and a quiz"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Watch the video, clear the quiz and collect your berets!")
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Good Job! You have just mastered how to answer a multiple choice question! You are now ready for Alpha Academy!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "The future chapters will consists of 2 parts: a Video Lesson and a quiz"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Watch the video, clear the quiz and collect your berets!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Let's meet again in the future courses!")
     ]
     let tutorialMessages1_2:[JSQMessage]=[
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Come on! I know that you are intrested!"),
@@ -142,12 +143,13 @@ extension TutorialViewController {
                     if choosenRouteName == "" || userRefuse {
                         selectRoute(title: "Ready?", message: "Are You Ready for Alpha Academy?", action1title: "Yes!", action2title: "Not Yet", route1: tutorialMessages1_1, route2: tutorialMessages1_2)
                     }else{
-                        appendMessage(text: "tap the button on the left to quit Tutorial Lesson", senderId: "1", senderDisplayName: "A-Chan")
+                        appendMessage(text: "Please tap the button on the bottom left to quit Tutorial Lesson!", senderId: "3", senderDisplayName: "Tip!")
                     }
                     atEndOfRoute = true
                 }else{
                     setName()
                 }
+                
                 
             }else{
                 appendMessage(text: text, senderId: senderId, senderDisplayName: senderDisplayName)

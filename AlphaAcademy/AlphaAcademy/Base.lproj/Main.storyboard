@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i2X-7o-nAP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i2X-7o-nAP">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -49,7 +50,7 @@
                                         </state>
                                         <connections>
                                             <action selector="continueButtonDidPressed:" destination="oiv-Wi-KvX" eventType="touchUpInside" id="LvW-tY-y1b"/>
-                                            <segue destination="L2g-MU-gVk" kind="showDetail" identifier="toTutor" id="7Yv-L8-bhq"/>
+                                            <segue destination="L2g-MU-gVk" kind="presentation" identifier="toTutor" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="7Yv-L8-bhq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -59,7 +60,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.52549019607843139" green="0.70196078431372544" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QrE-Sy-sCZ" firstAttribute="top" secondItem="Uq7-Aw-bW5" secondAttribute="bottom" constant="20" id="4WL-N4-0fE"/>
                             <constraint firstItem="Uq7-Aw-bW5" firstAttribute="centerX" secondItem="NnQ-1h-JSd" secondAttribute="centerX" id="G6W-4d-k2t"/>
@@ -97,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTo-Wx-o8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4163" y="-509"/>
+            <point key="canvasLocation" x="4514" y="-649"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="77k-hW-7OX">
@@ -122,22 +123,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
-                                <rect key="frame" x="136" y="359.33333333333331" width="103.33333333333331" height="93.333333333333314"/>
+                                <rect key="frame" x="58.666666666666657" y="336" width="258.33333333333337" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="46.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
+                                        <rect key="frame" x="73.666666666666686" y="0.0" width="111.33333333333331" height="46.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduction to Kotlin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-MB-Kzf">
+                                        <rect key="frame" x="0.0" y="46.666666666666686" width="258.33333333333331" height="46.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Cu-5Ns">
-                                        <rect key="frame" x="27.666666666666657" y="46.666666666666686" width="48" height="46.666666666666657"/>
+                                        <rect key="frame" x="105.33333333333334" y="93.333333333333314" width="48" height="46.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
                                             <action selector="chapterSelected1:" destination="Laa-iQ-CTj" eventType="touchUpInside" id="Yey-Yj-PUs"/>
-                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt1" id="XcG-If-rPs"/>
+                                            <segue destination="X1W-D2-R8A" kind="popoverPresentation" identifier="gotoChapt1" popoverAnchorView="qnJ-Cu-5Ns" id="XcG-If-rPs">
+                                                <segue key="commit" inheritsFrom="parent" id="3yz-8P-LOJ"/>
+                                                <segue key="preview" inheritsFrom="commit" id="PEW-7D-NYV"/>
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -162,23 +174,23 @@
         <!--Lessons View Controller-->
         <scene sceneID="OW5-lR-xEs">
             <objects>
-                <viewController id="X1W-D2-R8A" customClass="LessonsViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="X1W-D2-R8A" customClass="LessonsViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Xm-5e-Pmg"/>
                         <viewControllerLayoutGuide type="bottom" id="VaQ-sI-pwF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sPM-PD-uzk">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="sPM-PD-uzk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <segue destination="4qr-Zz-GBN" kind="show" identifier="quit" id="73z-al-KkI"/>
+                        <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="73z-al-KkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAB-jz-QPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518" y="823"/>
+            <point key="canvasLocation" x="3409" y="983"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="uBx-62-VPx">
@@ -193,22 +205,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
-                                <rect key="frame" x="134" y="359.33333333333331" width="107.33333333333331" height="93.666666666666686"/>
+                                <rect key="frame" x="105.66666666666669" y="335.33333333333331" width="164" height="142.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
-                                        <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="46.666666666666664"/>
+                                        <rect key="frame" x="28.333333333333336" y="0.0" width="107.33333333333331" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Flow I" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDe-j1-wiR">
+                                        <rect key="frame" x="0.0" y="48.666666666666686" width="164" height="46.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwf-iT-1ow">
-                                        <rect key="frame" x="29.666666666666657" y="48.666666666666686" width="48" height="45"/>
+                                        <rect key="frame" x="57.999999999999986" y="97.333333333333371" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
                                             <action selector="chapterSelected3:" destination="ZXX-tU-395" eventType="touchUpInside" id="y9p-Me-dlU"/>
-                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt3" id="78Y-Xq-DxT"/>
+                                            <segue destination="X1W-D2-R8A" kind="popoverPresentation" identifier="gotoChapt3" popoverAnchorView="Wwf-iT-1ow" id="78Y-Xq-DxT">
+                                                <segue key="commit" inheritsFrom="parent" id="6v5-Sm-Rry"/>
+                                                <segue key="preview" inheritsFrom="commit" id="I5H-Hc-yLr"/>
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -243,7 +266,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-85-osP">
-                                <rect key="frame" x="133" y="360.33333333333331" width="109" height="91.666666666666686"/>
+                                <rect key="frame" x="133.33333333333334" y="360.66666666666669" width="109" height="91.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-wp-fzT">
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="46.666666666666664"/>
@@ -253,13 +276,17 @@
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-FU-KEI">
-                                        <rect key="frame" x="24.666666666666657" y="46.666666666666686" width="60" height="45"/>
+                                        <rect key="frame" x="30.333333333333314" y="46.666666666666629" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Start!"/>
                                         <connections>
                                             <action selector="chapterSelected5:" destination="PLU-c5-9xp" eventType="touchUpInside" id="1bq-2B-7u2"/>
                                             <action selector="chapterSelected5:" destination="RMQ-dx-zZI" eventType="touchUpInside" id="afR-jZ-7CE"/>
-                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt5" id="gl0-LH-mWc"/>
+                                            <segue destination="X1W-D2-R8A" kind="popoverPresentation" identifier="gotoChapt5" popoverAnchorView="Pyx-FU-KEI" id="gl0-LH-mWc">
+                                                <segue key="commit" inheritsFrom="parent" id="BXL-Og-5Uc"/>
+                                                <segue key="preview" inheritsFrom="commit" id="Gqk-BC-6rK"/>
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -295,7 +322,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-7J-cGA">
-                                <rect key="frame" x="132" y="360.33333333333331" width="111" height="91.666666666666686"/>
+                                <rect key="frame" x="132.33333333333334" y="360.66666666666669" width="111" height="91.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-l4-jdB">
                                         <rect key="frame" x="0.0" y="0.0" width="111" height="46.666666666666664"/>
@@ -305,13 +332,17 @@
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-dm-9wk">
-                                        <rect key="frame" x="25.666666666666657" y="46.666666666666686" width="60" height="45"/>
+                                        <rect key="frame" x="31.333333333333314" y="46.666666666666629" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Start!"/>
                                         <connections>
                                             <action selector="chapterSelected6:" destination="1h3-gq-ZVQ" eventType="touchUpInside" id="UZ7-ZE-8Tu"/>
                                             <action selector="chapterSelected6:" destination="c38-Eo-haU" eventType="touchUpInside" id="f1U-ZV-bg1"/>
-                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt6" id="j3z-Vf-Ocz"/>
+                                            <segue destination="X1W-D2-R8A" kind="popoverPresentation" identifier="gotoChapt6" popoverAnchorView="mtB-dm-9wk" id="j3z-Vf-Ocz">
+                                                <segue key="commit" inheritsFrom="parent" id="HMj-hu-1EE"/>
+                                                <segue key="preview" inheritsFrom="commit" id="gII-br-hIw"/>
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -347,22 +378,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
-                                <rect key="frame" x="133.66666666666666" y="360.33333333333331" width="108" height="91.666666666666686"/>
+                                <rect key="frame" x="129.66666666666666" y="337.33333333333331" width="116.33333333333334" height="138.33333333333331"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="46.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
+                                        <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Variables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-S4-xic">
+                                        <rect key="frame" x="3" y="46.666666666666686" width="110.66666666666667" height="46.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-MG-L7x">
-                                        <rect key="frame" x="30" y="46.666666666666686" width="48" height="45"/>
+                                        <rect key="frame" x="34.333333333333343" y="93.333333333333371" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
                                             <action selector="chapterSelected2:" destination="GCn-Io-dtM" eventType="touchUpInside" id="CVS-zW-4Dt"/>
-                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt2" id="kvU-XT-gED"/>
+                                            <segue destination="X1W-D2-R8A" kind="popoverPresentation" identifier="gotoChapt2" popoverAnchorView="0cK-MG-L7x" id="kvU-XT-gED">
+                                                <segue key="commit" inheritsFrom="parent" id="Swh-wC-wAy"/>
+                                                <segue key="preview" inheritsFrom="commit" id="bcq-rj-KSv"/>
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -397,22 +439,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
-                                <rect key="frame" x="132.33333333333334" y="360.33333333333331" width="110.33333333333334" height="91.666666666666686"/>
+                                <rect key="frame" x="101.33333333333333" y="337.33333333333331" width="172.33333333333337" height="138.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
-                                        <rect key="frame" x="0.0" y="0.0" width="110.33333333333333" height="46.666666666666664"/>
+                                        <rect key="frame" x="31.000000000000021" y="0.0" width="110.33333333333331" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Flow II" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5B-Nk-Zlg">
+                                        <rect key="frame" x="0.0" y="46.666666666666686" width="172.33333333333334" height="46.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaL-Ml-biS">
-                                        <rect key="frame" x="31.333333333333314" y="46.666666666666686" width="48" height="45"/>
+                                        <rect key="frame" x="62.333333333333329" y="93.333333333333371" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
                                             <action selector="chapterSelected4:" destination="Ajr-Ld-t9O" eventType="touchUpInside" id="Xd2-EB-f9Y"/>
-                                            <segue destination="X1W-D2-R8A" kind="show" identifier="gotoChapt4" id="BPj-qM-tiW"/>
+                                            <segue destination="X1W-D2-R8A" kind="popoverPresentation" identifier="gotoChapt4" popoverAnchorView="xaL-Ml-biS" id="BPj-qM-tiW">
+                                                <segue key="commit" inheritsFrom="parent" id="RXX-FM-XMX"/>
+                                                <segue key="preview" inheritsFrom="commit" id="Sfo-YM-vLK"/>
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -463,8 +516,10 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
                                         <rect key="frame" x="0.0" y="84.666666666666629" width="323" height="30"/>
-                                        <color key="backgroundColor" red="0.49803921569999998" green="0.95686274510000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Back to Title"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Back to Title">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
                                             <segue destination="i2X-7o-nAP" kind="show" identifier="LogOut" id="fqm-Dw-EAe"/>
@@ -472,28 +527,36 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-u5-jnL">
                                         <rect key="frame" x="0.0" y="114.66666666666663" width="323" height="30"/>
-                                        <color key="backgroundColor" red="0.59331905841827393" green="0.92525660991668701" blue="0.98824584484100342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Rename"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Rename">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="setNameButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="4WP-b6-t2v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-RK-ONo">
                                         <rect key="frame" x="0.0" y="144.66666666666663" width="323" height="30"/>
-                                        <color key="backgroundColor" red="0.49803921569999998" green="0.95686274510000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Redo Tutorial"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Redo Tutorial">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="tutorialButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="dSI-Iu-o3J"/>
-                                            <segue destination="L2g-MU-gVk" kind="presentation" identifier="redoTutorial" id="For-Cq-UGP"/>
+                                            <segue destination="L2g-MU-gVk" kind="popoverPresentation" identifier="redoTutorial" popoverAnchorView="L67-RK-ONo" id="For-Cq-UGP">
+                                                <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-Vs-WfR">
                                         <rect key="frame" x="0.0" y="174.66666666666663" width="323" height="30"/>
-                                        <color key="backgroundColor" red="0.59331905839999999" green="0.92525660990000003" blue="0.9882458448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Berets Collection"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Berets Collection">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="beretsCollectionButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="gKu-7c-Y2x"/>
-                                            <segue destination="bd3-wz-aVK" kind="presentation" identifier="Berets" id="l1T-mv-5dS"/>
+                                            <segue destination="bd3-wz-aVK" kind="presentation" identifier="Berets" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="l1T-mv-5dS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -509,7 +572,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.34901960784313724" green="0.76470588235294112" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tG6-zB-YO6" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="2kd-PG-Ne9"/>
                             <constraint firstItem="tG6-zB-YO6" firstAttribute="leading" secondItem="KRr-As-RgG" secondAttribute="leadingMargin" constant="10" id="99V-55-hSV"/>
@@ -547,7 +610,7 @@
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="quitButtonIsTapped:" destination="bd3-wz-aVK" eventType="touchUpInside" id="Cbp-ss-lRq"/>
-                                    <segue destination="4qr-Zz-GBN" kind="show" identifier="quitCollection" id="VMW-nI-64W"/>
+                                    <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quitCollection" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="VMW-nI-64W"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -563,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7t-aw-QKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5456" y="823"/>
+            <point key="canvasLocation" x="5284" y="983"/>
         </scene>
         <!--Title Page View Controller-->
         <scene sceneID="dVB-DG-F0g">
@@ -574,7 +637,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-A5-54F">
-                                <rect key="frame" x="10" y="142" width="355" height="528"/>
+                                <rect key="frame" x="10" y="145" width="355" height="522"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mt4-2C-m0Q">
                                         <rect key="frame" x="20" y="0.0" width="315" height="56"/>
@@ -589,7 +652,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m4-C8-XWN">
-                                        <rect key="frame" x="129.66666666666666" y="451" width="96" height="77"/>
+                                        <rect key="frame" x="117" y="451" width="121" height="71"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="50"/>
                                         <state key="normal" title="Start!">
                                             <color key="titleColor" red="0.59215686270000001" green="0.20784313730000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -622,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6g-aE-W5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2873" y="-509"/>
+            <point key="canvasLocation" x="2564" y="-509"/>
         </scene>
     </scenes>
     <resources>
@@ -630,8 +693,8 @@
         <image name="Title" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gl0-LH-mWc"/>
-        <segue reference="73z-al-KkI"/>
-        <segue reference="7Yv-L8-bhq"/>
+        <segue reference="BPj-qM-tiW"/>
+        <segue reference="cSH-p9-l60"/>
+        <segue reference="For-Cq-UGP"/>
     </inferredMetricsTieBreakers>
 </document>
