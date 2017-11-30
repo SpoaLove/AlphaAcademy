@@ -92,7 +92,7 @@ extension LessonsViewController {
 extension LessonsViewController {
     
     func quitLesson(){
-        showAd()
+        //showAd()
         let selector = UIAlertController(title: "Quit", message: "Do You Really Want to Quit? Progress will be lost!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
             (action:UIAlertAction) -> () in
@@ -232,12 +232,12 @@ extension LessonsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
-        // Do any additional setup after loading the view.
-        let request = GADRequest()
-        interstitial.load(request)
-        
-        interstitial.delegate = self as? GADInterstitialDelegate
+//        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+//        // Do any additional setup after loading the view.
+//        let request = GADRequest()
+//        interstitial.load(request)
+//
+//        interstitial.delegate = self as? GADInterstitialDelegate
 
         
         // tell JSQMessageViewController
@@ -356,53 +356,55 @@ extension LessonsViewController {
     }
 }
 
-extension LessonsViewController {
-    
-    func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
-        interstitial.delegate = (self as! GADInterstitialDelegate)
-        interstitial.load(GADRequest())
-        return interstitial
-    }
-    
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        interstitial = createAndLoadInterstitial()
-    }
-    
-    func showAd(){
-        if interstitial.isReady {
-            interstitial.present(fromRootViewController: self)
-        } else {
-            print("Ad wasn't ready")
-        }
-        print("Ad")
-    }
-    
-    /// Tells the delegate an ad request succeeded.
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        print("interstitialDidReceiveAd")
-    }
-    
-    /// Tells the delegate an ad request failed.
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-    
-    /// Tells the delegate that an interstitial will be presented.
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
-        print("interstitialWillPresentScreen")
-    }
-    
-    /// Tells the delegate the interstitial is to be animated off the screen.
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        print("interstitialWillDismissScreen")
-    }
-    
+// extension for ads
+//extension LessonsViewController {
+//
+//    func createAndLoadInterstitial() -> GADInterstitial {
+//        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+//        interstitial.delegate = (self as! GADInterstitialDelegate)
+//        interstitial.load(GADRequest())
+//        return interstitial
+//    }
+//
+//    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+//        interstitial = createAndLoadInterstitial()
+//    }
+//
+//    func showAd(){
+//        if interstitial.isReady {
+//            interstitial.present(fromRootViewController: self)
+//        } else {
+//            print("Ad wasn't ready")
+//        }
+//        print("Ad")
+//    }
+//
+//    /// Tells the delegate an ad request succeeded.
+//    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+//        print("interstitialDidReceiveAd")
+//    }
+//
+//    /// Tells the delegate an ad request failed.
+//    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+//        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+//    }
+//
+//    /// Tells the delegate that an interstitial will be presented.
+//    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+//        print("interstitialWillPresentScreen")
+//    }
+//
+//    /// Tells the delegate the interstitial is to be animated off the screen.
+//    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+//        print("interstitialWillDismissScreen")
+//    }
+//
+//
+//
+//    /// Tells the delegate that a user click will open another app
+//    /// (such as the App Store), backgrounding the current app.
+//    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+//        print("interstitialWillLeaveApplication")
+//    }
+//}
 
-    
-    /// Tells the delegate that a user click will open another app
-    /// (such as the App Store), backgrounding the current app.
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-        print("interstitialWillLeaveApplication")
-    }
-}

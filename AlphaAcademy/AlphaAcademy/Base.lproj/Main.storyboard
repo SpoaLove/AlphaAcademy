@@ -276,7 +276,7 @@
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-FU-KEI">
-                                        <rect key="frame" x="30.333333333333314" y="46.666666666666629" width="48" height="45"/>
+                                        <rect key="frame" x="30.666666666666657" y="46.666666666666629" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -332,7 +332,7 @@
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-dm-9wk">
-                                        <rect key="frame" x="31.333333333333314" y="46.666666666666629" width="48" height="45"/>
+                                        <rect key="frame" x="31.666666666666657" y="46.666666666666629" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -500,7 +500,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
-                                <rect key="frame" x="26" y="303.66666666666669" width="323" height="204.66666666666669"/>
+                                <rect key="frame" x="26" y="288.66666666666669" width="323" height="234.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
                                         <rect key="frame" x="158.33333333333334" y="0.0" width="6.6666666666666572" height="45.666666666666664"/>
@@ -559,13 +559,25 @@
                                             <segue destination="bd3-wz-aVK" kind="presentation" identifier="Berets" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="l1T-mv-5dS"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-hf-4Kp">
+                                        <rect key="frame" x="0.0" y="204.66666666666663" width="323" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Debug Reset Level">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="setLevelButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="K9W-9y-nr0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="L67-RK-ONo" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="1e5-78-mDX"/>
                                     <constraint firstItem="7t7-u5-jnL" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="FUO-He-epU"/>
                                     <constraint firstAttribute="trailing" secondItem="L67-RK-ONo" secondAttribute="trailing" id="N9Z-nU-ikl"/>
                                     <constraint firstItem="aOv-eJ-I49" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="PoA-LC-EOe"/>
+                                    <constraint firstAttribute="trailing" secondItem="g8A-hf-4Kp" secondAttribute="trailing" id="S5l-22-tcE"/>
                                     <constraint firstAttribute="trailing" secondItem="7t7-u5-jnL" secondAttribute="trailing" id="fAY-D5-XAn"/>
+                                    <constraint firstItem="g8A-hf-4Kp" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="fKO-tO-SgX"/>
                                     <constraint firstAttribute="trailing" secondItem="aOv-eJ-I49" secondAttribute="trailing" id="jgg-18-fAQ"/>
                                     <constraint firstAttribute="trailing" secondItem="CEm-Vs-WfR" secondAttribute="trailing" id="kV1-Wg-hfI"/>
                                     <constraint firstItem="CEm-Vs-WfR" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="s0R-Os-ndo"/>
@@ -637,7 +649,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-A5-54F">
-                                <rect key="frame" x="10" y="145" width="355" height="522"/>
+                                <rect key="frame" x="10" y="142" width="355" height="528"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mt4-2C-m0Q">
                                         <rect key="frame" x="20" y="0.0" width="315" height="56"/>
@@ -652,7 +664,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m4-C8-XWN">
-                                        <rect key="frame" x="117" y="451" width="121" height="71"/>
+                                        <rect key="frame" x="129.66666666666666" y="451" width="96" height="77"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="50"/>
                                         <state key="normal" title="Start!">
                                             <color key="titleColor" red="0.59215686270000001" green="0.20784313730000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

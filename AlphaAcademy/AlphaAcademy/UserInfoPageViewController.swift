@@ -48,6 +48,9 @@ class UserInfoPageViewController: UIViewController {
         setName()
     }
     
+    @IBAction func setLevelButtonDidPressed(_ sender: UIButton) {
+        setLevel()
+    }
     
     @IBAction func tutorialButtonDidPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "redoTutorial", sender: self)
@@ -109,12 +112,58 @@ extension UserInfoPageViewController {
         
         
     }
+
+
+// DEBUG: Level Setting:
+func setLevel(){
+    
+    //1. Create the alert controller.
+    let alert = UIAlertController(title: "Reset Level", message: "New Level? (level = count of the string input)", preferredStyle: .alert)
+    
+    //2. Add the text field. You can configure it however you need.
+    alert.addTextField { (textField) in
+        var text:String
+        
+        if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
+            text = "\(userLevel)"
+        }else{
+            text = "0"
+        }
+        
+        textField.text = text
+    }
+    
+    // 3. Grab the value from the text field, and print it when the user clicks OK.
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+        let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+        print("Text field: \(String(describing: textField?.text))")
+        
+        // dunno how to cast string into int do this for now
+        let level = textField?.text?.count
+        print(level)
+        UserDefaults.standard.set(level, forKey: "userLevel")
+        self.setLevelComplete()
+        
+        
+        
+    }))
+    
+    // 4. Present the alert.
+    self.present(alert, animated: true, completion: nil)
+    
+    
+}
 }
 
 extension UserInfoPageViewController {
     func setNameComplete(){
         self.userNameLabel.text = getName()
     }
+    
+    func setLevelComplete(){
+        self.userLevelLabel.text = getLevel()
+    }
+    
     func getName()->String{
         if let username = UserDefaults.standard.object(forKey: "userName") as? String {
             return username

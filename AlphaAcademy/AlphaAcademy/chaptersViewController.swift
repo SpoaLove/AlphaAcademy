@@ -65,6 +65,8 @@ class chaptersViewController: UIViewController {
             print("Ad wasn't ready")
         }
     }
+    
+
     /*
      // MARK: - Navigation
      

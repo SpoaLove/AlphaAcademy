@@ -15,13 +15,19 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     // MARK: UIPageViewControllerDataSource
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "Chapter1"),
-                self.newVc(viewController: "Chapter2"),
-                self.newVc(viewController: "Chapter3"),
-                self.newVc(viewController: "Chapter4"),
-                self.newVc(viewController: "Chapter5"),
-                self.newVc(viewController: "Chapter6"),
-                self.newVc(viewController: "UserInformation")]
+        return [self.newVc(viewController: "Chapter1")]
+    }()
+    
+    // Additional UIView Controllers
+    
+    lazy var additionalViewControllers: [UIViewController] = {
+        return [
+            self.newVc(viewController: "Chapter2"),
+            self.newVc(viewController: "Chapter3"),
+            self.newVc(viewController: "Chapter4"),
+            self.newVc(viewController: "Chapter5"),
+            self.newVc(viewController: "Chapter6")
+        ]
     }()
     
     override func viewDidLoad() {
@@ -30,7 +36,17 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.delegate = self
         
 
+        // combine additional View Controllers according to user's level
+        if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
+            if userLevel != 0{
+                for i in 0...userLevel-2 {
+                    orderedViewControllers.append(additionalViewControllers[i])
+                }
+            }
+        }
         
+        // add userInfoPage
+        orderedViewControllers.append(self.newVc(viewController: "UserInformation"))
         
         
         // This sets up the first view that will show up on our page control
@@ -113,5 +129,6 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
         return orderedViewControllers[nextIndex]
     }
+    
     
 }
