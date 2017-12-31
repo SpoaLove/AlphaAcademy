@@ -123,13 +123,11 @@ func setLevel(){
     //2. Add the text field. You can configure it however you need.
     alert.addTextField { (textField) in
         var text:String
-        
         if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
             text = "\(userLevel)"
         }else{
             text = "0"
         }
-        
         textField.text = text
     }
     
@@ -137,9 +135,7 @@ func setLevel(){
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
         let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
         print("Text field: \(String(describing: textField?.text))")
-        
-        // dunno how to cast string into int do this for now
-        let level = textField?.text?.count
+        let level = Int(textField!.text!)!
         print(level)
         UserDefaults.standard.set(level, forKey: "userLevel")
         self.setLevelComplete()

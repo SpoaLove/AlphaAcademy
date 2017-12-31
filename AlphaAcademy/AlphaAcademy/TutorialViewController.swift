@@ -11,39 +11,15 @@ import JSQMessagesViewController
 import AVKit
 
 
-class TutorialViewController: JSQMessagesViewController {
+class TutorialViewController: Lessons {
     
     
-    let user1 = ChatUser(id: "1", name: "A-Chan")
-    var user2 = ChatUser(id: "2", name: "You")
-    let user3 = ChatUser(id: "3", name: "Console")
-    let user4 = ChatUser(id: "4", name: "Code")
-    
-    
-    
-    var atEndOfRoute:Bool = false
-    var finishedSettingName:Bool = false
+    // additional variables
+    var finishedSettingName = false
     var setNamebyTyping = false
     var userRefuse = false
     
-    var name:String {
-        return user2.name
-    }
-    
-    
-    var currentUser: ChatUser {
-        return user2
-    }
-    
-    
-    // all messages
-    var messages = [JSQMessage]()
-    
-    
     // Tutorial Messages!
-    let initailMessages:[JSQMessage] = [
-        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' or 'n' and press the send button to start the conversation!")
-    ]
     let tutorialMessages1:[JSQMessage] = [
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to Alpha Academy! My name is A-Chan, your classmate in the Alpha Academy! Please type 'next' or 'n' to continue."),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before we start, I want to know what is your name?")
@@ -69,16 +45,6 @@ class TutorialViewController: JSQMessagesViewController {
     ]
     
     
-    var currentMessages = [JSQMessage]()
-    var messagesCount=0
-    
-    private let avatarSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
-    
-    var choosenRouteName:String = ""
-    
-}
-
-extension TutorialViewController {
     override func didPressAccessoryButton(_ sender: UIButton!) {
         if atEndOfRoute {
             atEndOfRoute = false
@@ -89,12 +55,9 @@ extension TutorialViewController {
         }
     }
     
-}
-
-extension TutorialViewController {
     
     // quit lesson function
-    func quitLesson(){
+    override func quitLesson(){
         
         guard finishedSettingName else {
             let alertController = UIAlertController(title: "Wait!", message:"The tutorial is not over yet!", preferredStyle: UIAlertControllerStyle.alert)
@@ -116,11 +79,6 @@ extension TutorialViewController {
         self.present(selector, animated: true, completion: nil)
         
     }
-}
-
-extension TutorialViewController {
-    
-
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
@@ -183,76 +141,8 @@ extension TutorialViewController {
         
     }
     
-    // Message sender Display Name
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
-        let message = messages[indexPath.row]
-        let messageUsername = message.senderDisplayName
-        
-        return NSAttributedString(string: messageUsername!)
-    }
-    
-    
-    // Message Bubble Height
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
-        return 15
-    }
-    // Message Bubble Image
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
-        
-        let bubbleFactory = JSQMessagesBubbleImageFactory()
-        
-        
-        let message = messages[indexPath.row]
-        
-        if message.isMediaMessage {
-            playVideo()
-        }
-        
-        switch message.senderId {
-        case "2":
-            return bubbleFactory?.outgoingMessagesBubbleImage(with: .blue)
-        case "1":
-            return bubbleFactory?.incomingMessagesBubbleImage(with: .red)
-        case "3":
-            return bubbleFactory?.incomingMessagesBubbleImage(with: .orange)
-        case "4":
-            return bubbleFactory?.incomingMessagesBubbleImage(with: .gray)
-        default:
-            return bubbleFactory?.incomingMessagesBubbleImage(with: .orange)
-            
-        }
-        
-        
-    }
-    
-    // Media Message Bubble Image
-    
-    
-    // Message Avatar Image
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
-        let avatarImageFactory = JSQMessagesAvatarImageFactory.self
-        
-        let message = messages[indexPath.item]
-        
-        switch message.senderId {
-        case "1":
-            // Sender is A-Chan
-            return avatarImageFactory.avatarImage(with: UIImage(named: "Title.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        case "2":
-            // Sender is Yourself
-            return avatarImageFactory.avatarImage(with: UIImage(named: "userWhiteBeret.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        case "3":
-            // Sender is Console
-            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.black, textColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        case "4":
-            // Sender is Code
-            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.orange, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        default:
-            // Sender is Code
-            return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: "?", backgroundColor: UIColor.white, textColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-        }
 
-    }
+
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
@@ -262,52 +152,13 @@ extension TutorialViewController {
         return messages[indexPath.row]
     }
     
-}
-
-//When View is loaded
-extension TutorialViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // tell JSQMessageViewController
-        
-        
-        // who is the current user
-        self.senderId = currentUser.id
-        self.senderDisplayName = currentUser.name
-        
-        
-        
-        // append initial messages
-        user2.name = getName()
-        messages += initailMessages
         
         // add tutorialMessages into currentMessages
         currentMessages += tutorialMessages1
     }
-}
 
-// Append Messages
-extension TutorialViewController {
-    func getMessages(chapter:[JSQMessage]) -> [JSQMessage]{
-        
-        var messages = [JSQMessage]()
-        
-        messages += chapter
-        
-        return messages
-    }
-}
-
-extension TutorialViewController {
-    func setChapter(chapter:[JSQMessage]){
-        self.currentMessages += getMessages(chapter: chapter)
-        
-    }
-}
-
-extension TutorialViewController {
-    
     // Route Selection with 2 routes
     func selectRoute(title:String, message:String, action1title:String, action2title:String, route1:[JSQMessage], route2:[JSQMessage]){
         let selector = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
@@ -337,24 +188,6 @@ extension TutorialViewController {
         selector.addAction(action2)
         self.present(selector, animated: true, completion: nil)
     }
-    
-}
-
-extension TutorialViewController {
-    func appendMessage(text: String!, senderId: String!, senderDisplayName: String!){
-        let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
-        messages.append(message!)
-        finishSendingMessage()
-    }
-    
-    func appendMessageWithJSQMessage(message: JSQMessage){
-        messages.append(message)
-        finishSendingMessage()
-    }
-}
-
-extension TutorialViewController {
-    
     
     fileprivate func settingName(_ name: String) {
         print(name)
@@ -396,9 +229,7 @@ extension TutorialViewController {
         
         
     }
-}
-
-extension TutorialViewController {
+    
     func setNameComplete(){
         user2.name = getName()
         finishedSettingName = true
@@ -407,26 +238,14 @@ extension TutorialViewController {
         currentMessages.append(JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hi \(self.getName())! What a nice name!"))
         
     }
-    func getName()->String{
-        if let username = UserDefaults.standard.object(forKey: "userName") as? String {
-            return username
-        }else{
-            return "You"
-        }
-    }
-}
 
-extension TutorialViewController {
     func test(){
         print(user2.name)
         appendMessage(text: user2.name, senderId: "1", senderDisplayName: user2.name)
     }
-}
 
-// play Video Functions
-extension TutorialViewController {
-    
-    func playVideo() {
+    // play Video Functions
+    override func playVideo() {
         guard let path = Bundle.main.path(forResource: "TeachingVideos/AGintro", ofType:"mp4") else {
             debugPrint("video notfound not found")
             return

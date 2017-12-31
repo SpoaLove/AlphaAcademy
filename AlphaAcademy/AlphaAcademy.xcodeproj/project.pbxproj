@@ -26,6 +26,8 @@
 		CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CB99D52F1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
+		CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB41FF8D5AC00211116 /* ChatUser.swift */; };
+		CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */; };
 		CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925751F207CF900C69C6C /* pageViewController.swift */; };
 		CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */; };
 		F17702C356D27FF940E324DB /* Pods_AlphaAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC89F77F7E44137226DF436 /* Pods_AlphaAcademyTests.framework */; };
@@ -73,6 +75,8 @@
 		CB99D5171F1AC112005D73B6 /* AlphaAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/Spoa/Desktop/AlphaAcademy/AlphaAcademy/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 		CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		CBC41BB41FF8D5AC00211116 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlphaAcademy.entitlements; sourceTree = "<group>"; };
 		CBE9256F1F1F5DAA00C69C6C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		CBE925711F1F60D600C69C6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */,
 				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
+				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
+				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
 				CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */,
 				CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */,
 				CB7870B61F49915800E4ACBD /* TutorialViewController.swift */,
@@ -254,7 +260,7 @@
 				TargetAttributes = {
 					CB99D4F71F1AC112005D73B6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8BHJJGAJG4;
+						DevelopmentTeam = DLW9CMP935;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
@@ -380,13 +386,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlphaAcademy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97BDA3E6CBDA36467FD6154C /* [CP] Check Pods Manifest.lock */ = {
@@ -395,13 +404,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlphaAcademyUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9B9528B9BF8238A0A3518DCC /* [CP] Check Pods Manifest.lock */ = {
@@ -410,13 +422,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlphaAcademyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B74C292B8AA17AC0CC513856 /* [CP] Copy Pods Resources */ = {
@@ -455,9 +470,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlphaAcademy/Pods-AlphaAcademy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,12 +491,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */,
 				CB2B1C0E1F2CCDC1002EE08C /* LessonsViewController.swift in Sources */,
 				CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
 				CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */,
 				CB7870B71F49915800E4ACBD /* TutorialViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
+				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
 				CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,
 				CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */,
@@ -648,11 +670,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 8BHJJGAJG4;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DLW9CMP935;
 				INFOPLIST_FILE = AlphaAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JCIDITD.AlphaAcademy-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JCIDITD.AlphaAcademyKotlin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -664,11 +689,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 8BHJJGAJG4;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DLW9CMP935;
 				INFOPLIST_FILE = AlphaAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JCIDITD.AlphaAcademy-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JCIDITD.AlphaAcademyKotlin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

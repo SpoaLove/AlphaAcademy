@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i2X-7o-nAP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i2X-7o-nAP">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -31,19 +31,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-Aw-bW5">
-                                <rect key="frame" x="36" y="64" width="303" height="694"/>
+                                <rect key="frame" x="19" y="364" width="337" height="84"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Alpha Academy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adE-at-80G">
-                                        <rect key="frame" x="19" y="0.0" width="265" height="674"/>
+                                        <rect key="frame" x="36" y="0.0" width="265" height="35"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="27"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqe-6r-Imy">
-                                        <rect key="frame" x="0.0" y="674" width="303" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="3aL-z4-ZWa"/>
-                                        </constraints>
+                                        <rect key="frame" x="125" y="35" width="87" height="49"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="28"/>
                                         <state key="normal" title="Continue">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,20 +51,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Nqe-6r-Imy" secondAttribute="trailing" id="MU6-23-toG"/>
-                                    <constraint firstItem="Nqe-6r-Imy" firstAttribute="leading" secondItem="Uq7-Aw-bW5" secondAttribute="leading" id="OFm-RI-JLR"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QrE-Sy-sCZ" firstAttribute="top" secondItem="Uq7-Aw-bW5" secondAttribute="bottom" constant="20" id="4WL-N4-0fE"/>
-                            <constraint firstItem="Uq7-Aw-bW5" firstAttribute="centerX" secondItem="NnQ-1h-JSd" secondAttribute="centerX" id="G6W-4d-k2t"/>
-                            <constraint firstItem="Uq7-Aw-bW5" firstAttribute="leading" secondItem="NnQ-1h-JSd" secondAttribute="leadingMargin" constant="20" id="lX4-5W-eow"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uq7-Aw-bW5" secondAttribute="trailing" constant="20" id="lu3-YM-FGe"/>
-                            <constraint firstItem="Uq7-Aw-bW5" firstAttribute="centerY" secondItem="NnQ-1h-JSd" secondAttribute="centerY" id="mWw-Qp-rEL"/>
-                            <constraint firstItem="Uq7-Aw-bW5" firstAttribute="top" secondItem="vHr-GC-fS5" secondAttribute="bottom" constant="20" id="nNn-ZC-Cqx"/>
+                            <constraint firstItem="Uq7-Aw-bW5" firstAttribute="centerY" secondItem="NnQ-1h-JSd" secondAttribute="centerY" id="SCt-4x-MED"/>
+                            <constraint firstItem="Uq7-Aw-bW5" firstAttribute="leading" secondItem="NnQ-1h-JSd" secondAttribute="leadingMargin" constant="3" id="Xfs-ud-zFz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uq7-Aw-bW5" secondAttribute="trailing" constant="3" id="a9M-Se-NS9"/>
+                            <constraint firstItem="Uq7-Aw-bW5" firstAttribute="centerX" secondItem="NnQ-1h-JSd" secondAttribute="centerX" id="x8t-r1-cuZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -707,6 +698,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="BPj-qM-tiW"/>
         <segue reference="cSH-p9-l60"/>
-        <segue reference="For-Cq-UGP"/>
+        <segue reference="7Yv-L8-bhq"/>
     </inferredMetricsTieBreakers>
 </document>
