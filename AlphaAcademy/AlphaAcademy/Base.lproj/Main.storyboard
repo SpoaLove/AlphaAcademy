@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="1561" y="168"/>
         </scene>
-        <!--Lessons View Controller-->
+        <!--Chapter1 Lessons View Controller-->
         <scene sceneID="OW5-lR-xEs">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="X1W-D2-R8A" customClass="LessonsViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="X1W-D2-R8A" customClass="Chapter1LessonsViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Xm-5e-Pmg"/>
                         <viewControllerLayoutGuide type="bottom" id="VaQ-sI-pwF"/>
@@ -697,7 +697,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BPj-qM-tiW"/>
-        <segue reference="cSH-p9-l60"/>
+        <segue reference="73z-al-KkI"/>
         <segue reference="7Yv-L8-bhq"/>
     </inferredMetricsTieBreakers>
 </document>

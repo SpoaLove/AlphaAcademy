@@ -61,18 +61,10 @@ class Lessons: JSQMessagesViewController {
     
     // quit lesson function
     func quitLesson(){
-        
-        guard finishedLesson else {
-            let alertController = UIAlertController(title: "Wait!", message:"The tutorial is not over yet!", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            present(alertController, animated: true, completion: nil)
-            return
-        }
-        
-        let selector = UIAlertController(title: "Quit Tutorial", message: "Press 'quit' to Quit Tutorial!", preferredStyle: .actionSheet)
+        let selector = UIAlertController(title: "Quit", message: "Do You Really Want to Quit? Progress will be lost!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
             (action:UIAlertAction) -> () in
-            self.performSegue(withIdentifier: "goToHome", sender: self)
+            self.performSegue(withIdentifier: "quit", sender: self)
         })
         let no = UIAlertAction(title: "no", style: .default, handler: {
             (action:UIAlertAction) -> () in
@@ -80,7 +72,6 @@ class Lessons: JSQMessagesViewController {
         selector.addAction(yes)
         selector.addAction(no)
         self.present(selector, animated: true, completion: nil)
-        
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {

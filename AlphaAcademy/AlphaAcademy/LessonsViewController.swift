@@ -53,24 +53,6 @@ class LessonsViewController: Lessons {
         }
     }
     
-
-    
-    override func quitLesson(){
-        //showAd()
-        let selector = UIAlertController(title: "Quit", message: "Do You Really Want to Quit? Progress will be lost!", preferredStyle: .actionSheet)
-        let yes = UIAlertAction(title: "Yes", style: .default, handler: {
-            (action:UIAlertAction) -> () in
-            self.performSegue(withIdentifier: "quit", sender: self)
-        })
-        let no = UIAlertAction(title: "no", style: .default, handler: {
-            (action:UIAlertAction) -> () in
-        })
-        selector.addAction(yes)
-        selector.addAction(no)
-        self.present(selector, animated: true, completion: nil)
-    }
-
-    
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
         if atEndOfRoute {

@@ -27,6 +27,7 @@
 		CB99D52F1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB41FF8D5AC00211116 /* ChatUser.swift */; };
+		CBC41BB71FFA0F7900211116 /* Chapter1LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */; };
 		CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */; };
 		CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925751F207CF900C69C6C /* pageViewController.swift */; };
 		CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */; };
@@ -76,6 +77,7 @@
 		CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/Spoa/Desktop/AlphaAcademy/AlphaAcademy/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 		CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		CBC41BB41FF8D5AC00211116 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1LessonsViewController.swift; sourceTree = "<group>"; };
 		CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlphaAcademy.entitlements; sourceTree = "<group>"; };
 		CBE9256F1F1F5DAA00C69C6C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
 				CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */,
 				CB2B1C0D1F2CCDC1002EE08C /* LessonsViewController.swift */,
+				CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */,
 				CB7870B61F49915800E4ACBD /* TutorialViewController.swift */,
 				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
 				CBE925751F207CF900C69C6C /* pageViewController.swift */,
@@ -499,6 +502,7 @@
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
 				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
+				CBC41BB71FFA0F7900211116 /* Chapter1LessonsViewController.swift in Sources */,
 				CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,
 				CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */,
