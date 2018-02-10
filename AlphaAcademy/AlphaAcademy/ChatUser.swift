@@ -8,7 +8,12 @@
 
 import Foundation
 
-// ChatUser Struct
+/**
+ * Chat User Structure
+ *
+ * @property id an unique identifier of the user
+ * @property name the name of the user
+ */
 struct ChatUser{
     let id: String
     var name: String

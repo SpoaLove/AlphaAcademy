@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="3519" y="-509"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Tutorial Lesson View Controller-->
         <scene sceneID="BI8-uF-u80">
             <objects>
-                <viewController id="L2g-MU-gVk" customClass="TutorialViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="L2g-MU-gVk" customClass="TutorialLessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lKI-Ko-pMU"/>
                         <viewControllerLayoutGuide type="bottom" id="I4W-2m-Hxh"/>
@@ -696,8 +696,8 @@
         <image name="Title" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BPj-qM-tiW"/>
-        <segue reference="73z-al-KkI"/>
+        <segue reference="j3z-Vf-Ocz"/>
+        <segue reference="cSH-p9-l60"/>
         <segue reference="7Yv-L8-bhq"/>
     </inferredMetricsTieBreakers>
 </document>

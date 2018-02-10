@@ -35,18 +35,27 @@ class Chapter1LessonsViewController: Lessons {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: """
         Other than 'String's there is other data types such as:
         'Int' which means intergers, used to store numbers without decimals,
-
         'Double' which means double precision, used to store numbers with decimals,
         'Boolean' which contains 2 members 'True' or 'False', used for storing conditions
-        """),
-        JSQMessage(senderId: ',', displayName: <#T##String!#>, text: <#T##String!#>)
-        //JSQMessage(senderId: <#T##String!#>, displayName: <#T##String!#>, text: <#T##String!#>)
-
+        """)
+        //JSQMessage(senderId: <#T##String!#>, displayName: <#T##String!#>, text: )
         
     
     ]
     
+    let helpMessages:[JSQMessage] = [
+        JSQMessage(senderId: "3", displayName: "Help", text: """
+        Help!
+        Command | Function
+        (N)ext  | Continue the Lesson
+        (H)elp,?| Shows this help message
+        """),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "In this chapter you will learn about the fundementals of programming in kotlin")
+    ]
     
+    private func appenedPreQuizMessages(){
+        //currentMessages += JSQMessage(senderId: "1", displayName: "A-Chan", text: "\(self.getName()), lets h")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         currentMessages += initialMessages
@@ -58,7 +67,10 @@ class Chapter1LessonsViewController: Lessons {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
 
+    
     /*
     // MARK: - Navigation
 
@@ -70,3 +82,7 @@ class Chapter1LessonsViewController: Lessons {
     */
 
 }
+
+
+
+

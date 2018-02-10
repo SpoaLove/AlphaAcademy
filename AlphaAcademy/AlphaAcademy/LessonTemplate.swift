@@ -1,5 +1,5 @@
 //
-//  LessonsViewController.swift
+//  LessonTemplate.swift
 //  AlphaAcademy
 //
 //  Created by Tengoku no Spoa on 2017/7/29.
@@ -11,7 +11,7 @@ import JSQMessagesViewController
 import GoogleMobileAds
 
 
-class LessonsViewController: Lessons {
+class LessonTemplate: Lessons {
     
     
  
@@ -132,7 +132,7 @@ class LessonsViewController: Lessons {
 }
 
 // extension for ads
-//extension LessonsViewController {
+//extension LessonTemplate {
 //
 //    func createAndLoadInterstitial() -> GADInterstitial {
 //        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
