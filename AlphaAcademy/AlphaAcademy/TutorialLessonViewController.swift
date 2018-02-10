@@ -10,7 +10,7 @@ import UIKit
 import JSQMessagesViewController
 
 class TutorialLessonViewController: Lessons {
-    
+
     /**
      * Defining additional Variables
      */
@@ -36,6 +36,8 @@ class TutorialLessonViewController: Lessons {
     ]
     
     let beretRecievingMessage = JSQMessage(senderId: "3", displayName: "System", text: "You have received the White Beret!")
+    let userLeveledUpMessage = JSQMessage(senderId: "3", displayName: "System", text: "Level Up! Lv0 -> Lv1")
+    
     
     let tutorialMessages2:[JSQMessage] = [
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Students in Alpha Academy receive new berets as they master new techniques!"),
@@ -103,6 +105,10 @@ class TutorialLessonViewController: Lessons {
                     atEndOfRoute = true
                 }else{
                     appendMessageWithJSQMessage(message: beretRecievingMessage)
+                    if getLevel()==0 {
+                        appendMessageWithJSQMessage(message: userLeveledUpMessage)
+                        setLevel(to: 1)
+                    }
                     currentMessages += tutorialMessages2
                     userHaveRecievedBeret = true
                 }
@@ -188,4 +194,3 @@ class TutorialLessonViewController: Lessons {
     }
     
 }
-

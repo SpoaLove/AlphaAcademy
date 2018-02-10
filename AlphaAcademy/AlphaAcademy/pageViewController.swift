@@ -15,13 +15,14 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     // MARK: UIPageViewControllerDataSource
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "Chapter1")]
+        return []
     }()
     
     // Additional UIView Controllers
     
     lazy var additionalViewControllers: [UIViewController] = {
         return [
+            self.newVc(viewController: "Chapter1"),
             self.newVc(viewController: "Chapter2"),
             self.newVc(viewController: "Chapter3"),
             self.newVc(viewController: "Chapter4"),
@@ -39,7 +40,7 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         // combine additional View Controllers according to user's level
         if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
             if userLevel != 0{
-                for i in 0...userLevel-2 {
+                for i in 0...userLevel-1 {
                     orderedViewControllers.append(additionalViewControllers[i])
                 }
             }

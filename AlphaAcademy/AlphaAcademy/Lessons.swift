@@ -116,15 +116,10 @@ class Lessons: JSQMessagesViewController {
     func help(){
         var helpMessage = """
                 Help!
-                Command|Function
+                Command: Function
                 """
         for command in commandList {
-            let spacesLength = 7 - command.key.count
-            var spaces = ""
-            for _ in 1...spacesLength {
-                spaces += " "
-            }
-            helpMessage += "\n\(command.key)\(spaces)| \(command.value)"
+            helpMessage += "\n\(command.key): \(command.value)"
         }
         appendMessage(text: helpMessage, senderId: "3", senderDisplayName: "Help!")
     }
@@ -369,6 +364,35 @@ class Lessons: JSQMessagesViewController {
      */
     func additionalFunctionForRoute1(){}
     func additionalFunctionForRoute2(){}
+    
+    
+    /**
+     * This function returns the Int of the Level
+     *
+     * @return the userLevel Int from the UserDefaut, if the userLevel cannot be fetched 0 will be returned instead
+     */
+    func getLevel()->Int{
+        if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
+            return userLevel
+        }else{
+            return 0
+        }
+    }
+    
+    
+    /**
+     * This function sets the userdefaults userlevel to the interger passed in
+     *
+     * @param level an interger that is <=9 that will be set as the userLevel
+     */
+    func setLevel(to level:Int){
+        guard level<=9 else {
+            print("Error: The input number is expected to be <=9, but found \(level)")
+            return
+        }
+        UserDefaults.standard.set(level, forKey: "userLevel")
+    }
+    
     
     override func viewDidLoad() {
         
