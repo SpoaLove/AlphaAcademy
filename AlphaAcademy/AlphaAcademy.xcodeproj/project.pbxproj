@@ -29,6 +29,7 @@
 		CBC41BB71FFA0F7900211116 /* Chapter1LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */; };
 		CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */; };
 		CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */; };
+		CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35462037393D00E2BFFB /* Quiz.swift */; };
 		CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925751F207CF900C69C6C /* pageViewController.swift */; };
 		CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */; };
 		F17702C356D27FF940E324DB /* Pods_AlphaAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC89F77F7E44137226DF436 /* Pods_AlphaAcademyTests.framework */; };
@@ -79,6 +80,7 @@
 		CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1LessonsViewController.swift; sourceTree = "<group>"; };
 		CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewController.swift; sourceTree = "<group>"; };
+		CBDA35462037393D00E2BFFB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlphaAcademy.entitlements; sourceTree = "<group>"; };
 		CBE9256F1F1F5DAA00C69C6C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		CBE925711F1F60D600C69C6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		CB99D4FA1F1AC112005D73B6 /* AlphaAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				CBDA35462037393D00E2BFFB /* Quiz.swift */,
 				CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */,
 				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
@@ -503,6 +506,7 @@
 				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
 				CBC41BB71FFA0F7900211116 /* Chapter1LessonsViewController.swift in Sources */,
 				CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */,
+				CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */,
 				CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,
 				CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */,

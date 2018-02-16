@@ -6,8 +6,6 @@
 //  Copyright © 2017年 Tengoku no Spoa. All rights reserved.
 //
 
-import Foundation
-
 /**
  * Chat User Structure
  *

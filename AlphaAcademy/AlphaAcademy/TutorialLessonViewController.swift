@@ -12,7 +12,7 @@ import JSQMessagesViewController
 class TutorialLessonViewController: Lessons {
 
     /**
-     * Defining additional Variables
+     * Defining additional conditions
      */
     var finishSettingName = false
     var nameDidSet = false
@@ -172,7 +172,7 @@ class TutorialLessonViewController: Lessons {
      * This function is called after the user name have been setted
      */
     func setNameComplete(){
-        user2.name = getName()
+        user.name = getName()
         finishSettingName = true
         let nameIsSetMessage:String = "My name is \(self.getName())!"
         appendMessage(text: nameIsSetMessage, senderId: "2", senderDisplayName: self.getName())
@@ -185,6 +185,8 @@ class TutorialLessonViewController: Lessons {
     override func viewDidLoad() {
         currentMessages += initialMessages
         super.viewDidLoad()
+        commandList.removeValue(forKey: "Quiz")
+        commandList.removeValue(forKey: "Q")
         // Do any additional setup after loading the view.
     }
     

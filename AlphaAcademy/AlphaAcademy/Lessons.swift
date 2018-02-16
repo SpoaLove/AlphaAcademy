@@ -16,10 +16,10 @@ class Lessons: JSQMessagesViewController {
     /**
      * Defines Users
      */
-    let user1 = ChatUser(id: "1", name: "A-Chan")
-    var user2 = ChatUser(id: "2", name: "You")
-    let user3 = ChatUser(id: "3", name: "Console")
-    let user4 = ChatUser(id: "4", name: "Code")
+    let achan = ChatUser(id: "1", name: "A-Chan")
+    var user = ChatUser(id: "2", name: "You")
+    let console = ChatUser(id: "3", name: "Console")
+    let code = ChatUser(id: "4", name: "Code")
 
     /**
      * Defines Conditions
@@ -32,10 +32,10 @@ class Lessons: JSQMessagesViewController {
      * Defines the Current User
      */
     var name:String {
-        return user2.name
+        return user.name
     }
     var currentUser: ChatUser {
-        return user2
+        return user
     }
     
     /**
@@ -60,19 +60,32 @@ class Lessons: JSQMessagesViewController {
     ]
     
     /**
+     * Tip messages
+     */
+    let continueTip = JSQMessage(senderId: "3", displayName: "Tip!", text: "please type 'next' or 'n' to continue")
+    let endTip = JSQMessage(senderId: "3", displayName: "Tip!", text: "Please tap the button on the bottom left to quit!")
+    
+    /**
      * Defines the avatar size
      */
     let avatarSize = CGSize(width: kJSQMessagesCollectionViewAvatarSizeDefault, height: kJSQMessagesCollectionViewAvatarSizeDefault)
     
     
+    /**
+     * This funtion returns the quit seque identifier
+     *
+     * @return a string of the quit sequre identifier
+     */
+    func quitSegueIdentifier()->String{
+        return "goToHome"
+    }
+    
    /**
      * This function quits the lesson to home if the user have reached the end of the script
      */
     override func didPressAccessoryButton(_ sender: UIButton!) {
-        // TODO: add help function
         if atEndOfRoute {
-            atEndOfRoute = false
-            performSegue(withIdentifier: "goToHome", sender: self)
+            performSegue(withIdentifier: quitSegueIdentifier(), sender: self)
             return
         }else{
             quitLesson()
@@ -86,7 +99,7 @@ class Lessons: JSQMessagesViewController {
         let selector = UIAlertController(title: "Quit", message: "Do You Really Want to Quit? Progress will be lost!", preferredStyle: .actionSheet)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: {
             (action:UIAlertAction) -> () in
-            self.performSegue(withIdentifier: "quit", sender: self)
+            self.performSegue(withIdentifier: self.quitSegueIdentifier(), sender: self)
         })
         let no = UIAlertAction(title: "no", style: .default, handler: {
             (action:UIAlertAction) -> () in
@@ -107,7 +120,9 @@ class Lessons: JSQMessagesViewController {
         "H":"Shows this help message",
         "?":"Shows this help message",
         "Next":"Continue the Lesson",
-        "N":"Continue the Lesson"
+        "N":"Continue the Lesson",
+        "Quiz":"Start the Quiz of the Chapter",
+        "Q":"Start the Quiz of the Chapter"
     ]
     
     /**
@@ -137,12 +152,68 @@ class Lessons: JSQMessagesViewController {
         // reach end of the Route
         }else if messagesCount==currentMessages.count && messagesCount != 0{
             if finishedLesson{
-                appendMessage(text: "Please tap the button on the bottom left to quit Chpater 1!", senderId: "3", senderDisplayName: "Tip!")
+                appendMessageWithJSQMessage(message: endTip)
                 atEndOfRoute = true
             }
         }else{
-            appendMessage(text: "please type 'next' or 'n' to continue", senderId: "3", senderDisplayName: "System")
+            appendMessageWithJSQMessage(message: continueTip)
         }
+    }
+    
+    
+    /**
+     * Shows the quiz using inputed Quiz
+     */
+    func showQuiz(with quiz:Quiz){
+        func checkAns(with choice:String){
+            self.appendMessage(text: choice, senderId: user.id, senderDisplayName: user.name)
+            if choice == quiz.correctAnswer {
+                self.appendMessageWithJSQMessage(message: quiz.messageCorrect)
+                correctResponse()
+            } else {
+                self.appendMessageWithJSQMessage(message: quiz.messageIncorrect)
+            }
+        }
+        
+        let selector = UIAlertController(title: "QUIZ!", message: quiz.questionText, preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: quiz.choice1, style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            checkAns(with: quiz.choice1)
+            selector.dismiss(animated: true, completion: nil)
+        })
+        let action2 = UIAlertAction(title: quiz.choice2, style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            checkAns(with: quiz.choice2)
+            selector.dismiss(animated: true, completion: nil)
+        })
+        let action3 = UIAlertAction(title: quiz.choice3, style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            checkAns(with: quiz.choice3)
+            selector.dismiss(animated: true, completion: nil)
+        })
+        selector.addAction(action1)
+        selector.addAction(action2)
+        selector.addAction(action3)
+        
+        
+        self.present(selector, animated: true, completion:nil)
+    }
+    
+    /**
+     * This function is called when the quiz is answered correctly
+     */
+    func correctResponse(){
+        // need to be implemented
+    }
+    
+    
+    
+    /**
+     * This function shows the quizes of the chapter to the user
+     * override this function to customize the quiz!
+     */
+    func quiz(){
+        printMsg(text: "Quiz Is not Implemented")
     }
     
     /**
@@ -158,7 +229,7 @@ class Lessons: JSQMessagesViewController {
                 return executeCommand(with:command.key)
             }
         }
-        return appendMessage(text: "please type 'next' or 'n' to continue", senderId: "3", senderDisplayName: "System")
+        return appendMessageWithJSQMessage(message: continueTip)
     }
     
     
@@ -174,6 +245,8 @@ class Lessons: JSQMessagesViewController {
             next()
         case "Video","V":
             playVideo(with: "TeachingVideos/AGintro", of: "mp4")
+        case "Quiz","Q":
+            quiz()
         default:
             help()
         }
@@ -293,6 +366,15 @@ class Lessons: JSQMessagesViewController {
         messages.append(message!)
         finishSendingMessage()
     }
+    
+    /**
+     * This function prints a debug message into the messages
+     *
+     * @param text the String that will be printed
+     */
+    func printMsg(text:String){
+        appendMessage(text: text, senderId: "3", senderDisplayName: "DEBUG")
+    }
 
     /**
      * This function plays a video from a given path
@@ -312,7 +394,6 @@ class Lessons: JSQMessagesViewController {
         present(playerController, animated: true) {
             player.play()
         }
-        
     }
     
     /**
@@ -402,7 +483,7 @@ class Lessons: JSQMessagesViewController {
         senderDisplayName = currentUser.name
         
         // append initial messages
-        user2.name = getName()
+        user.name = getName()
         messages += initailMessages
     }
 

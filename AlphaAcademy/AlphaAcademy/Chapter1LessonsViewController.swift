@@ -11,51 +11,134 @@ import AVKit
 import JSQMessagesViewController
 
 class Chapter1LessonsViewController: Lessons {
-
-    let initialMessages:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to the first chapter of Alpha Academy"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "In this chapter you will learn about the fundementals of programming in kotlin"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "To write a kotlin program you have to first write the 'main function'"),
-        JSQMessage(senderId: "4", displayName: "Code", text: """
-        fun main(args: Array<String>){
-            // some Codes
-        }
-        """),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "The main function of a propgram is the start of the program, when a program is runned the main function will be called first"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Let's add some code into the main function!"),
-        JSQMessage(senderId: "4", displayName: "Code", text: """
-        fun main(args: Array<String>) {
-            print("Hello, World!")
-        }
-        """),
-        JSQMessage(senderId: "3", displayName: "Console", text: "Hello, World!"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "The print() function is a function that will output the 'arguments' that was passed in!"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "In this case the argument passed in is a 'String': \"Hello,World\""),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "'String' one of the data types that a kotlin program can deal with, Strings is used store words and sentences, or can be simply define as a collection of characters"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: """
-        Other than 'String's there is other data types such as:
-        'Int' which means intergers, used to store numbers without decimals,
-        'Double' which means double precision, used to store numbers with decimals,
-        'Boolean' which contains 2 members 'True' or 'False', used for storing conditions
-        """)
-        //JSQMessage(senderId: <#T##String!#>, displayName: <#T##String!#>, text: )
-        
     
-    ]
     
-    let helpMessages:[JSQMessage] = [
-        JSQMessage(senderId: "3", displayName: "Help", text: """
-        Help!
-        Command | Function
-        (N)ext  | Continue the Lesson
-        (H)elp,?| Shows this help message
-        """),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "In this chapter you will learn about the fundementals of programming in kotlin")
-    ]
+    /**
+     * Additional variables
+     */
+    var userCompleteQuiz = false
+    var userHaveRecievedBeret = false
     
-    private func appenedPreQuizMessages(){
-        //currentMessages += JSQMessage(senderId: "1", displayName: "A-Chan", text: "\(self.getName()), lets h")
+    /**
+     * This function returns a boolean checking if the user have completed the chapter
+     * @return the boolean of userLevel higher than 1
+     */
+    func userCompletedChapter()->Bool {
+        return getLevel()>1
     }
+
+    /**
+     * initial lesson messages
+     */
+    let initialMessages:[JSQMessage] = [
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Welcome to the first lesson of Alpha Academy!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "In this lesson you will learn about your first spell in Swift!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "For any magician that is learning a new programming language, the first spell they will have to master is the ‘print' function spell!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "‘print’ is super simple to use, all you have to do is to type the code below:"),
+        JSQMessage(senderId: "4", displayName: "Code", text: "print(\"Hello, World!\")"),
+        JSQMessage(senderId: "3", displayName: "Console", text: "Hello, World!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "The code above is a complete program that can print out the ‘String’ “Hello, World!” onto the console!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "A ‘String’ is a data type used in swift to store text that will be used in the program, a ‘String’ should always start and end with double quotation marks!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Well-done! You have just mastered your very first spell in Swift!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before you receive your beret, let’s have a simple quiz! Please type quiz to start the quiz!")
+    ]
+
+    /**
+     * quizes
+     */
+    var quizes = [
+        Quiz(
+            questionText: "Which of the following is not a function of the ‘print’ function",
+            choice1: "print out a String onto the console",
+            choice2: "print out a Cotton onto the console",
+            choice3: "print put a Kitten onto the console",
+            correctAnswer: "print out a String onto the console",
+            messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that the print function prints a String"),
+            messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
+        ),
+        Quiz(
+            questionText: "Which of the following code is a valid ‘print’ function:",
+            choice1: "print(‘Hello, Alpha Academy!’)",
+            choice2: "print(Hello, Alpha Academy!)",
+            choice3: "print(\"Hello, Alpha Academy!\")",
+            correctAnswer: "print(\"Hello, Alpha Academy!\")",
+            messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that a ‘String’ should always start and end with double quotation marks!"),
+            messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
+            )
+    ]
+    
+    /**
+     * post quiz messages
+     */
+    let postQuizMessages:[JSQMessage] = [
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "You have successfully passed the quiz!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "This is your new beret!")
+    ]
+    
+    let beretRecievingMessage = JSQMessage(senderId: "3", displayName: "System", text: "You have received the Pink Beret!")
+    let userLeveledUpMessage = JSQMessage(senderId: "3", displayName: "System", text: "Level Up! Lv1 -> Lv2")
+    
+    
+    /**
+     * post quiz messages2
+     */
+    let postQuizMessages2:[JSQMessage] = [
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "You can always change your beret in your beret collection that have been opened in the home page!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Enjoy your time in Alpha Academy, see you in the next class~")
+    ]
+    
+    
+    
+    /**
+     * This function shows and remove the first quiz if quizes is not empty
+     */
+    func showQuizes(){
+        if !quizes.isEmpty {
+            showQuiz(with: quizes.first!)
+        }
+    }
+    
+    override func correctResponse() {
+        quizes.removeFirst()
+        if quizes.count >= 2 {
+            appendMessage(text: "\(quizes.count-1) questons left!", senderId: "3", senderDisplayName: "QUIZ!")
+        } else if quizes.count == 1 {
+            appendMessage(text: "1 queston left!", senderId: "3", senderDisplayName: "QUIZ!")
+        } else {
+            appendMessage(text: "All Questions have been answered correctlly!", senderId: "3", senderDisplayName: "QUIZ!")
+            currentMessages += postQuizMessages
+            userCompleteQuiz = true
+        }
+    }
+    
+    override func next(){
+        if userCompleteQuiz && messagesCount==currentMessages.count && !userHaveRecievedBeret {
+            appendMessageWithJSQMessage(message: beretRecievingMessage)
+            if getLevel()==1 {
+                appendMessageWithJSQMessage(message: userLeveledUpMessage)
+                setLevel(to: 2)
+            }
+            currentMessages += postQuizMessages2
+            userHaveRecievedBeret = true
+        }
+        
+        if userHaveRecievedBeret && messagesCount==currentMessages.count && !atEndOfRoute{
+            appendMessage(text: "Please tap the button on the bottom left to quit Lesson 1!", senderId: "3", senderDisplayName: "Tip!")
+            atEndOfRoute = true
+        }
+        
+        super.next()
+    }
+
+    override func quitSegueIdentifier() -> String {
+        return "quit"
+    }
+    
+    override func quiz() {
+        showQuizes()
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         currentMessages += initialMessages
@@ -67,19 +150,6 @@ class Chapter1LessonsViewController: Lessons {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
