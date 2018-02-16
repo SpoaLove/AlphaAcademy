@@ -1,0 +1,51 @@
+Chpater 1 Lesson Sctipts
+
+# 1.InitialScripts.1
+A-Chan: "Welcome to the first lesson of Alpha Academy!"
+A-Chan: "In this lesson you will learn about your first spell in Swift!"
+A-Chan: "For any magician that is learning a new programming language, the first spell they will have to master is the ‘print' function spell!"
+A-Chan: "‘print’ is super simple to use, all you have to do is to type the code below:"
+Code: "print(“Hello, World!”)"
+Console: "Hello, World!"
+A-Chan: "The code above is a complete program that can print out the ‘String’ “Hello, World!” onto the console!"
+A-Chan: "A ‘String’ is a data type used in swift to store text that will be used in the program, a ‘String’ should always start and end with double quotation marks!"
+A-Chan: "Well-done! You have just mastered your very first spell in swift!"
+A-Chan: "Before you receive your beret, let’s have a simple quiz!"
+
+
+# 1.Quizes.1
+//Popups
+Quiz: "Which of the following is not a function of the ‘print’ function:"
+1. "print out a String onto the console" -> 1.Quizes.1.1
+2. "print out a Cotton onto the console" -> 1.Quizes.1.2
+3. "print put a Kitten onto the console" -> 1.Quizes.1.2
+//Popups
+
+# 1.Quizes.1.1
+A-Chan: "Correct! Remember that the print function prints a String"
+
+# 1.Quizes.1.2
+A-Chan: "The answer is incorrect! Read carefully through the lesson and try again!"
+
+# 1.Quizes.2
+//Popups
+Quiz: "Which of the following code is a valid ‘print’ function:"
+1. "print(‘Hello, Alpha Academy!’)" -> 1.Quizes.2.2
+2. "print(Hello, Alpha Academy!)" -> 1.Quizes.2.2
+3. "print("Hello, Alpha Academy!"")" -> 1.Quizes.2.1
+//Popups
+
+# 1.Quizes.2.1
+A-Chan: "Correct! Remember that a ‘String’ should always start and end with double quotation marks!"
+
+# 1.Quizes.2.2
+A-Chan: "The answer is incorrect! Read carefully through the lesson and try again!"
+
+
+# 1.PostQuizScripts.1
+A-Chan:"Now you have just completed the lesson of Alpha Academy!"
+A-Chan: "This is your new beret!"
+
+# 1.PostQuizScripts.2
+A-Chan: "You can always change your beret in your beret collection that have been opened in the home page!"
+A-Chan: "Enjoy your time in Alpha Academy, see you in the next class~"

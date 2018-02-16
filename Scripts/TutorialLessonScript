@@ -1,0 +1,20 @@
+Tutorial Lesson Scripts
+
+# Tutorial.InitialScripts.1
+A-Chan: "Welcome to Alpha Academy! I am your classmate A-Chan!"
+A-Chan: "Before I start may I ask what is your name?"
+//User Text Inputs
+-UserName- Name?: "Please enter your Name:"
+//User Text Inputs
+A-Chan: "-UserName-! What a nice name!"
+A-Chan: "Alpha Academy is a magical school that locates in the programming island."
+A-Chan: "In Alpha Academy everything that happens is governed by magical spells, which is the ‘Swift’ Programming Language!"
+A-Chan: "Swift is a safe and fast programming language which is a fantastic way to write programs!"
+A-Chan: "It is also an easy and friendly way for new programmers to start learning programming!"
+A-Chan: "Everyday students in Alpha Academy work hard and excel their techniques on using these magical spells!"
+
+
+#Tutorial.PostQuizScripts.1
+A-Chan: "Students in Alpha Academy receive new berets as they master new techniques!"
+A-Chan: "After you have master it all you will receive the Black Beret which is the symbol of being one of the most elite students in the Alpha Academy!"
+A-Chan: "Enjoy your time in Alpha Academy, see you in the next class~"

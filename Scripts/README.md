@@ -1,10 +1,19 @@
 # Format for Script
 
-<strong>This Document describes how the Script should be formated</strong>
+<strong>This Document describes how the Script should be formatted</strong>
 
-## Script Numbers
+## Script Structure
 
-<strong>Every Route in the Script will have it's identify number</strong>
+<strong> Every main chapters' script must follow the Structure below:</Strong>
+
+<strong>Initial Scripts</strong>
+<strong>Quizes</strong>
+<strong>Post Quiz Scripts</strong>
+
+
+## Script identifyer
+
+<strong>Every Route in the Script will have it's identifyer</strong>
 
 <strong>The identify number should be written at the start of the script</strong>
 
@@ -16,10 +25,10 @@ a '.' is used to show the script is a sub route
 
 <strong>Example:</strong>
 
-\# 1.3.2
+\# 1.Quizes.2
 
 
-## Line
+## Dialog
 
 <strong>A line of dialog should be written like following:</strong>
 
@@ -29,11 +38,11 @@ CharacterName: "text"
 
 A-Chan: "Hello, World!"
 
-## user text inputs
+## User text inputs
 
 <strong>if there is user text inputs use the following format:</strong>
 
-//User Text Inputs 
+//User Text Inputs
 
 -Variable Name- Title: "Title of Text"
 
@@ -43,13 +52,13 @@ A-Chan: "Hello, World!"
 
 <strong>Example:</strong>
 
-//User Text Inputs 
+//User Text Inputs
 
 -userName- Title: "Name?"
 
 * Discriptions: "Please enter your Name:"
 
-//User Text Inputs 
+//User Text Inputs
 
 ## user popup inputs
 
