@@ -181,6 +181,10 @@ class TutorialLessonViewController: Lessons {
         nameDidSet = true
     }
     
+    override func quitSegueIdentifier()->String{
+        return "goToHome"
+    }
+    
     
     override func viewDidLoad() {
         currentMessages += initialMessages

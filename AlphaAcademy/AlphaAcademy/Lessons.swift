@@ -92,7 +92,7 @@ class Lessons: JSQMessagesViewController {
      * @return a string of the quit sequre identifier
      */
     func quitSegueIdentifier()->String{
-        return "goToHome"
+        return "quit"
     }
     
    /**

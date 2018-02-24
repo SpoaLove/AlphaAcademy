@@ -130,9 +130,6 @@ class Chapter1LessonsViewController: Lessons {
         super.next()
     }
 
-    override func quitSegueIdentifier() -> String {
-        return "quit"
-    }
     
     override func quiz() {
         showQuizes()

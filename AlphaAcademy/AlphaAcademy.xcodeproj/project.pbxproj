@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8C34E85825BDD675F229B929 /* Pods_AlphaAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A5A4307117B90AC4C68B92 /* Pods_AlphaAcademyUITests.framework */; };
 		941A56E6D14943E0C9331E77 /* Pods_AlphaAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795279CDE0943DF6B0AABF1D /* Pods_AlphaAcademy.framework */; };
-		CB2B1C0E1F2CCDC1002EE08C /* LessonTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0D1F2CCDC1002EE08C /* LessonTemplate.swift */; };
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
 		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
 		CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */; };
@@ -30,6 +29,7 @@
 		CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */; };
 		CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */; };
 		CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35462037393D00E2BFFB /* Quiz.swift */; };
+		CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */; };
 		CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925751F207CF900C69C6C /* pageViewController.swift */; };
 		CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */; };
 		F17702C356D27FF940E324DB /* Pods_AlphaAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC89F77F7E44137226DF436 /* Pods_AlphaAcademyTests.framework */; };
@@ -60,7 +60,6 @@
 		795279CDE0943DF6B0AABF1D /* Pods_AlphaAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlphaAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		981D787F3D5A97A43D32BCE8 /* Pods-AlphaAcademyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlphaAcademyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlphaAcademyUITests/Pods-AlphaAcademyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A98B4371B62968AFAE0A6B1A /* Pods-AlphaAcademyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlphaAcademyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlphaAcademyUITests/Pods-AlphaAcademyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CB2B1C0D1F2CCDC1002EE08C /* LessonTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTemplate.swift; sourceTree = "<group>"; };
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
 		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
 		CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeretsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewController.swift; sourceTree = "<group>"; };
 		CBDA35462037393D00E2BFFB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2LessonViewController.swift; sourceTree = "<group>"; };
 		CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlphaAcademy.entitlements; sourceTree = "<group>"; };
 		CBE9256F1F1F5DAA00C69C6C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		CBE925711F1F60D600C69C6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -164,16 +164,16 @@
 		CB99D4FA1F1AC112005D73B6 /* AlphaAcademy */ = {
 			isa = PBXGroup;
 			children = (
-				CBDA35462037393D00E2BFFB /* Quiz.swift */,
 				CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */,
 				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
-				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
+				CBDA35462037393D00E2BFFB /* Quiz.swift */,
 				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
 				CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */,
-				CB2B1C0D1F2CCDC1002EE08C /* LessonTemplate.swift */,
+				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
 				CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */,
 				CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */,
+				CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */,
 				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
 				CBE925751F207CF900C69C6C /* pageViewController.swift */,
 				CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */,
@@ -498,12 +498,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */,
-				CB2B1C0E1F2CCDC1002EE08C /* LessonTemplate.swift in Sources */,
 				CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
 				CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
 				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
+				CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */,
 				CBC41BB71FFA0F7900211116 /* Chapter1LessonsViewController.swift in Sources */,
 				CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */,
 				CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */,
