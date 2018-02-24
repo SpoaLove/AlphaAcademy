@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5h-In-yyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3519" y="-509"/>
+            <point key="canvasLocation" x="2235" y="-510"/>
         </scene>
         <!--Tutorial Lesson View Controller-->
         <scene sceneID="BI8-uF-u80">
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTo-Wx-o8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4514" y="-649"/>
+            <point key="canvasLocation" x="3519" y="-510"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="77k-hW-7OX">
@@ -98,7 +98,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEh-Dg-LBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5454" y="-509"/>
+            <point key="canvasLocation" x="4803" y="-510"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="O1d-7g-PGx">
@@ -113,28 +113,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
-                                <rect key="frame" x="132" y="298" width="150.33333333333337" height="140"/>
+                                <rect key="frame" x="80.333333333333329" y="269.33333333333331" width="254.66666666666669" height="198"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                        <rect key="frame" x="19.66666666666665" y="0.0" width="111.33333333333331" height="46.666666666666664"/>
+                                        <rect key="frame" x="71.666666666666686" y="0.0" width="111.33333333333331" height="66"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'Print' Magic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-MB-Kzf">
-                                        <rect key="frame" x="0.0" y="46.666666666666686" width="150.33333333333334" height="46.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Print(&quot;Magic&quot;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-MB-Kzf">
+                                        <rect key="frame" x="0.0" y="66" width="254.66666666666666" height="66"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Cu-5Ns">
-                                        <rect key="frame" x="51.333333333333343" y="93.333333333333314" width="48" height="46.666666666666657"/>
+                                        <rect key="frame" x="103.33333333333333" y="132" width="47.999999999999986" height="66"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
-                                            <action selector="chapterSelected1:" destination="Laa-iQ-CTj" eventType="touchUpInside" id="Yey-Yj-PUs"/>
                                             <segue destination="X1W-D2-R8A" kind="popoverPresentation" identifier="gotoChapt1" popoverAnchorView="qnJ-Cu-5Ns" id="XcG-If-rPs">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
@@ -157,12 +156,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7w-Rj-AcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="HsG-zX-Ppm"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="168"/>
+            <point key="canvasLocation" x="957" y="165"/>
         </scene>
-        <!--Chapter1 Lessons View Controller-->
+        <!--Chapter1 Lesson View Controller-->
         <scene sceneID="OW5-lR-xEs">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="X1W-D2-R8A" customClass="Chapter1LessonsViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="X1W-D2-R8A" customClass="Chapter1LessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Xm-5e-Pmg"/>
                         <viewControllerLayoutGuide type="bottom" id="VaQ-sI-pwF"/>
@@ -170,7 +169,7 @@
                     <view key="view" hidden="YES" contentMode="scaleToFill" id="sPM-PD-uzk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.82745885848999023" green="0.82744091749191284" blue="0.82744443416595459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="73z-al-KkI"/>
@@ -178,12 +177,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAB-jz-QPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="916"/>
+            <point key="canvasLocation" x="957" y="915"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapter2 Lesson View Controller-->
         <scene sceneID="vGi-9a-pSI">
             <objects>
-                <viewController id="AjO-f8-Eg0" sceneMemberID="viewController">
+                <viewController id="AjO-f8-Eg0" customClass="Chapter2LessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZyC-uS-qN7"/>
                         <viewControllerLayoutGuide type="bottom" id="aRZ-ge-95X"/>
@@ -191,12 +190,15 @@
                     <view key="view" contentMode="scaleToFill" id="xdL-Dc-GwK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.90981245040893555" green="0.90979284048080444" blue="0.90979677438735962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="JuQ-28-njV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqQ-ma-tr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2219" y="915"/>
+            <point key="canvasLocation" x="1593" y="915"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="uBx-62-VPx">
@@ -211,28 +213,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-XJ-ysa">
-                                <rect key="frame" x="125" y="297" width="164" height="142.33333333333337"/>
+                                <rect key="frame" x="153.33333333333334" y="321.33333333333331" width="107.33333333333334" height="93.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-PL-tP9">
-                                        <rect key="frame" x="28.333333333333336" y="0.0" width="107.33333333333331" height="46.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Flow I" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDe-j1-wiR">
-                                        <rect key="frame" x="0.0" y="48.666666666666686" width="164" height="46.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwf-iT-1ow">
-                                        <rect key="frame" x="58" y="97.333333333333314" width="48" height="45"/>
+                                        <rect key="frame" x="29.666666666666657" y="48.666666666666686" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
-                                            <action selector="chapterSelected3:" destination="ZXX-tU-395" eventType="touchUpInside" id="y9p-Me-dlU"/>
+                                            <segue destination="l8r-bk-DGF" kind="popoverPresentation" identifier="gotoChapt3" popoverAnchorView="Wwf-iT-1ow" id="3gX-Si-Zck">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -252,7 +249,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKV-Nh-efc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="92a-1F-wCy"/>
             </objects>
-            <point key="canvasLocation" x="2873" y="167"/>
+            <point key="canvasLocation" x="2236" y="165"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="R9Q-zR-gDr">
@@ -281,8 +278,9 @@
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
-                                            <action selector="chapterSelected5:" destination="PLU-c5-9xp" eventType="touchUpInside" id="1bq-2B-7u2"/>
-                                            <action selector="chapterSelected5:" destination="RMQ-dx-zZI" eventType="touchUpInside" id="afR-jZ-7CE"/>
+                                            <segue destination="L15-yu-54s" kind="popoverPresentation" identifier="gotoChapt5" popoverAnchorView="Pyx-FU-KEI" id="OfR-Cd-TWg">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -300,10 +298,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ab-hx-sof" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="PLU-c5-9xp" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="bbR-Lb-yyQ"/>
             </objects>
-            <point key="canvasLocation" x="4164" y="166"/>
+            <point key="canvasLocation" x="3519" y="165"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="efP-Fi-P6j">
@@ -332,8 +329,9 @@
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
-                                            <action selector="chapterSelected6:" destination="1h3-gq-ZVQ" eventType="touchUpInside" id="UZ7-ZE-8Tu"/>
-                                            <action selector="chapterSelected6:" destination="c38-Eo-haU" eventType="touchUpInside" id="f1U-ZV-bg1"/>
+                                            <segue destination="u1x-Ls-cpe" kind="popoverPresentation" identifier="gotoChapt6" popoverAnchorView="mtB-dm-9wk" id="V0X-xR-rFR">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -351,10 +349,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7l-cE-ZlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1h3-gq-ZVQ" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="UKA-s7-Fpd"/>
             </objects>
-            <point key="canvasLocation" x="4804" y="166"/>
+            <point key="canvasLocation" x="4164" y="165"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="9JZ-Ro-X24">
@@ -369,28 +366,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
-                                <rect key="frame" x="149" y="299" width="116.33333333333331" height="138.33333333333337"/>
+                                <rect key="frame" x="133.33333333333334" y="289.66666666666669" width="149.00000000000003" height="157.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="46.666666666666664"/>
+                                        <rect key="frame" x="16.333333333333307" y="0.0" width="116.33333333333331" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Variables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-S4-xic">
-                                        <rect key="frame" x="3" y="46.666666666666686" width="110.66666666666667" height="46.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="var &amp; let" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-S4-xic">
+                                        <rect key="frame" x="0.0" y="46.666666666666629" width="149" height="66"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-MG-L7x">
-                                        <rect key="frame" x="34.333333333333343" y="93.333333333333314" width="48" height="45"/>
+                                        <rect key="frame" x="50.333333333333314" y="112.66666666666663" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
-                                            <action selector="chapterSelected2:" destination="GCn-Io-dtM" eventType="touchUpInside" id="CVS-zW-4Dt"/>
                                             <segue destination="AjO-f8-Eg0" kind="popoverPresentation" identifier="gotoChapt2" popoverAnchorView="0cK-MG-L7x" id="Df3-Dz-l1d">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
@@ -413,7 +409,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbH-V5-OyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0IC-Dy-00y"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="166.8665667166417"/>
+            <point key="canvasLocation" x="1594" y="165"/>
         </scene>
         <!--Chapters View Controller-->
         <scene sceneID="qaW-n2-HDe">
@@ -428,28 +424,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-Tc-BtN">
-                                <rect key="frame" x="121.00000000000001" y="299" width="172.33333333333337" height="138.33333333333337"/>
+                                <rect key="frame" x="152" y="322.33333333333331" width="110.33333333333331" height="91.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-Ok-eVG">
-                                        <rect key="frame" x="30.999999999999993" y="0.0" width="110.33333333333331" height="46.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110.33333333333333" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Flow II" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5B-Nk-Zlg">
-                                        <rect key="frame" x="0.0" y="46.666666666666686" width="172.33333333333334" height="46.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaL-Ml-biS">
-                                        <rect key="frame" x="62.333333333333343" y="93.333333333333314" width="48" height="45"/>
+                                        <rect key="frame" x="31.333333333333343" y="46.666666666666686" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
-                                            <action selector="chapterSelected4:" destination="Ajr-Ld-t9O" eventType="touchUpInside" id="Xd2-EB-f9Y"/>
+                                            <segue destination="loW-Nj-liL" kind="popoverPresentation" identifier="gotoChapt4" popoverAnchorView="xaL-Ml-biS" id="ZS2-uU-155">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -469,7 +460,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hJ-Sd-FBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="AxA-Ab-Qob"/>
             </objects>
-            <point key="canvasLocation" x="3521" y="166"/>
+            <point key="canvasLocation" x="2880" y="165"/>
         </scene>
         <!--User Info Page View Controller-->
         <scene sceneID="3xn-Ii-Pip">
@@ -486,23 +477,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
                                 <rect key="frame" x="30" y="100" width="354" height="511"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userWhiteBeret" translatesAutoresizingMaskIntoConstraints="NO" id="ALy-rj-5eZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="365"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userBlackBeret" translatesAutoresizingMaskIntoConstraints="NO" id="ALy-rj-5eZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="350.33333333333331"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
-                                        <rect key="frame" x="116.66666666666666" y="365" width="121" height="32.666666666666686"/>
+                                        <rect key="frame" x="116.66666666666666" y="350.33333333333331" width="121" height="31.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ta-6qX">
-                                        <rect key="frame" x="154" y="397.66666666666669" width="46.333333333333343" height="27.666666666666686"/>
+                                        <rect key="frame" x="154" y="381.66666666666669" width="46.333333333333343" height="26.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
-                                        <rect key="frame" x="0.0" y="425.33333333333337" width="354" height="21.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="408.33333333333331" width="354" height="20.666666666666686"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Back to Title">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -513,7 +504,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-u5-jnL">
-                                        <rect key="frame" x="0.0" y="446.66666666666663" width="354" height="21.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="429" width="354" height="20.333333333333314"/>
                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Rename">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -523,7 +514,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-RK-ONo">
-                                        <rect key="frame" x="0.0" y="468.33333333333337" width="354" height="21.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="449.33333333333337" width="354" height="20.666666666666686"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Redo Tutorial">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -536,7 +527,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-Vs-WfR">
-                                        <rect key="frame" x="0.0" y="489.66666666666663" width="354" height="21.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="470" width="354" height="20.333333333333314"/>
                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Berets Collection">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -546,8 +537,8 @@
                                             <segue destination="bd3-wz-aVK" kind="presentation" identifier="Berets" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="l1T-mv-5dS"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-hf-4Kp">
-                                        <rect key="frame" x="0.0" y="511" width="354" height="0.0"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-hf-4Kp">
+                                        <rect key="frame" x="0.0" y="490.33333333333337" width="354" height="20.666666666666686"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Debug Reset Level">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -594,6 +585,56 @@
             </objects>
             <point key="canvasLocation" x="5458" y="166"/>
         </scene>
+        <!--Chapters View Controller-->
+        <scene sceneID="8X6-qJ-fYt">
+            <objects>
+                <viewController storyboardIdentifier="Chapter7" id="fIG-TP-pXc" customClass="chaptersViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NUJ-P4-3tN"/>
+                        <viewControllerLayoutGuide type="bottom" id="QOO-76-PWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T0A-i2-WOF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eWp-qD-mQ9">
+                                <rect key="frame" x="151" y="322.33333333333331" width="112" height="91.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1K-KB-SHs">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="46.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YZ-YL-h3q">
+                                        <rect key="frame" x="32" y="46.666666666666686" width="48" height="45"/>
+                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
+                                        <state key="normal" title="Start!"/>
+                                        <connections>
+                                            <segue destination="qMt-zq-Hs3" kind="popoverPresentation" identifier="gotoChapt7" popoverAnchorView="3YZ-YL-h3q" id="NXO-eF-kMm">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3YZ-YL-h3q" firstAttribute="leading" secondItem="eWp-qD-mQ9" secondAttribute="leading" constant="32" id="AZk-j4-ISS"/>
+                                    <constraint firstItem="n1K-KB-SHs" firstAttribute="leading" secondItem="eWp-qD-mQ9" secondAttribute="leading" id="oCQ-NT-XLM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34787088632583618" green="0.76417213678359985" blue="0.98041969537734985" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eWp-qD-mQ9" firstAttribute="centerY" secondItem="T0A-i2-WOF" secondAttribute="centerY" id="CT4-04-gAe"/>
+                            <constraint firstItem="eWp-qD-mQ9" firstAttribute="centerX" secondItem="T0A-i2-WOF" secondAttribute="centerX" id="Hr8-4y-43R"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udN-T3-tCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4803" y="165"/>
+        </scene>
         <!--Berets Collection View Controller-->
         <scene sceneID="pdQ-4g-sH1">
             <objects>
@@ -617,6 +658,7 @@
                                     </label>
                                     <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0White" translatesAutoresizingMaskIntoConstraints="NO" id="I9w-gQ-pNH">
                                         <rect key="frame" x="0.0" y="45.666666666666686" width="414" height="327"/>
+                                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="White Beret" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehg-k9-BMB">
                                         <rect key="frame" x="135.33333333333337" y="372.66666666666669" width="143.66666666666663" height="45.666666666666686"/>
@@ -655,7 +697,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.62750077250000003" green="0.26433014869999999" blue="0.2307784259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uwg-lL-BDO" firstAttribute="leading" secondItem="kpL-Xf-aZX" secondAttribute="leading" id="5qk-8w-9dX"/>
                             <constraint firstItem="LcB-EJ-FMv" firstAttribute="top" secondItem="uwg-lL-BDO" secondAttribute="bottom" constant="8" symbolic="YES" id="6cV-7d-Jh8"/>
@@ -731,17 +773,122 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6g-aE-W5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2564" y="-509"/>
+            <point key="canvasLocation" x="957" y="-510"/>
+        </scene>
+        <!--Chapter3 Lesson View Controller-->
+        <scene sceneID="ecX-i1-VdH">
+            <objects>
+                <viewController id="l8r-bk-DGF" customClass="Chapter3LessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HV9-wi-fbd"/>
+                        <viewControllerLayoutGuide type="bottom" id="NIj-70-MGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZcX-7h-J0e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90981245040000003" green="0.90979284049999998" blue="0.90979677439999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qJ1-nS-6rC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9XJ-ja-VYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2235" y="915"/>
+        </scene>
+        <!--Chapter4 Lesson View Controller-->
+        <scene sceneID="ool-po-GZg">
+            <objects>
+                <viewController id="loW-Nj-liL" customClass="Chapter4LessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0tB-wC-1xN"/>
+                        <viewControllerLayoutGuide type="bottom" id="fga-Fa-Vw2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SRF-WF-Pcm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90981245040000003" green="0.90979284049999998" blue="0.90979677439999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="dCq-6V-sem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3s-39-z98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880" y="915"/>
+        </scene>
+        <!--Chapter5 Lesson View Controller-->
+        <scene sceneID="4NF-V9-HeY">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="L15-yu-54s" customClass="Chapter5LessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vT6-JO-KwK"/>
+                        <viewControllerLayoutGuide type="bottom" id="hxk-ea-8WI"/>
+                    </layoutGuides>
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="voU-Ce-mr5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.82745885850000001" green="0.82744091750000004" blue="0.82744443420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="HuJ-Cz-qJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLY-vm-zlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3519" y="915"/>
+        </scene>
+        <!--Chapter6 Lesson View Controller-->
+        <scene sceneID="BzP-kH-fR7">
+            <objects>
+                <viewController id="u1x-Ls-cpe" customClass="Chapter6LessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIv-5F-Yhv"/>
+                        <viewControllerLayoutGuide type="bottom" id="YVh-6n-W0A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sHP-Rq-XfH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90981245040000003" green="0.90979284049999998" blue="0.90979677439999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="plW-zs-ng6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95j-hl-WpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4164" y="915"/>
+        </scene>
+        <!--Chapter7 Lesson View Controller-->
+        <scene sceneID="N7E-SM-SsQ">
+            <objects>
+                <viewController id="qMt-zq-Hs3" customClass="Chapter7LessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6fk-2l-cmG"/>
+                        <viewControllerLayoutGuide type="bottom" id="gCj-b2-Oyp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fio-1C-MuP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90981245040000003" green="0.90979284049999998" blue="0.90979677439999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <segue destination="ILP-MS-51z" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bLo-hU-dS2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6J-q3-8of" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4803" y="915"/>
         </scene>
     </scenes>
     <resources>
         <image name="0White" width="507" height="327"/>
         <image name="Logo" width="1580" height="280"/>
         <image name="Title" width="512" height="512"/>
-        <image name="userWhiteBeret" width="512" height="512"/>
+        <image name="userBlackBeret" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cSH-p9-l60"/>
+        <segue reference="VMW-nI-64W"/>
         <segue reference="For-Cq-UGP"/>
     </inferredMetricsTieBreakers>
 </document>

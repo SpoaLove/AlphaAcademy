@@ -1,5 +1,5 @@
 //
-//  Chapter1LessonsViewController.swift
+//  Chapter1LessonViewController.swift
 //  AlphaAcademy
 //
 //  Created by Tengoku no Spoa on 2018/1/1.
@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import JSQMessagesViewController
 
-class Chapter1LessonsViewController: Lessons {
+class Chapter1LessonViewController: Lessons {
     
     
     /**

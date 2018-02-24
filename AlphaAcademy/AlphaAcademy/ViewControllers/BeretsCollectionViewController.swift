@@ -9,6 +9,7 @@
 import UIKit
 
 class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -22,10 +23,14 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        beretLabel.text = pickerData[row]
-        beretImageView.image = beretArray[row]
-        currentBeretNumber = row
+        updateBeret(with: row)
         self.view.endEditing(true)
+    }
+    
+    func updateBeret(with beretNumber:Int){
+        beretLabel.text = pickerData[beretNumber]
+        beretImageView.image = beretArray[beretNumber]
+        currentBeretNumber = beretNumber
     }
 
 
@@ -45,7 +50,6 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
         "Lime Beret",
         "Green Beret",
         "Blue Beret",
-        "Black Beret"
     ]
     
     let beretArray = [
@@ -62,9 +66,15 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
     
     
     override func viewDidLoad() {
-        pickerData.removeLast(9-getLevel())
+        if getLevel()>=8 {
+            pickerData += ["Black Beret"]
+        } else {
+            pickerData.removeLast(8-getLevel())
+        }
         self.beretPickerView.delegate = self
         self.beretPickerView.dataSource = self
+        self.currentBeretNumber = getBeretNumber()
+        updateBeret(with: currentBeretNumber)
         super.viewDidLoad()
     }
 
@@ -86,5 +96,14 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
             return 0
         }
     }
+    
+    func getBeretNumber() -> Int {
+        if let selectedBeret = UserDefaults.standard.object(forKey: "selectedBeret") as? Int {
+            return selectedBeret
+        }else{
+            return 0
+        }
+    }
+    
 
 }

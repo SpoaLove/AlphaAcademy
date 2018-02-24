@@ -27,7 +27,8 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             self.newVc(viewController: "Chapter3"),
             self.newVc(viewController: "Chapter4"),
             self.newVc(viewController: "Chapter5"),
-            self.newVc(viewController: "Chapter6")
+            self.newVc(viewController: "Chapter6"),
+            self.newVc(viewController: "Chapter7")
         ]
     }()
     
@@ -39,8 +40,10 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
         // combine additional View Controllers according to user's level
         if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
-            if userLevel != 0{
-                for i in 0...userLevel-1 {
+            
+            let level = userLevel>7 ? 7 : userLevel
+            if level != 0 {
+                for i in 0...level-1 {
                     orderedViewControllers.append(additionalViewControllers[i])
                 }
             } else {

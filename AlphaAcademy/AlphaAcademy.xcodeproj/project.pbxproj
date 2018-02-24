@@ -25,11 +25,16 @@
 		CB99D52F1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB41FF8D5AC00211116 /* ChatUser.swift */; };
-		CBC41BB71FFA0F7900211116 /* Chapter1LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */; };
+		CBC41BB71FFA0F7900211116 /* Chapter1LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */; };
 		CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */; };
 		CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */; };
 		CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35462037393D00E2BFFB /* Quiz.swift */; };
 		CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */; };
+		CBDA358A2041E61000E2BFFB /* Chapter3LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35892041E60F00E2BFFB /* Chapter3LessonViewController.swift */; };
+		CBDA358C2041E64500E2BFFB /* Chapter4LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA358B2041E64500E2BFFB /* Chapter4LessonViewController.swift */; };
+		CBDA35912041E74200E2BFFB /* Chapter5LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35902041E74200E2BFFB /* Chapter5LessonViewController.swift */; };
+		CBDA35932041E75700E2BFFB /* Chapter6LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35922041E75700E2BFFB /* Chapter6LessonViewController.swift */; };
+		CBDA35952041E76200E2BFFB /* Chapter7LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35942041E76200E2BFFB /* Chapter7LessonViewController.swift */; };
 		CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925751F207CF900C69C6C /* pageViewController.swift */; };
 		CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */; };
 		F17702C356D27FF940E324DB /* Pods_AlphaAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC89F77F7E44137226DF436 /* Pods_AlphaAcademyTests.framework */; };
@@ -76,11 +81,16 @@
 		CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/Spoa/Desktop/AlphaAcademy/AlphaAcademy/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 		CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		CBC41BB41FF8D5AC00211116 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
-		CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1LessonsViewController.swift; sourceTree = "<group>"; };
+		CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1LessonViewController.swift; sourceTree = "<group>"; };
 		CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewController.swift; sourceTree = "<group>"; };
 		CBDA35462037393D00E2BFFB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2LessonViewController.swift; sourceTree = "<group>"; };
+		CBDA35892041E60F00E2BFFB /* Chapter3LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3LessonViewController.swift; sourceTree = "<group>"; };
+		CBDA358B2041E64500E2BFFB /* Chapter4LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4LessonViewController.swift; sourceTree = "<group>"; };
+		CBDA35902041E74200E2BFFB /* Chapter5LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter5LessonViewController.swift; sourceTree = "<group>"; };
+		CBDA35922041E75700E2BFFB /* Chapter6LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter6LessonViewController.swift; sourceTree = "<group>"; };
+		CBDA35942041E76200E2BFFB /* Chapter7LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter7LessonViewController.swift; sourceTree = "<group>"; };
 		CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlphaAcademy.entitlements; sourceTree = "<group>"; };
 		CBE9256F1F1F5DAA00C69C6C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		CBE925711F1F60D600C69C6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -165,20 +175,11 @@
 			isa = PBXGroup;
 			children = (
 				CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */,
-				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
+				CBDA358D2041E66100E2BFFB /* Chapters */,
+				CBDA358E2041E6A300E2BFFB /* Models */,
+				CBDA358F2041E6FE00E2BFFB /* ViewControllers */,
 				CB99D4FB1F1AC112005D73B6 /* AppDelegate.swift */,
-				CBDA35462037393D00E2BFFB /* Quiz.swift */,
-				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
-				CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */,
-				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
-				CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */,
-				CBC41BB61FFA0F7900211116 /* Chapter1LessonsViewController.swift */,
-				CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */,
-				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
-				CBE925751F207CF900C69C6C /* pageViewController.swift */,
-				CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */,
-				CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */,
-				CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */,
+				CBE9256E1F1F5C6700C69C6C /* AlphaAcademy.entitlements */,
 				CB99D4FF1F1AC112005D73B6 /* Main.storyboard */,
 				CB99D5021F1AC112005D73B6 /* Assets.xcassets */,
 				CB99D5071F1AC112005D73B6 /* Info.plist */,
@@ -187,6 +188,44 @@
 				CB77021A1F68D55700484E88 /* TeachingVideos */,
 			);
 			path = AlphaAcademy;
+			sourceTree = "<group>";
+		};
+		CBDA358D2041E66100E2BFFB /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+				CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */,
+				CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */,
+				CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */,
+				CBDA35892041E60F00E2BFFB /* Chapter3LessonViewController.swift */,
+				CBDA358B2041E64500E2BFFB /* Chapter4LessonViewController.swift */,
+				CBDA35902041E74200E2BFFB /* Chapter5LessonViewController.swift */,
+				CBDA35922041E75700E2BFFB /* Chapter6LessonViewController.swift */,
+				CBDA35942041E76200E2BFFB /* Chapter7LessonViewController.swift */,
+			);
+			path = Chapters;
+			sourceTree = "<group>";
+		};
+		CBDA358E2041E6A300E2BFFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBDA35462037393D00E2BFFB /* Quiz.swift */,
+				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
+				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CBDA358F2041E6FE00E2BFFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */,
+				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
+				CBE925751F207CF900C69C6C /* pageViewController.swift */,
+				CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */,
+				CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */,
+				CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,11 +543,16 @@
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
 				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
 				CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */,
-				CBC41BB71FFA0F7900211116 /* Chapter1LessonsViewController.swift in Sources */,
+				CBDA358C2041E64500E2BFFB /* Chapter4LessonViewController.swift in Sources */,
+				CBC41BB71FFA0F7900211116 /* Chapter1LessonViewController.swift in Sources */,
 				CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */,
 				CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */,
 				CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */,
+				CBDA35912041E74200E2BFFB /* Chapter5LessonViewController.swift in Sources */,
+				CBDA35932041E75700E2BFFB /* Chapter6LessonViewController.swift in Sources */,
+				CBDA35952041E76200E2BFFB /* Chapter7LessonViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,
+				CBDA358A2041E61000E2BFFB /* Chapter3LessonViewController.swift in Sources */,
 				CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
