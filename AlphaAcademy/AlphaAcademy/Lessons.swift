@@ -486,5 +486,17 @@ class Lessons: JSQMessagesViewController {
         user.name = getName()
         messages += initailMessages
     }
-
+    
+    
+    /*
+     * This function allows the return button on the keboard to act just like the send button on the right!
+     */
+    override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            didPressSend(nil, withMessageText: textView.text, senderId: user.id, senderDisplayName: user.name, date: nil)
+            return false
+        }
+        return true
+    }
+    
 }
