@@ -22,6 +22,21 @@ class Lessons: JSQMessagesViewController {
     let code = ChatUser(id: "4", name: "Code")
 
     /**
+     * all possible user avatar images
+     */
+    var userImages = [
+        #imageLiteral(resourceName: "userWhiteBeret"),
+        #imageLiteral(resourceName: "userPinkBeret"),
+        #imageLiteral(resourceName: "userRedBeret"),
+        #imageLiteral(resourceName: "userOrangeBeret"),
+        #imageLiteral(resourceName: "userYellowBeret"),
+        #imageLiteral(resourceName: "userLimeBeret"),
+        #imageLiteral(resourceName: "userGreenBeret"),
+        #imageLiteral(resourceName: "userBlueBeret"),
+        #imageLiteral(resourceName: "userBlackBeret")
+    ]
+    
+    /**
      * Defines Conditions
      */
     var atEndOfRoute = false
@@ -306,13 +321,15 @@ class Lessons: JSQMessagesViewController {
         
         let message = messages[indexPath.item]
         
+        let userAvatar = getBeret()
+        
         switch message.senderId {
         case "1":
             // Sender is A-Chan
             return avatarImageFactory.avatarImage(with: UIImage(named: "Title.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         case "2":
             // Sender is Yourself
-            return avatarImageFactory.avatarImage(with: UIImage(named: "userWhiteBeret.png"), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+            return avatarImageFactory.avatarImage(with: userAvatar, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         case "3":
             // Sender is Console
             return JSQMessagesAvatarImageFactory.avatarImage(withUserInitials: ">_", backgroundColor: UIColor.black, textColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
@@ -474,7 +491,39 @@ class Lessons: JSQMessagesViewController {
         UserDefaults.standard.set(level, forKey: "userLevel")
     }
     
+    /**
+     * This function sets the userdefaults selectedBeret to the interger passed in
+     *
+     * @param beretNumber an interger
+     */
+    func setBeretNumber(with beretNumber:Int){
+        UserDefaults.standard.set(beretNumber, forKey: "selectedBeret")
+    }
     
+    
+    /**
+     * This function returns the Int of the chosen beret's id number
+     *
+     * @return the selectedBeret Int from the UserDefaut, if the selectedBeret cannot be fetched 0 will be returned instead
+     */
+    func getBeretNumber() -> Int {
+        if let selectedBeret = UserDefaults.standard.object(forKey: "selectedBeret") as? Int {
+            return selectedBeret
+        }else{
+            return 0
+        }
+    }
+    
+    /**
+     * This function returns the user's chosen beret's image
+     *
+     * @return the corresponding UIImage of the beret id number
+     */
+    func getBeret() -> UIImage {
+        return userImages[getBeretNumber()]
+    }
+    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()

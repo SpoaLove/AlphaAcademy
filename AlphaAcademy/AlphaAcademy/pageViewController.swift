@@ -43,6 +43,8 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                 for i in 0...userLevel-1 {
                     orderedViewControllers.append(additionalViewControllers[i])
                 }
+            } else {
+                orderedViewControllers.append(additionalViewControllers[0])
             }
         }
         

@@ -17,6 +17,19 @@ class UserInfoPageViewController: UIViewController {
     @IBOutlet weak var redoTutorialButton: UIButton!
     @IBOutlet weak var setNameButton: UIButton!
     @IBOutlet weak var beretsCollectionButton: UIButton!
+    @IBOutlet weak var userImageView: UIImageView!
+    
+    var userImages = [
+        #imageLiteral(resourceName: "userWhiteBeret"),
+        #imageLiteral(resourceName: "userPinkBeret"),
+        #imageLiteral(resourceName: "userRedBeret"),
+        #imageLiteral(resourceName: "userOrangeBeret"),
+        #imageLiteral(resourceName: "userYellowBeret"),
+        #imageLiteral(resourceName: "userLimeBeret"),
+        #imageLiteral(resourceName: "userGreenBeret"),
+        #imageLiteral(resourceName: "userBlueBeret"),
+        #imageLiteral(resourceName: "userBlackBeret")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +80,8 @@ extension UserInfoPageViewController {
         // set Username tag to userName
         self.userNameLabel.text = getName()
         self.userLevelLabel.text = getLevel()
+        self.userImageView.image = getBeret()
+        
     }
 }
 
@@ -167,11 +182,23 @@ extension UserInfoPageViewController {
             return "Name"
         }
     }
-    func getLevel()->String{
+    func getLevel() -> String {
         if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
             return "Lv:\(String(userLevel))"
         }else{
             return "Lv:0"
         }
+    }
+    
+    func getBeretNumber() -> Int {
+        if let selectedBeret = UserDefaults.standard.object(forKey: "selectedBeret") as? Int {
+            return selectedBeret
+        }else{
+            return 0
+        }
+    }
+    
+    func getBeret() -> UIImage {
+        return userImages[getBeretNumber()]
     }
 }
