@@ -10,8 +10,12 @@ import UIKit
 import JSQMessagesViewController
 import AVKit
 
-class Lessons: JSQMessagesViewController {
 
+/**
+ * The Lessons class is a sub-class of JSQMessagesViewController
+ * this class provides the nessesary templates for the lessons to inherit from
+ */
+class Lessons: JSQMessagesViewController {
     
     /**
      * Defines Users
@@ -66,6 +70,10 @@ class Lessons: JSQMessagesViewController {
     var currentMessages = [JSQMessage]()
     var messagesCount=0
     
+    /**
+     * Initializing Defaults Class
+     */
+    let defaults = Defaults()
 
     /**
      * Defines the initial Messages, the first array of messages that will be put on the queue
@@ -413,18 +421,6 @@ class Lessons: JSQMessagesViewController {
         }
     }
     
-    /**
-     * This function returns the String of the User name
-     *
-     * @return a String of the User Defaut of the username, if the username cannot be fetched from the UserDefauts "You"
-     */
-    func getName()->String{
-        if let username = UserDefaults.standard.object(forKey: "userName") as? String {
-            return username
-        }else{
-            return "You"
-        }
-    }
     
     /**
      * This function shows user a choice betweem two routes that can be appended into the queue
@@ -442,14 +438,14 @@ class Lessons: JSQMessagesViewController {
             (action:UIAlertAction) -> () in
             self.additionalFunctionForRoute1()
             self.choosenRouteName = action1title
-            self.appendMessage(text: action1title, senderId: "2", senderDisplayName: self.getName())
+            self.appendMessage(text: action1title, senderId: "2", senderDisplayName: self.defaults.getName())
             self.setChapter(chapter: route1)
         })
         let action2 = UIAlertAction(title: action2title, style: .default, handler: {
             (action:UIAlertAction) -> () in
             self.additionalFunctionForRoute2()
             self.choosenRouteName = action2title
-            self.appendMessage(text: action2title, senderId: "2", senderDisplayName: self.getName())
+            self.appendMessage(text: action2title, senderId: "2", senderDisplayName: self.defaults.getName())
             self.setChapter(chapter: route2)
         })
         selector.addAction(action1)
@@ -465,62 +461,12 @@ class Lessons: JSQMessagesViewController {
     
     
     /**
-     * This function returns the Int of the Level
-     *
-     * @return the userLevel Int from the UserDefaut, if the userLevel cannot be fetched 0 will be returned instead
-     */
-    func getLevel()->Int{
-        if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
-            return userLevel
-        }else{
-            return 0
-        }
-    }
-    
-    
-    /**
-     * This function sets the userdefaults userlevel to the interger passed in
-     *
-     * @param level an interger that is <=9 that will be set as the userLevel
-     */
-    func setLevel(to level:Int){
-        guard level<=9 && level>0 else {
-            print("Error: The input number is expected to be >0 && <=9, but found \(level)")
-            return
-        }
-        UserDefaults.standard.set(level, forKey: "userLevel")
-    }
-    
-    /**
-     * This function sets the userdefaults selectedBeret to the interger passed in
-     *
-     * @param beretNumber an interger
-     */
-    func setBeretNumber(with beretNumber:Int){
-        UserDefaults.standard.set(beretNumber, forKey: "selectedBeret")
-    }
-    
-    
-    /**
-     * This function returns the Int of the chosen beret's id number
-     *
-     * @return the selectedBeret Int from the UserDefaut, if the selectedBeret cannot be fetched 0 will be returned instead
-     */
-    func getBeretNumber() -> Int {
-        if let selectedBeret = UserDefaults.standard.object(forKey: "selectedBeret") as? Int {
-            return selectedBeret
-        }else{
-            return 0
-        }
-    }
-    
-    /**
      * This function returns the user's chosen beret's image
      *
      * @return the corresponding UIImage of the beret id number
      */
     func getBeret() -> UIImage {
-        return userImages[getBeretNumber()]
+        return userImages[defaults.getBeretNumber()]
     }
     
 
@@ -532,7 +478,7 @@ class Lessons: JSQMessagesViewController {
         senderDisplayName = currentUser.name
         
         // append initial messages
-        user.name = getName()
+        user.name = defaults.getName()
         messages += initailMessages
     }
     

@@ -105,11 +105,11 @@ class TutorialLessonViewController: Lessons {
                     atEndOfRoute = true
                 }else{
                     appendMessageWithJSQMessage(message: beretRecievingMessage)
-                    if getLevel()==0 {
+                    if defaults.getLevel()==0 {
                         appendMessageWithJSQMessage(message: userLeveledUpMessage)
-                        setLevel(to: 1)
+                        defaults.setLevel(to: 1)
                     }
-                    setBeretNumber(with: 0)
+                    defaults.setBeretNumber(with: 0)
                     currentMessages += tutorialMessages2
                     userHaveRecievedBeret = true
                 }
@@ -165,6 +165,7 @@ class TutorialLessonViewController: Lessons {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let name = alert?.textFields![0].text!
             self.setNameWith(name: name!)
+            self.next()
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -173,11 +174,11 @@ class TutorialLessonViewController: Lessons {
      * This function is called after the user name have been setted
      */
     func setNameComplete(){
-        user.name = getName()
+        user.name = defaults.getName()
         finishSettingName = true
-        let nameIsSetMessage:String = "My name is \(self.getName())!"
-        appendMessage(text: nameIsSetMessage, senderId: "2", senderDisplayName: self.getName())
-        currentMessages.append(JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hi \(self.getName())! What a nice name!"))
+        let nameIsSetMessage:String = "My name is \(self.defaults.getName())!"
+        appendMessage(text: nameIsSetMessage, senderId: "2", senderDisplayName: self.defaults.getName())
+        currentMessages.append(JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hi \(self.defaults.getName())! What a nice name!"))
         currentMessages += tutorialMessages
         nameDidSet = true
     }

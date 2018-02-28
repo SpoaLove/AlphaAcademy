@@ -24,7 +24,7 @@ class Chapter1LessonViewController: Lessons {
      * @return the boolean of userLevel higher than 1
      */
     func userCompletedChapter()->Bool {
-        return getLevel()>1
+        return defaults.getLevel()>1
     }
 
     /**
@@ -116,11 +116,11 @@ class Chapter1LessonViewController: Lessons {
     override func next(){
         if userCompleteQuiz && messagesCount==currentMessages.count && !userHaveRecievedBeret {
             appendMessageWithJSQMessage(message: beretRecievingMessage)
-            if getLevel()==1 {
+            if defaults.getLevel()==1 {
                 appendMessageWithJSQMessage(message: userLeveledUpMessage)
-                setLevel(to: 2)
+                defaults.setLevel(to: 2)
             }
-            setBeretNumber(with: 1)
+            defaults.setBeretNumber(with: 1)
             currentMessages += postQuizMessages2
             userHaveRecievedBeret = true
         }
@@ -136,12 +136,6 @@ class Chapter1LessonViewController: Lessons {
     
     override func quiz() {
         showQuizes()
-    }
-    
-    
-    override func setLevel(to level: Int) {
-        super.setLevel(to: level)
-        next()
     }
 
     override func viewDidLoad() {

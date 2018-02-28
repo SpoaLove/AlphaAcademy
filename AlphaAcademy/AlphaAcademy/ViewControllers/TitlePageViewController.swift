@@ -9,7 +9,15 @@
 import UIKit
 
 class TitlePageViewController: UIViewController {
-    fileprivate func startButtonIsPressed() {
+    
+    
+    /**
+     * This function bring the user to a different story board according to if the user have used the application for at least once or not
+     * if true the user will be brought to the chapters selection page
+     * if false the user wil be brought to the tutorial lessons
+     */
+    @IBAction func startButton(_ sender: Any) {
+        print("Start")
         if UserDefaults.standard.object(forKey: "userStarted") != nil{
             performSegue(withIdentifier: "Start", sender: self)
         }else{
@@ -17,35 +25,5 @@ class TitlePageViewController: UIViewController {
             performSegue(withIdentifier: "FirstTimeEnter", sender: self)
         }
     }
-    
-    @IBAction func startButton(_ sender: Any) {
-        print("Start")
-        startButtonIsPressed()
-
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

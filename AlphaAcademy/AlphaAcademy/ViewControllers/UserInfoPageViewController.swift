@@ -11,6 +11,9 @@ import UIKit
 
 class UserInfoPageViewController: UIViewController {
     
+    /**
+     * Defines UI Components
+     */
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userLevelLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
@@ -19,6 +22,9 @@ class UserInfoPageViewController: UIViewController {
     @IBOutlet weak var beretsCollectionButton: UIButton!
     @IBOutlet weak var userImageView: UIImageView!
     
+    /**
+     * This is an array of possible user images with different color of berets
+     */
     var userImages = [
         #imageLiteral(resourceName: "userWhiteBeret"),
         #imageLiteral(resourceName: "userPinkBeret"),
@@ -31,6 +37,11 @@ class UserInfoPageViewController: UIViewController {
         #imageLiteral(resourceName: "userBlackBeret")
     ]
     
+    /**
+     * Initiate the defaults class
+     */
+    let defaults = Defaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Load User Info
@@ -38,65 +49,66 @@ class UserInfoPageViewController: UIViewController {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
+    /**
+     * This function bring the user back to the title page
      */
     @IBAction func userDidPressedLogOutButton(_ sender: Any) {
         self.performSegue(withIdentifier: "LogOut", sender: self)
     }
-    
+
+    /**
+     * This function triggers the setName function
+     */
     @IBAction func setNameButtonDidPressed(_ sender: Any) {
         setName()
     }
     
+    /**
+     * This function triggers the setLevel function
+     */
     @IBAction func setLevelButtonDidPressed(_ sender: UIButton) {
         setLevel()
     }
     
+    /**
+     * This function bring the user to the tutorial page
+     */
     @IBAction func tutorialButtonDidPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "redoTutorial", sender: self)
     }
     
-    
+    /**
+     * This function brings the user the the berets collections
+     */
     @IBAction func beretsCollectionButtonDidPressed(_ sender: Any) {
+        
+        guard defaults.getLevel() > 0 else{
+            print("Expect UserLevel to be over 0, instead found \(defaults.getLevel())")
+            return
+        }
+        
         self.performSegue(withIdentifier: "Berets", sender: self)
     }
-}
-
-extension UserInfoPageViewController {
+    
+    /**
+     * Thgis function loads and update the user information on the the UI
+     */
     func loadUserInfo(){
         // set Username tag to userName
-        self.userNameLabel.text = getName()
-        self.userLevelLabel.text = getLevel()
+        self.userNameLabel.text = defaults.getName()
+        self.userLevelLabel.text = getLevelString()
         self.userImageView.image = getBeret()
         
     }
-}
-
-
-
-// Name Setting
-extension UserInfoPageViewController {
     
-    
+    /**
+     * This function shoews a UI Alert to set the user name for the user into the userDefaults
+     */
     func setName(){
         
-        //1. Create the alert controller.
         let alert = UIAlertController(title: "Rename", message: "Please Enter Your Name:", preferredStyle: .alert)
         
-        //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
             var text:String
             
@@ -105,19 +117,60 @@ extension UserInfoPageViewController {
             }else{
                 text = "name?"
             }
-            
             textField.text = text
         }
         
-        // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            let textField = alert?.textFields![0]
             print("Text field: \(String(describing: textField?.text))")
             let name = (textField?.text)!
             print(name)
             UserDefaults.standard.set(name, forKey: "userName")
             self.setNameComplete()
             
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    // DEBUG: Level Setting:
+    func setLevel(){
+        
+        let alert = UIAlertController(title: "Reset Level", message: "New Level?", preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            var text:String
+            if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
+                if userLevel < 0 {
+                    text = "0"
+                } else {
+                    text = "\(userLevel)"
+                }
+            }else{
+                text = "0"
+            }
+            textField.text = text
+        }
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            print("Text field: \(String(describing: textField?.text))")
+            if var level = Int(textField!.text!) {
+            
+                if level < 0 || level > 8 {
+                    level = 0
+                    print("Expect level to be non-negative and lower than 8, instead found \(level)")
+                }
+                
+                print(level)
+                UserDefaults.standard.set(level, forKey: "userLevel")
+                self.setLevelComplete()
+            } else {
+                print("Error: failed to parse input '\(textField!.text!)' into Int ")
+            }
             
             
         }))
@@ -127,81 +180,37 @@ extension UserInfoPageViewController {
         
         
     }
-
-
-// DEBUG: Level Setting:
-func setLevel(){
-    
-    //1. Create the alert controller.
-    let alert = UIAlertController(title: "Reset Level", message: "New Level? (level = count of the string input)", preferredStyle: .alert)
-    
-    //2. Add the text field. You can configure it however you need.
-    alert.addTextField { (textField) in
-        var text:String
-        if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
-            if userLevel < 0 {
-                text = "0"
-            } else {
-                text = "\(userLevel)"
-            }
-        }else{
-            text = "0"
-        }
-        textField.text = text
-    }
-    
-    // 3. Grab the value from the text field, and print it when the user clicks OK.
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-        let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
-        print("Text field: \(String(describing: textField?.text))")
-        let level = Int(textField!.text!)!
-        print(level)
-        UserDefaults.standard.set(level, forKey: "userLevel")
-        self.setLevelComplete()
-        
-        
-    }))
-    
-    // 4. Present the alert.
-    self.present(alert, animated: true, completion: nil)
     
     
-}
-}
-
-extension UserInfoPageViewController {
+    /**
+     * This function updates the userNameLabel with the userDefaults
+     */
     func setNameComplete(){
-        self.userNameLabel.text = getName()
+        self.userNameLabel.text = defaults.getName()
     }
     
+    /**
+     * This function updates the userLevelLabel with the userDefaults
+     */
     func setLevelComplete(){
-        self.userLevelLabel.text = getLevel()
+        self.userLevelLabel.text = getLevelString()
     }
     
-    func getName()->String{
-        if let username = UserDefaults.standard.object(forKey: "userName") as? String {
-            return username
-        }else{
-            return "Name"
-        }
-    }
-    func getLevel() -> String {
-        if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
-            return "Lv:\(String(userLevel))"
-        }else{
-            return "Lv:0"
-        }
+    /**
+     * This function formats and returns the userLevel as String tom userDefaults
+     *
+     * @return a formatted String of the userLevel
+     */
+    func getLevelString() -> String {
+        return "Lv: \(defaults.getLevel())"
     }
     
-    func getBeretNumber() -> Int {
-        if let selectedBeret = UserDefaults.standard.object(forKey: "selectedBeret") as? Int {
-            return selectedBeret
-        }else{
-            return 0
-        }
-    }
-    
+    /**
+     * This function returns the corresponding UIImage of user's chosen beret using userDefaults
+     *
+     * @return a UIImage of user's beret
+     */
     func getBeret() -> UIImage {
-        return userImages[getBeretNumber()]
+        return userImages[defaults.getBeretNumber()]
     }
 }

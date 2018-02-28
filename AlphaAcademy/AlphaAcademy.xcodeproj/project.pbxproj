@@ -11,6 +11,7 @@
 		941A56E6D14943E0C9331E77 /* Pods_AlphaAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795279CDE0943DF6B0AABF1D /* Pods_AlphaAcademy.framework */; };
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
 		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
+		CB5ECBAB2046C0DB00FE65A4 /* UserDefaultsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */; };
 		CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */; };
 		CB77021B1F68D56100484E88 /* TeachingVideos in Resources */ = {isa = PBXBuildFile; fileRef = CB77021A1F68D55700484E88 /* TeachingVideos */; };
 		CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */; };
@@ -67,6 +68,7 @@
 		A98B4371B62968AFAE0A6B1A /* Pods-AlphaAcademyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlphaAcademyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlphaAcademyUITests/Pods-AlphaAcademyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
 		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
+		CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFunctions.swift; sourceTree = "<group>"; };
 		CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeretsCollectionViewController.swift; sourceTree = "<group>"; };
 		CB77021A1F68D55700484E88 /* TeachingVideos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TeachingVideos; sourceTree = "<group>"; };
 		CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewLaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				CBDA35462037393D00E2BFFB /* Quiz.swift */,
 				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
 				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
+				CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
 				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
 				CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */,
+				CB5ECBAB2046C0DB00FE65A4 /* UserDefaultsFunctions.swift in Sources */,
 				CBDA358C2041E64500E2BFFB /* Chapter4LessonViewController.swift in Sources */,
 				CBC41BB71FFA0F7900211116 /* Chapter1LessonViewController.swift in Sources */,
 				CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */,

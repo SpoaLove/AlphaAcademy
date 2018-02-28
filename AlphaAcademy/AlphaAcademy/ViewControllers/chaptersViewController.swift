@@ -15,17 +15,16 @@ class chaptersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // google ads stuff
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
-        // Do any additional setup after loading the view.
         let request = GADRequest()
         interstitial.load(request)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    /**
+     * This function shows an ad
+     */
     func showAd(){
         if interstitial.isReady {
             interstitial.present(fromRootViewController: self)
@@ -33,16 +32,5 @@ class chaptersViewController: UIViewController {
             print("Ad wasn't ready")
         }
     }
-    
-
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
