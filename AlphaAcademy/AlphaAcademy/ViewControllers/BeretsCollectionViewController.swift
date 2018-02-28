@@ -9,7 +9,7 @@
 import UIKit
 
 class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     /**
      * Defines UI Components
      */
@@ -93,7 +93,6 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
      * @param beretNumber an Interger identifiying user's chosen beret
      */
     func updateBeret(with beretNumber:Int){
-        
         if beretNumber > 8 {
             beretLabel.text = pickerData[7]
         } else {
@@ -108,6 +107,8 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
         // append black beret into the picker Data if userlevel is higher than 8, else remove the last entry for each userLevel lower than 8
         if defaults.getLevel()>=8 || defaults.getBeretNumber()==8{
             pickerData += ["Black Beret"]
+        } else if defaults.getLevel() == 0 {
+            pickerData = ["White Beret"]
         } else {
             pickerData.removeLast(8-defaults.getLevel())
         }
@@ -121,14 +122,14 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
         updateBeret(with: currentBeretNumber)
         super.viewDidLoad()
     }
-
+    
     /**
      * This function brings the user back to the chapters selection page
      */
     @IBAction func quitButtonIsTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "quitCollection", sender: self)
     }
-
+    
     /**
      * This function updates the userdefault's beretNumber using the currentBeretNumber
      */
