@@ -484,8 +484,8 @@ class Lessons: JSQMessagesViewController {
      * @param level an interger that is <=9 that will be set as the userLevel
      */
     func setLevel(to level:Int){
-        guard level<=9 else {
-            print("Error: The input number is expected to be <=9, but found \(level)")
+        guard level<=9 && level>0 else {
+            print("Error: The input number is expected to be >0 && <=9, but found \(level)")
             return
         }
         UserDefaults.standard.set(level, forKey: "userLevel")

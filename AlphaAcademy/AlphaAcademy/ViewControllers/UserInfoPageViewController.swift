@@ -139,7 +139,11 @@ func setLevel(){
     alert.addTextField { (textField) in
         var text:String
         if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
-            text = "\(userLevel)"
+            if userLevel < 0 {
+                text = "0"
+            } else {
+                text = "\(userLevel)"
+            }
         }else{
             text = "0"
         }
@@ -154,7 +158,6 @@ func setLevel(){
         print(level)
         UserDefaults.standard.set(level, forKey: "userLevel")
         self.setLevelComplete()
-        
         
         
     }))

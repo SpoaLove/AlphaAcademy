@@ -109,6 +109,7 @@ class TutorialLessonViewController: Lessons {
                         appendMessageWithJSQMessage(message: userLeveledUpMessage)
                         setLevel(to: 1)
                     }
+                    setBeretNumber(with: 0)
                     currentMessages += tutorialMessages2
                     userHaveRecievedBeret = true
                 }

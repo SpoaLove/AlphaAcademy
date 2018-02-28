@@ -48,7 +48,7 @@ class Chapter1LessonViewController: Lessons {
      */
     var quizes = [
         Quiz(
-            questionText: "Which of the following is not a function of the ‘print’ function",
+            questionText: "Which of the following is the correct function of the ‘print’ function",
             choice1: "print out a String onto the console",
             choice2: "print out a Cotton onto the console",
             choice3: "print put a Kitten onto the console",
@@ -103,9 +103,11 @@ class Chapter1LessonViewController: Lessons {
         if quizes.count >= 2 {
             appendMessage(text: "\(quizes.count-1) questons left!", senderId: "3", senderDisplayName: "QUIZ!")
         } else if quizes.count == 1 {
-            appendMessage(text: "1 queston left!", senderId: "3", senderDisplayName: "QUIZ!")
+            appendMessage(text: "1 queston left! Type 'Q' or Quiz to Continue!", senderId: "3", senderDisplayName: "QUIZ!")
         } else {
             appendMessage(text: "All Questions have been answered correctlly!", senderId: "3", senderDisplayName: "QUIZ!")
+            
+            messagesCount = currentMessages.count
             currentMessages += postQuizMessages
             userCompleteQuiz = true
         }
@@ -118,6 +120,7 @@ class Chapter1LessonViewController: Lessons {
                 appendMessageWithJSQMessage(message: userLeveledUpMessage)
                 setLevel(to: 2)
             }
+            setBeretNumber(with: 1)
             currentMessages += postQuizMessages2
             userHaveRecievedBeret = true
         }
@@ -135,6 +138,11 @@ class Chapter1LessonViewController: Lessons {
         showQuizes()
     }
     
+    
+    override func setLevel(to level: Int) {
+        super.setLevel(to: level)
+        next()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

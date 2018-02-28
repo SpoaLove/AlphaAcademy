@@ -86,7 +86,7 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
 
 
     @IBAction func wearBeretButtonIsPressed(_ sender: Any) {
-        UserDefaults.standard.set(currentBeretNumber, forKey: "selectedBeret")
+        setBeretNumber(with: currentBeretNumber)
     }
     
     func getLevel()->Int{
@@ -105,5 +105,9 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
+    func setBeretNumber(with beretNumber:Int){
+        UserDefaults.standard.set(beretNumber, forKey: "selectedBeret")
+    }
+
 
 }
