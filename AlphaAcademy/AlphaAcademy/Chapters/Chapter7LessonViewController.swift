@@ -68,7 +68,7 @@ class Chapter7LessonViewController: Lessons {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentMessages.append(initialMessage)
+        currentMessages.append(initialMessage!)
         
         // Do any additional setup after loading the view.
     }

@@ -61,7 +61,7 @@ class pageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         // combine additional View Controllers according to user's level
         if let userLevel = UserDefaults.standard.object(forKey: "userLevel") as? Int {
             
-            var level = userLevel>7 ? 7 : userLevel
+            var level = userLevel>6 ? 6 : userLevel
             level = userLevel<0 ? 0 : userLevel
             if level != 0 {
                 for i in 0...level-1 {
