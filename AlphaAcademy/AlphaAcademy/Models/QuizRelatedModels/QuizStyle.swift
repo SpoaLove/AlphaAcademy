@@ -6,8 +6,9 @@
 //  Copyright © 2018年 Tengoku no Spoa. All rights reserved.
 //
 
-import Foundation
-
+/**
+ * QuizStyle Enumeration
+ */
 enum QuizStyle {
     case MultipleChoice
     case YesOrNo

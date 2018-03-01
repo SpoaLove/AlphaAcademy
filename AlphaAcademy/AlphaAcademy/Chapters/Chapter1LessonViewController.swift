@@ -32,7 +32,7 @@ class Chapter1LessonViewController: Lessons {
     func userCompletedChapter()->Bool {
         return defaults.getLevel()>1
     }
-
+    
     /**
      * initial lesson messages
      */
@@ -48,11 +48,11 @@ class Chapter1LessonViewController: Lessons {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Well-done! You have just mastered your very first spell in Swift!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before you receive your beret, let’s have a simple quiz! Please type quiz to start the quiz!")
     ]
-
+    
     /**
      * quizes
      */
-    var quizes = [
+    var quizes:[Quiz] = [
         MultipleChoiceQuiz(
             questionText: "Which of the following is the correct function of the ‘print’ function",
             choice1: "print out a String onto the console",
@@ -70,7 +70,7 @@ class Chapter1LessonViewController: Lessons {
             correctAnswer: "print(\"Hello, Alpha Academy!\")",
             messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that a ‘String’ should always start and end with double quotation marks!"),
             messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
-            )
+        )
     ]
     
     /**
@@ -96,7 +96,7 @@ class Chapter1LessonViewController: Lessons {
     override func correctResponse() {
         quizes.removeFirst()
         if quizes.count >= 2 {
-            appendMessage(text: "\(quizes.count-1) questons left!", senderId: "3", senderDisplayName: "QUIZ!")
+            appendMessage(text: "\(quizes.count) questons left!", senderId: "3", senderDisplayName: "QUIZ!")
         } else if quizes.count == 1 {
             appendMessage(text: "1 queston left! Type 'Q' or Quiz to Continue!", senderId: "3", senderDisplayName: "QUIZ!")
         } else {

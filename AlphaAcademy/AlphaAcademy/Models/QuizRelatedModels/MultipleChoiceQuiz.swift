@@ -1,5 +1,5 @@
 //
-//  Quiz.swift
+//  MultipleChoiceQuiz.swift
 //  AlphaAcademy
 //
 //  Created by Tengoku no Spoa on 2018/2/16.
@@ -9,8 +9,9 @@
 import JSQMessagesViewController.JSQMessage
 
 /**
- * Lesson Quiz Structure
+ * Multiple Choice Quiz Structure
  *
+ * @property quizStyle defines the quizStyle
  * @property questionText the String of the question
  * @property choice1 the String of first given choice of answer
  * @property choice2 the String of second given choice of answer
@@ -19,7 +20,8 @@ import JSQMessagesViewController.JSQMessage
  * @property messageCorrect a 'JSQMessage' as a reply of the quiz when the user answered correctly
  * @property messageIncorrect a 'JSQMessage' as a reply of the quiz when the user answered incorrectly
  */
-class MultipleChoiceQuiz : Quiz {
+struct MultipleChoiceQuiz: Quiz{
+    let quizStyle: QuizStyle = QuizStyle.MultipleChoice
     let questionText:String
     let choice1:String
     let choice2:String

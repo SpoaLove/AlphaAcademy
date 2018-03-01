@@ -14,6 +14,8 @@
 		CB5ECBAB2046C0DB00FE65A4 /* UserDefaultsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */; };
 		CB5ECBAD20480E4900FE65A4 /* QuizStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBAC20480E4900FE65A4 /* QuizStyle.swift */; };
 		CB5ECBAF20480F0400FE65A4 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBAE20480F0400FE65A4 /* Quiz.swift */; };
+		CB5ECBB1204812F000FE65A4 /* YesOrNoQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBB0204812F000FE65A4 /* YesOrNoQuiz.swift */; };
+		CB5ECBB32048145C00FE65A4 /* UserInputQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBB22048145C00FE65A4 /* UserInputQuiz.swift */; };
 		CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */; };
 		CB77021B1F68D56100484E88 /* TeachingVideos in Resources */ = {isa = PBXBuildFile; fileRef = CB77021A1F68D55700484E88 /* TeachingVideos */; };
 		CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */; };
@@ -73,6 +75,8 @@
 		CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFunctions.swift; sourceTree = "<group>"; };
 		CB5ECBAC20480E4900FE65A4 /* QuizStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStyle.swift; sourceTree = "<group>"; };
 		CB5ECBAE20480F0400FE65A4 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		CB5ECBB0204812F000FE65A4 /* YesOrNoQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesOrNoQuiz.swift; sourceTree = "<group>"; };
+		CB5ECBB22048145C00FE65A4 /* UserInputQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputQuiz.swift; sourceTree = "<group>"; };
 		CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeretsCollectionViewController.swift; sourceTree = "<group>"; };
 		CB77021A1F68D55700484E88 /* TeachingVideos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TeachingVideos; sourceTree = "<group>"; };
 		CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewLaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,6 +161,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB5ECBB420481F0200FE65A4 /* QuizRelatedModels */ = {
+			isa = PBXGroup;
+			children = (
+				CB5ECBAE20480F0400FE65A4 /* Quiz.swift */,
+				CB5ECBAC20480E4900FE65A4 /* QuizStyle.swift */,
+				CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */,
+				CB5ECBB0204812F000FE65A4 /* YesOrNoQuiz.swift */,
+				CB5ECBB22048145C00FE65A4 /* UserInputQuiz.swift */,
+			);
+			path = QuizRelatedModels;
+			sourceTree = "<group>";
+		};
 		CB99D4EF1F1AC112005D73B6 = {
 			isa = PBXGroup;
 			children = (
@@ -214,12 +230,10 @@
 		CBDA358E2041E6A300E2BFFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */,
-				CB5ECBAE20480F0400FE65A4 /* Quiz.swift */,
+				CB5ECBB420481F0200FE65A4 /* QuizRelatedModels */,
 				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
-				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
 				CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */,
-				CB5ECBAC20480E4900FE65A4 /* QuizStyle.swift */,
+				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -551,6 +565,7 @@
 				CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
+				CB5ECBB1204812F000FE65A4 /* YesOrNoQuiz.swift in Sources */,
 				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
 				CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */,
 				CB5ECBAB2046C0DB00FE65A4 /* UserDefaultsFunctions.swift in Sources */,
@@ -562,6 +577,7 @@
 				CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */,
 				CBDA35912041E74200E2BFFB /* Chapter5LessonViewController.swift in Sources */,
 				CBDA35932041E75700E2BFFB /* Chapter6LessonViewController.swift in Sources */,
+				CB5ECBB32048145C00FE65A4 /* UserInputQuiz.swift in Sources */,
 				CBDA35952041E76200E2BFFB /* Chapter7LessonViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,
 				CBDA358A2041E61000E2BFFB /* Chapter3LessonViewController.swift in Sources */,

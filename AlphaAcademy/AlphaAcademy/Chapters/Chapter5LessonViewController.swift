@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JSQMessagesViewController
 
 class Chapter5LessonViewController: Lessons {
 

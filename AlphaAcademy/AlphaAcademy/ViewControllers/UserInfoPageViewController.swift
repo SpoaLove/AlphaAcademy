@@ -180,7 +180,6 @@ class UserInfoPageViewController: UIViewController {
             
         }))
         
-        // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
         
         

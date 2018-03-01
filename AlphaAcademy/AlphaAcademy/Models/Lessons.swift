@@ -185,44 +185,106 @@ class Lessons: JSQMessagesViewController {
     
     
     /**
-     * Shows the quiz using inputed Quiz
+     * This function parse the quizStyle of the quiz and call corresponding functions to display the quiz
      *
-     * param quiz a Quiz struct that will be parsed and displayed
+     * @param quiz a Quiz under the quiz protocal that will be parsed and displayed
      */
-    func showQuiz(with quiz:MultipleChoiceQuiz){
-        func checkAns(with choice:String){
-            self.appendMessage(text: choice, senderId: user.id, senderDisplayName: user.name)
-            if choice == quiz.correctAnswer {
-                self.appendMessageWithJSQMessage(message: quiz.messageCorrect)
-                correctResponse()
-            } else {
-                self.appendMessageWithJSQMessage(message: quiz.messageIncorrect)
-            }
+    func showQuiz(with quiz:Quiz){
+        switch quiz.quizStyle {
+        case .MultipleChoice :
+            showMultipleChoiceQuiz(with: quiz as! MultipleChoiceQuiz)
+        case .YesOrNo:
+            showYesOrNoQuiz(with: quiz as! YesOrNoQuiz)
+        case .UserInputQuiz:
+            showUserInputQuiz(with: quiz as! UserInputQuiz)
         }
+    }
+    
+    /**
+     * This function checks if the user have answered the quiz correctlly
+     * If the user answered correctlly the message correct will be appended
+     * Else the message incorrect will be appended
+     */
+    func checkAns(with answer:String, quiz:Quiz){
+        self.appendMessage(text: answer, senderId: user.id, senderDisplayName: user.name)
+        if answer == quiz.correctAnswer {
+            self.appendMessageWithJSQMessage(message: quiz.messageCorrect)
+            correctResponse()
+        } else {
+            self.appendMessageWithJSQMessage(message: quiz.messageIncorrect)
+        }
+    }
+    
+    /**
+     * This function shows a MultipleChoiceQuiz
+     *
+     * @param quiz a MultipleChoiceQuize that wull be displayed
+     */
+    func showMultipleChoiceQuiz(with quiz:MultipleChoiceQuiz) {
         
         let selector = UIAlertController(title: "QUIZ!", message: quiz.questionText, preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: quiz.choice1, style: .default, handler: {
             (action:UIAlertAction) -> () in
-            checkAns(with: quiz.choice1)
+            self.checkAns(with: quiz.choice1, quiz: quiz)
             selector.dismiss(animated: true, completion: nil)
         })
         let action2 = UIAlertAction(title: quiz.choice2, style: .default, handler: {
             (action:UIAlertAction) -> () in
-            checkAns(with: quiz.choice2)
+            self.checkAns(with: quiz.choice2, quiz: quiz)
             selector.dismiss(animated: true, completion: nil)
         })
         let action3 = UIAlertAction(title: quiz.choice3, style: .default, handler: {
             (action:UIAlertAction) -> () in
-            checkAns(with: quiz.choice3)
+            self.checkAns(with: quiz.choice3, quiz: quiz)
             selector.dismiss(animated: true, completion: nil)
         })
         selector.addAction(action1)
         selector.addAction(action2)
         selector.addAction(action3)
-        
-        
         self.present(selector, animated: true, completion:nil)
     }
+    
+    
+    /**
+     * This function shows a Yes Or No Quiz
+     *
+     * @param quiz a YesOrNoQuiz that wull be displayed
+     */
+    func showYesOrNoQuiz(with quiz:YesOrNoQuiz) {
+        let selector = UIAlertController(title: "QUIZ!", message: quiz.questionText, preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "Yes", style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            self.checkAns(with: "Yes", quiz: quiz)
+            selector.dismiss(animated: true, completion: nil)
+        })
+        let action2 = UIAlertAction(title: "No", style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            self.checkAns(with: "No", quiz: quiz)
+            selector.dismiss(animated: true, completion: nil)
+        })
+        selector.addAction(action1)
+        selector.addAction(action2)
+        self.present(selector, animated: true, completion:nil)
+    }
+    
+    
+    /**
+     * This function shows a User Input Quiz
+     *
+     * @param quiz a UserInputQuiz that wull be displayed
+     */
+    func showUserInputQuiz(with quiz:UserInputQuiz) {
+        let alert = UIAlertController(title: "QUIZ!", message: quiz.questionText, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        alert.addAction(UIAlertAction(title: "Confrim", style: .default, handler:{ [weak alert] (_) in
+            let textField = alert?.textFields![0].text
+            self.checkAns(with: textField!, quiz: quiz)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     
     /**
      * This function is called when the quiz is answered correctly
