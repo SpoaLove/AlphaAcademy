@@ -10,6 +10,12 @@ import UIKit
 import AVKit
 import JSQMessagesViewController
 
+/**
+ * Chapter 1 Lesson View Controller
+ * print("Magic")
+ * This lesson teaches the student how to use the print function
+ * Also a brief intoduction to data types, namely the String data type
+ */
 class Chapter1LessonViewController: Lessons {
     
     
@@ -47,7 +53,7 @@ class Chapter1LessonViewController: Lessons {
      * quizes
      */
     var quizes = [
-        Quiz(
+        MultipleChoiceQuiz(
             questionText: "Which of the following is the correct function of the ‘print’ function",
             choice1: "print out a String onto the console",
             choice2: "print out a Cotton onto the console",
@@ -56,7 +62,7 @@ class Chapter1LessonViewController: Lessons {
             messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that the print function prints a String"),
             messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
         ),
-        Quiz(
+        MultipleChoiceQuiz(
             questionText: "Which of the following code is a valid ‘print’ function:",
             choice1: "print(‘Hello, Alpha Academy!’)",
             choice2: "print(Hello, Alpha Academy!)",
@@ -86,17 +92,6 @@ class Chapter1LessonViewController: Lessons {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "You can always change your beret in your beret collection that have been opened in the home page!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Enjoy your time in Alpha Academy, see you in the next class~")
     ]
-    
-    
-    
-    /**
-     * This function shows and remove the first quiz if quizes is not empty
-     */
-    func showQuizes(){
-        if !quizes.isEmpty {
-            showQuiz(with: quizes.first!)
-        }
-    }
     
     override func correctResponse() {
         quizes.removeFirst()
@@ -134,21 +129,21 @@ class Chapter1LessonViewController: Lessons {
     }
 
     
+    /**
+     * This function shows and remove the first quiz if quizes is not empty
+     */
     override func quiz() {
-        showQuizes()
+        if !quizes.isEmpty {
+            showQuiz(with: quizes.first!)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // append initial messages into the current messages
         currentMessages += initialMessages
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
 }
 

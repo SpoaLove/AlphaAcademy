@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,30 +20,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JA9-P7-7WR">
-                                <rect key="frame" x="10" y="285.5" width="355" height="96.5"/>
+                                <rect key="frame" x="10" y="128.5" width="355" height="410"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="GCr-NC-5BH">
-                                        <rect key="frame" x="20" y="0.0" width="315" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="63"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GCr-NC-5BH" secondAttribute="height" multiplier="45:8" id="aj6-fQ-yYC"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017年 Tengoku no Spoa. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hFQ-rA-awu">
-                                        <rect key="frame" x="0.0" y="76" width="355" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0White" translatesAutoresizingMaskIntoConstraints="NO" id="89y-06-CPz">
+                                        <rect key="frame" x="20" y="83" width="315" height="327"/>
+                                        <color key="backgroundColor" red="0.62750077250000003" green="0.26433014869999999" blue="0.2307784259" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="GCr-NC-5BH" firstAttribute="width" secondItem="GCr-NC-5BH" secondAttribute="height" multiplier="45:8" id="HlG-B7-KvR"/>
-                                    <constraint firstAttribute="trailing" secondItem="GCr-NC-5BH" secondAttribute="trailing" constant="20" id="U4c-wd-ynj"/>
-                                    <constraint firstItem="GCr-NC-5BH" firstAttribute="leading" secondItem="JA9-P7-7WR" secondAttribute="leading" constant="20" id="ech-OX-PLO"/>
+                                    <constraint firstItem="89y-06-CPz" firstAttribute="leading" secondItem="JA9-P7-7WR" secondAttribute="leading" constant="20" symbolic="YES" id="Noh-PI-WvL"/>
+                                    <constraint firstAttribute="trailing" secondItem="89y-06-CPz" secondAttribute="trailing" constant="20" symbolic="YES" id="jKb-x8-8CA"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017年 Tengoku no Spoa. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hFQ-rA-awu">
+                                <rect key="frame" x="10" y="626.5" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="hFQ-rA-awu" secondAttribute="trailing" constant="10" id="7S9-CP-nFZ"/>
+                            <constraint firstItem="hFQ-rA-awu" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="10" id="9kf-Eo-wak"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="hFQ-rA-awu" secondAttribute="bottom" constant="20" id="RGL-2W-VtM"/>
                             <constraint firstItem="JA9-P7-7WR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Tn4-ns-vdG"/>
                             <constraint firstItem="JA9-P7-7WR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="WjQ-IO-DEr"/>
                             <constraint firstItem="JA9-P7-7WR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XBD-Av-hz6"/>
@@ -58,6 +64,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="0White" width="507" height="327"/>
         <image name="Logo" width="1580" height="280"/>
     </resources>
 </document>

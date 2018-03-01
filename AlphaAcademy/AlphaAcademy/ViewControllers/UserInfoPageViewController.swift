@@ -125,7 +125,7 @@ class UserInfoPageViewController: UIViewController {
             print("Text field: \(String(describing: textField?.text))")
             let name = (textField?.text)!
             print(name)
-            UserDefaults.standard.set(name, forKey: "userName")
+            self.defaults.setName(with: name)
             self.setNameComplete()
             
         }))
@@ -166,7 +166,12 @@ class UserInfoPageViewController: UIViewController {
                 }
                 
                 print(level)
-                UserDefaults.standard.set(level, forKey: "userLevel")
+                
+                if level < self.defaults.getBeretNumber() {
+                    self.defaults.setBeretNumber(with: level)
+                }
+                
+                self.defaults.setLevel(to: level)
                 self.setLevelComplete()
             } else {
                 print("Error: failed to parse input '\(textField!.text!)' into Int ")

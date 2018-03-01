@@ -186,8 +186,10 @@ class Lessons: JSQMessagesViewController {
     
     /**
      * Shows the quiz using inputed Quiz
+     *
+     * param quiz a Quiz struct that will be parsed and displayed
      */
-    func showQuiz(with quiz:Quiz){
+    func showQuiz(with quiz:MultipleChoiceQuiz){
         func checkAns(with choice:String){
             self.appendMessage(text: choice, senderId: user.id, senderDisplayName: user.name)
             if choice == quiz.correctAnswer {
@@ -226,7 +228,7 @@ class Lessons: JSQMessagesViewController {
      * This function is called when the quiz is answered correctly
      */
     func correctResponse(){
-        // need to be implemented
+        // need to be implemented in sub classes
     }
     
     

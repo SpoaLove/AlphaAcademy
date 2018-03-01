@@ -12,6 +12,8 @@
 		CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */; };
 		CB3143EE1F41E55D00DC0FF6 /* Collegiate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */; };
 		CB5ECBAB2046C0DB00FE65A4 /* UserDefaultsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */; };
+		CB5ECBAD20480E4900FE65A4 /* QuizStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBAC20480E4900FE65A4 /* QuizStyle.swift */; };
+		CB5ECBAF20480F0400FE65A4 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5ECBAE20480F0400FE65A4 /* Quiz.swift */; };
 		CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */; };
 		CB77021B1F68D56100484E88 /* TeachingVideos in Resources */ = {isa = PBXBuildFile; fileRef = CB77021A1F68D55700484E88 /* TeachingVideos */; };
 		CB7870BF1F4A07B500E4ACBD /* NewLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */; };
@@ -29,7 +31,7 @@
 		CBC41BB71FFA0F7900211116 /* Chapter1LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */; };
 		CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */; };
 		CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */; };
-		CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35462037393D00E2BFFB /* Quiz.swift */; };
+		CBDA35472037393D00E2BFFB /* MultipleChoiceQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */; };
 		CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */; };
 		CBDA358A2041E61000E2BFFB /* Chapter3LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35892041E60F00E2BFFB /* Chapter3LessonViewController.swift */; };
 		CBDA358C2041E64500E2BFFB /* Chapter4LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA358B2041E64500E2BFFB /* Chapter4LessonViewController.swift */; };
@@ -69,6 +71,8 @@
 		CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaptersViewController.swift; sourceTree = "<group>"; };
 		CB3143ED1F41E55A00DC0FF6 /* Collegiate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Collegiate.ttf; sourceTree = "<group>"; };
 		CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFunctions.swift; sourceTree = "<group>"; };
+		CB5ECBAC20480E4900FE65A4 /* QuizStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStyle.swift; sourceTree = "<group>"; };
+		CB5ECBAE20480F0400FE65A4 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		CB6239681F4CC27D0057E968 /* BeretsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeretsCollectionViewController.swift; sourceTree = "<group>"; };
 		CB77021A1F68D55700484E88 /* TeachingVideos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TeachingVideos; sourceTree = "<group>"; };
 		CB7870BE1F4A07B500E4ACBD /* NewLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewLaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,7 +90,7 @@
 		CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1LessonViewController.swift; sourceTree = "<group>"; };
 		CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewController.swift; sourceTree = "<group>"; };
-		CBDA35462037393D00E2BFFB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuiz.swift; sourceTree = "<group>"; };
 		CBDA35872041E14600E2BFFB /* Chapter2LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2LessonViewController.swift; sourceTree = "<group>"; };
 		CBDA35892041E60F00E2BFFB /* Chapter3LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3LessonViewController.swift; sourceTree = "<group>"; };
 		CBDA358B2041E64500E2BFFB /* Chapter4LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4LessonViewController.swift; sourceTree = "<group>"; };
@@ -210,10 +214,12 @@
 		CBDA358E2041E6A300E2BFFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CBDA35462037393D00E2BFFB /* Quiz.swift */,
+				CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */,
+				CB5ECBAE20480F0400FE65A4 /* Quiz.swift */,
 				CBC41BB41FF8D5AC00211116 /* ChatUser.swift */,
 				CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */,
 				CB5ECBAA2046C0DB00FE65A4 /* UserDefaultsFunctions.swift */,
+				CB5ECBAC20480E4900FE65A4 /* QuizStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -541,16 +547,18 @@
 			files = (
 				CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */,
 				CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
+				CB5ECBAF20480F0400FE65A4 /* Quiz.swift in Sources */,
 				CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
 				CBE925761F207CF900C69C6C /* pageViewController.swift in Sources */,
 				CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */,
 				CBDA35882041E14600E2BFFB /* Chapter2LessonViewController.swift in Sources */,
 				CB5ECBAB2046C0DB00FE65A4 /* UserDefaultsFunctions.swift in Sources */,
+				CB5ECBAD20480E4900FE65A4 /* QuizStyle.swift in Sources */,
 				CBDA358C2041E64500E2BFFB /* Chapter4LessonViewController.swift in Sources */,
 				CBC41BB71FFA0F7900211116 /* Chapter1LessonViewController.swift in Sources */,
 				CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */,
-				CBDA35472037393D00E2BFFB /* Quiz.swift in Sources */,
+				CBDA35472037393D00E2BFFB /* MultipleChoiceQuiz.swift in Sources */,
 				CB8D028B1F4C73B000256C39 /* TitlePageViewController.swift in Sources */,
 				CBDA35912041E74200E2BFFB /* Chapter5LessonViewController.swift in Sources */,
 				CBDA35932041E75700E2BFFB /* Chapter6LessonViewController.swift in Sources */,
