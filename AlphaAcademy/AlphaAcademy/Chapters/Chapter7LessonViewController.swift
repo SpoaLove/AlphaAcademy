@@ -24,7 +24,7 @@ class Chapter7LessonViewController: Lessons {
             choice1: "1",
             choice2: "2",
             choice3: "3",
-            correctAnswer: "3",
+            correctAnswer: "2",
             messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "2 is the Answer"),
             messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "incorrect answer")
         ),
