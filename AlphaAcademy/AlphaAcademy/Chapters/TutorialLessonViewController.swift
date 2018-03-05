@@ -135,6 +135,8 @@ class TutorialLessonViewController: Lessons {
             }
         }
         
+        return appendMessageWithJSQMessage(message: continueTip)
+
     }
     
     /**

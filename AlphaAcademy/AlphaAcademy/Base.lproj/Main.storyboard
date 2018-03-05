@@ -873,7 +873,7 @@
                         <color key="backgroundColor" red="0.90981245040000003" green="0.90979284049999998" blue="0.90979677439999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <segue destination="ILP-MS-51z" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bLo-hU-dS2"/>
+                        <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quit" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="9hE-mj-Q0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6J-q3-8of" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -888,7 +888,7 @@
         <image name="userBlackBeret" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VMW-nI-64W"/>
+        <segue reference="9hE-mj-Q0f"/>
         <segue reference="For-Cq-UGP"/>
     </inferredMetricsTieBreakers>
 </document>

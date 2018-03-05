@@ -104,13 +104,16 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
     
     override func viewDidLoad() {
         
+        var removeAmount = 8-defaults.getLevel()
+        
         // append black beret into the picker Data if userlevel is higher than 8, else remove the last entry for each userLevel lower than 8
         if defaults.getLevel()>=8 || defaults.getBeretNumber()==8{
             pickerData += ["Black Beret"]
+            removeAmount = 0
         } else if defaults.getLevel() == 0 {
             pickerData = ["White Beret"]
         } else {
-            pickerData.removeLast(8-defaults.getLevel())
+            pickerData.removeLast(removeAmount)
         }
         
         // defining pickerView's delegate and datasource

@@ -198,6 +198,7 @@ class UserInfoPageViewController: UIViewController {
      */
     func setLevelComplete(){
         self.userLevelLabel.text = getLevelString()
+        self.userImageView.image = getBeret()
     }
     
     /**

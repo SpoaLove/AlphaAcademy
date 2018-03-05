@@ -41,11 +41,12 @@ class Defaults {
      * @param level an interger that is <=9 that will be set as the userLevel
      */
     func setLevel(to level:Int){
-        guard level<=9 && level>0 else {
+        if level > 9 || level < 0 {
             print("Error: The input number is expected to be >0 && <=9, but found \(level)")
-            return
+            UserDefaults.standard.set(0, forKey: "userLevel")
+        } else {
+            UserDefaults.standard.set(level, forKey: "userLevel")
         }
-        UserDefaults.standard.set(level, forKey: "userLevel")
     }
     
     /**
