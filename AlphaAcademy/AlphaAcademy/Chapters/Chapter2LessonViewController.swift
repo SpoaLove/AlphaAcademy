@@ -12,7 +12,7 @@ import JSQMessagesViewController
 /**
  * Chapter 2 Lesson View Controller
  * var & let
- * This lesson teaches the student how to declear variables
+ * This lesson teaches the student how to declare variables
  */
 class Chapter2LessonViewController: Lessons {
     
@@ -70,13 +70,13 @@ class Chapter2LessonViewController: Lessons {
         YesOrNoQuiz(
             questionText: "a Constant is mutable?",
             correctAnswer: "No",
-            messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Remeber that "),
+            messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that a constant declared using let is not mutable once it is given a value."),
             messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
         ),
         UserInputQuiz(
             questionText: "Please declare a constant called “lunch” with the value of “Burger” with it’s type explicitly",
             correctAnswer: "let lunch:String = burger",
-            messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "42 is the Answer"),
+            messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that a variable can be declared explicitlly!"),
             messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
         )
     ]
