@@ -282,7 +282,7 @@ class Lessons: JSQMessagesViewController {
         let alert = UIAlertController(title: "QUIZ!", message: quiz.questionText, preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         alert.addAction(UIAlertAction(title: "Confrim", style: .default, handler:{ [weak alert] (_) in
-            let textField = alert?.textFields![0].text!)
+            let textField = alert?.textFields![0].text!
             self.checkAns(with: textField!, quiz: quiz)
         }))
         
