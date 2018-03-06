@@ -16,7 +16,6 @@ class TutorialLessonViewController: Lessons {
      */
     var finishSettingName = false
     var nameDidSet = false
-    var userHaveRecievedBeret = false
     
     /**
      * Tutorial Messages
