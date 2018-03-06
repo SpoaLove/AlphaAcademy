@@ -148,6 +148,7 @@ class TutorialLessonViewController: Lessons {
         print("Username: \(name)")
         UserDefaults.standard.set(name, forKey: "userName")
         self.setNameComplete()
+        next()
     }
     
     /**

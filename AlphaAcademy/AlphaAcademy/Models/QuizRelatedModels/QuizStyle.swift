@@ -13,4 +13,5 @@ enum QuizStyle {
     case MultipleChoice
     case YesOrNo
     case UserInputQuiz
+    case TrueOrFalse
 }

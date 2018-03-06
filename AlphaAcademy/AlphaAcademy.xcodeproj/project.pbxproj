@@ -31,6 +31,7 @@
 		CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB41FF8D5AC00211116 /* ChatUser.swift */; };
 		CBC41BB71FFA0F7900211116 /* Chapter1LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */; };
+		CBC849FD204E5B2B00E6E34C /* TrueOrFalseQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC849FC204E5B2B00E6E34C /* TrueOrFalseQuiz.swift */; };
 		CBD9C6E61FF8C6E3008F7E3A /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */; };
 		CBDA3545202E269400E2BFFB /* TutorialLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */; };
 		CBDA35472037393D00E2BFFB /* MultipleChoiceQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */; };
@@ -92,6 +93,7 @@
 		CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		CBC41BB41FF8D5AC00211116 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1LessonViewController.swift; sourceTree = "<group>"; };
+		CBC849FC204E5B2B00E6E34C /* TrueOrFalseQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueOrFalseQuiz.swift; sourceTree = "<group>"; };
 		CBD9C6E51FF8C6E2008F7E3A /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		CBDA3544202E269400E2BFFB /* TutorialLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewController.swift; sourceTree = "<group>"; };
 		CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuiz.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				CBDA35462037393D00E2BFFB /* MultipleChoiceQuiz.swift */,
 				CB5ECBB0204812F000FE65A4 /* YesOrNoQuiz.swift */,
 				CB5ECBB22048145C00FE65A4 /* UserInputQuiz.swift */,
+				CBC849FC204E5B2B00E6E34C /* TrueOrFalseQuiz.swift */,
 			);
 			path = QuizRelatedModels;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				CB5ECBB32048145C00FE65A4 /* UserInputQuiz.swift in Sources */,
 				CBDA35952041E76200E2BFFB /* Chapter7LessonViewController.swift in Sources */,
 				CBE9257A1F2082E600C69C6C /* UserInfoPageViewController.swift in Sources */,
+				CBC849FD204E5B2B00E6E34C /* TrueOrFalseQuiz.swift in Sources */,
 				CBDA358A2041E61000E2BFFB /* Chapter3LessonViewController.swift in Sources */,
 				CB2B1C101F2CD926002EE08C /* chaptersViewController.swift in Sources */,
 			);

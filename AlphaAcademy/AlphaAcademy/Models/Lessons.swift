@@ -46,6 +46,9 @@ class Lessons: JSQMessagesViewController {
     var atEndOfRoute = false
     var choosenRouteName:String = ""
     var finishedLesson = false
+    var userCompleteQuiz = false
+    var userHaveRecievedBeret = false
+
 
     /**
      * Defines the Current User
@@ -78,8 +81,8 @@ class Lessons: JSQMessagesViewController {
     /**
      * Defines the initial Messages, the first array of messages that will be put on the queue
      */
-    let initailMessages:[JSQMessage] = [
-        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' or 'n' and press the send button to start the conversation!")
+    let tipMessage:[JSQMessage] = [
+        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' or 'n' and press the send button to start or continue the conversation!")
     ]
     
     /**
@@ -197,6 +200,8 @@ class Lessons: JSQMessagesViewController {
             showYesOrNoQuiz(with: quiz as! YesOrNoQuiz)
         case .UserInputQuiz:
             showUserInputQuiz(with: quiz as! UserInputQuiz)
+        case .TrueOrFalse:
+            showTrueOrFalseQuiz(with: quiz as! TrueOrFalseQuiz)
         }
     }
     
@@ -246,7 +251,7 @@ class Lessons: JSQMessagesViewController {
     
     
     /**
-     * This function shows a Yes Or No Quiz
+     * This function shows a Yes or No Quiz
      *
      * @param quiz a YesOrNoQuiz that wull be displayed
      */
@@ -283,6 +288,28 @@ class Lessons: JSQMessagesViewController {
         
         self.present(alert, animated: true, completion: nil)
         
+    }
+    
+    /**
+     * This function shows a True or False Quiz
+     *
+     * @param quiz a TrueOrFalseQuiz that wull be displayed
+     */
+    func showTrueOrFalseQuiz(with quiz:TrueOrFalseQuiz) {
+        let selector = UIAlertController(title: "QUIZ!", message: quiz.questionText, preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "True", style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            self.checkAns(with: "True", quiz: quiz)
+            selector.dismiss(animated: true, completion: nil)
+        })
+        let action2 = UIAlertAction(title: "False", style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            self.checkAns(with: "False", quiz: quiz)
+            selector.dismiss(animated: true, completion: nil)
+        })
+        selector.addAction(action1)
+        selector.addAction(action2)
+        self.present(selector, animated: true, completion:nil)
     }
     
     
@@ -543,7 +570,7 @@ class Lessons: JSQMessagesViewController {
         
         // append initial messages
         user.name = defaults.getName()
-        messages += initailMessages
+        messages += tipMessage
     }
     
     

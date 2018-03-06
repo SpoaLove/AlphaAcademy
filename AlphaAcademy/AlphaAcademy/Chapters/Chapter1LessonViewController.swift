@@ -18,13 +18,6 @@ import JSQMessagesViewController
  */
 class Chapter1LessonViewController: Lessons {
     
-    
-    /**
-     * Additional variables
-     */
-    var userCompleteQuiz = false
-    var userHaveRecievedBeret = false
-    
     /**
      * This function returns a boolean checking if the user have completed the chapter
      * @return the boolean of userLevel higher than 1
@@ -46,7 +39,7 @@ class Chapter1LessonViewController: Lessons {
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "The code above is a complete program that can print out the ‘String’ “Hello, World!” onto the console!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "A ‘String’ is a data type used in swift to store text that will be used in the program, a ‘String’ should always start and end with double quotation marks!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Well-done! You have just mastered your very first spell in Swift!"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before you receive your beret, let’s have a simple quiz! Please type quiz to start the quiz!")
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Before you receive your beret, let’s have a simple quiz! Please type 'q' or 'quiz' to start the quiz!")
     ]
     
     /**
