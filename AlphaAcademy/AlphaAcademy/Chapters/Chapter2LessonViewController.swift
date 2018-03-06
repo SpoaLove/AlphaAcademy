@@ -75,7 +75,7 @@ class Chapter2LessonViewController: Lessons {
         ),
         UserInputQuiz(
             questionText: "Please declare a constant called “lunch” with the value of “Burger” with it’s type explicitly",
-            correctAnswer: "let lunch:String = burger",
+            correctAnswer: "let lunch:String = \"burger\"",
             messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that a variable can be declared explicitlly!"),
             messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
         )
