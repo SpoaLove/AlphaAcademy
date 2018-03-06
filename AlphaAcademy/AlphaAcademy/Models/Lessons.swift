@@ -70,7 +70,7 @@ class Lessons: JSQMessagesViewController {
      * 'currentMessages': queue of messages
      * 'messagesCount'  : index of the current message
      */
-    var currentMessages = [JSQMessage]()
+    var messageQueue = [JSQMessage]()
     var messagesCount=0
     
     /**
@@ -171,12 +171,12 @@ class Lessons: JSQMessagesViewController {
      */
     func next(){
         print("Next is sent")
-        if messagesCount<currentMessages.count {
-            messages.append(currentMessages[messagesCount])
+        if messagesCount<messageQueue.count {
+            messages.append(messageQueue[messagesCount])
             messagesCount += 1
             
         // reach end of the Route
-        }else if messagesCount==currentMessages.count && messagesCount != 0{
+        }else if messagesCount==messageQueue.count && messagesCount != 0{
             if finishedLesson{
                 appendMessageWithJSQMessage(message: endTip)
                 atEndOfRoute = true
@@ -457,7 +457,7 @@ class Lessons: JSQMessagesViewController {
      * @param chapter an array of JSQMessages that will be added into the messages queue
      */
     func setChapter(chapter:[JSQMessage]){
-        currentMessages += chapter
+        messageQueue += chapter
     }
     
     /**
@@ -560,6 +560,20 @@ class Lessons: JSQMessagesViewController {
         return userImages[defaults.getBeretNumber()]
     }
     
+    
+    /**
+     * This function prompts a debug alert that shows that the Chapter is under development.
+     * This function should not be used in the actual release
+     */
+    func unimplemented(){
+        let selector = UIAlertController(title: "Alert!", message: "This Chapter is currentlly in Development!", preferredStyle: .actionSheet)
+        let quit = UIAlertAction(title: "Quit", style: .default, handler: {
+            (action:UIAlertAction) -> () in
+            self.performSegue(withIdentifier: self.quitSegueIdentifier(), sender: self)
+        })
+        selector.addAction(quit)
+        self.present(selector, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         

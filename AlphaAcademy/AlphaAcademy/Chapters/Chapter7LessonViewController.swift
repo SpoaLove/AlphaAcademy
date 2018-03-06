@@ -61,14 +61,14 @@ class Chapter7LessonViewController: Lessons {
             appendMessage(text: "1 queston left! Type 'Q' or Quiz to Continue!", senderId: "3", senderDisplayName: "QUIZ!")
         } else {
             appendMessage(text: "All Questions have been answered correctlly!", senderId: "3", senderDisplayName: "QUIZ!")
-            messagesCount = currentMessages.count
+            messagesCount = messageQueue.count
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentMessages.append(initialMessage!)
+        messageQueue.append(initialMessage!)
         
         // Do any additional setup after loading the view.
     }

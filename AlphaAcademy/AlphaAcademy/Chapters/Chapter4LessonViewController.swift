@@ -13,8 +13,8 @@ class Chapter4LessonViewController: Lessons {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
-
-}
+    
+    override func reply(with message: String) {
+        unimplemented()
+    }}

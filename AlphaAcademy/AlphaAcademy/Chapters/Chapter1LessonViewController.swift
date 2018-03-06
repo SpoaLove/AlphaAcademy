@@ -95,25 +95,25 @@ class Chapter1LessonViewController: Lessons {
         } else {
             appendMessage(text: "All Questions have been answered correctlly!", senderId: "3", senderDisplayName: "QUIZ!")
             
-            messagesCount = currentMessages.count
-            currentMessages += postQuizMessages
+            messagesCount = messageQueue.count
+            messageQueue += postQuizMessages
             userCompleteQuiz = true
         }
     }
     
     override func next(){
-        if userCompleteQuiz && messagesCount==currentMessages.count && !userHaveRecievedBeret {
+        if userCompleteQuiz && messagesCount==messageQueue.count && !userHaveRecievedBeret {
             appendMessageWithJSQMessage(message: beretRecievingMessage)
             if defaults.getLevel()==1 {
                 appendMessageWithJSQMessage(message: userLeveledUpMessage)
                 defaults.setLevel(to: 2)
             }
             defaults.setBeretNumber(with: 1)
-            currentMessages += postQuizMessages2
+            messageQueue += postQuizMessages2
             userHaveRecievedBeret = true
         }
         
-        if userHaveRecievedBeret && messagesCount==currentMessages.count && !atEndOfRoute{
+        if userHaveRecievedBeret && messagesCount==messageQueue.count && !atEndOfRoute{
             appendMessage(text: "Please tap the button on the bottom left to quit Lesson 1!", senderId: "3", senderDisplayName: "Tip!")
             atEndOfRoute = true
         }
@@ -134,7 +134,7 @@ class Chapter1LessonViewController: Lessons {
     override func viewDidLoad() {
         super.viewDidLoad()
         // append initial messages into the current messages
-        currentMessages += initialMessages
+        messageQueue += initialMessages
     }
 
 

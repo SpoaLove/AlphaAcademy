@@ -94,10 +94,10 @@ class TutorialLessonViewController: Lessons {
      * allows the user to set their username
      */
     override func next(){
-        if messagesCount<currentMessages.count {
-            messages.append(currentMessages[messagesCount])
+        if messagesCount<messageQueue.count {
+            messages.append(messageQueue[messagesCount])
             messagesCount += 1
-        }else if messagesCount==currentMessages.count && messagesCount != 0{
+        }else if messagesCount==messageQueue.count && messagesCount != 0{
             if finishSettingName{
                 if userHaveRecievedBeret {
                     appendMessage(text: "Please tap the button on the bottom left to quit Tutorial Lesson!", senderId: "3", senderDisplayName: "Tip!")
@@ -109,7 +109,7 @@ class TutorialLessonViewController: Lessons {
                         defaults.setLevel(to: 1)
                     }
                     defaults.setBeretNumber(with: 0)
-                    currentMessages += tutorialMessages2
+                    messageQueue += tutorialMessages2
                     userHaveRecievedBeret = true
                 }
             }else{
@@ -128,7 +128,7 @@ class TutorialLessonViewController: Lessons {
             }
         }
         
-        if messagesCount==currentMessages.count && messagesCount != 0{
+        if messagesCount==messageQueue.count && messagesCount != 0{
             if !nameDidSet{
                 return setNameWith(name: message)
             }
@@ -180,8 +180,8 @@ class TutorialLessonViewController: Lessons {
         finishSettingName = true
         let nameIsSetMessage:String = "My name is \(self.defaults.getName())!"
         appendMessage(text: nameIsSetMessage, senderId: "2", senderDisplayName: self.defaults.getName())
-        currentMessages.append(JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hi \(self.defaults.getName())! What a nice name!"))
-        currentMessages += tutorialMessages
+        messageQueue.append(JSQMessage(senderId: "1", displayName: "A-Chan", text: "Hi \(self.defaults.getName())! What a nice name!"))
+        messageQueue += tutorialMessages
         nameDidSet = true
     }
     
@@ -191,7 +191,7 @@ class TutorialLessonViewController: Lessons {
     
     
     override func viewDidLoad() {
-        currentMessages += initialMessages
+        messageQueue += initialMessages
         super.viewDidLoad()
         commandList.removeValue(forKey: "Quiz")
         commandList.removeValue(forKey: "Q")
