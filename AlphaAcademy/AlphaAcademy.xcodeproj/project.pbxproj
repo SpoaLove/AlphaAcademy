@@ -25,9 +25,6 @@
 		CB99D52A1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
 		CB99D52B1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
 		CB99D52C1F1AC3D0005D73B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */; };
-		CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
-		CB99D52F1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
-		CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */; };
 		CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB41FF8D5AC00211116 /* ChatUser.swift */; };
 		CBC41BB71FFA0F7900211116 /* Chapter1LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */; };
 		CBC849FD204E5B2B00E6E34C /* TrueOrFalseQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC849FC204E5B2B00E6E34C /* TrueOrFalseQuiz.swift */; };
@@ -88,7 +85,6 @@
 		CB99D50C1F1AC112005D73B6 /* AlphaAcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaAcademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D5171F1AC112005D73B6 /* AlphaAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99D5291F1AC3D0005D73B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/Spoa/Desktop/AlphaAcademy/AlphaAcademy/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
-		CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		CBC41BB41FF8D5AC00211116 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		CBC41BB61FFA0F7900211116 /* Chapter1LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1LessonViewController.swift; sourceTree = "<group>"; };
 		CBC849FC204E5B2B00E6E34C /* TrueOrFalseQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueOrFalseQuiz.swift; sourceTree = "<group>"; };
@@ -242,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				CB8D028A1F4C73B000256C39 /* TitlePageViewController.swift */,
-				CB99D52D1F1B5FD2005D73B6 /* welcomeViewController.swift */,
 				CBE925751F207CF900C69C6C /* pageViewController.swift */,
 				CBE925791F2082E600C69C6C /* UserInfoPageViewController.swift */,
 				CB2B1C0F1F2CD926002EE08C /* chaptersViewController.swift */,
@@ -559,7 +554,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC41BB51FF8D5AC00211116 /* ChatUser.swift in Sources */,
-				CB99D52E1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
 				CB5ECBAF20480F0400FE65A4 /* Quiz.swift in Sources */,
 				CB6239691F4CC27D0057E968 /* BeretsCollectionViewController.swift in Sources */,
 				CB99D4FC1F1AC112005D73B6 /* AppDelegate.swift in Sources */,
@@ -589,7 +583,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB99D52F1F1B5FD2005D73B6 /* welcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +590,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB99D5301F1B5FD3005D73B6 /* welcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
