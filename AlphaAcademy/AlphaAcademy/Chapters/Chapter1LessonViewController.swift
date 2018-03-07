@@ -50,7 +50,7 @@ class Chapter1LessonViewController: Lessons {
             questionText: "Which of the following is the correct function of the ‘print’ function",
             choice1: "print out a String onto the console",
             choice2: "print out a Cotton onto the console",
-            choice3: "print put a Kitten onto the console",
+            choice3: "print out a Kitten onto the console",
             correctAnswer: "print out a String onto the console",
             messageCorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "Correct! Remember that the print function prints a String"),
             messageIncorrect: JSQMessage(senderId: "1", displayName: "A-Chan", text: "The answer is incorrect! Read carefully through the lesson and try again!")
@@ -114,11 +114,18 @@ class Chapter1LessonViewController: Lessons {
         }
         
         if userHaveRecievedBeret && messagesCount==messageQueue.count && !atEndOfRoute{
-            appendMessage(text: "Please tap the button on the bottom left to quit Lesson 1!", senderId: "3", senderDisplayName: "Tip!")
+            appendMessageWithJSQMessage(message: endTip)
             atEndOfRoute = true
         }
         
         super.next()
+        
+        if let lastMsg = messages.last?.senderId {
+            
+            if lastMsg  == "4" {
+                next()
+            }
+        }
     }
 
     

@@ -82,14 +82,14 @@ class Lessons: JSQMessagesViewController {
      * Defines the initial Messages, the first array of messages that will be put on the queue
      */
     let tipMessage:[JSQMessage] = [
-        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' or 'n' and press the send button to start or continue the conversation!")
+        JSQMessage(senderId: "3", displayName: "Tip!", text: "please type in 'next' or 'n' and press the send button to start or continue the conversation or type 'help' or 'h' for help!")
     ]
     
     /**
      * Tip messages
      */
     let continueTip = JSQMessage(senderId: "3", displayName: "Tip!", text: "please type 'next' or 'n' to continue")
-    let endTip = JSQMessage(senderId: "3", displayName: "Tip!", text: "Please tap the button on the bottom left to quit!")
+    let endTip = JSQMessage(senderId: "3", displayName: "Tip!", text: "Please tap the arrow button on the left of the textbox to quit!")
     
     /**
      * Defines the avatar size
@@ -357,8 +357,6 @@ class Lessons: JSQMessagesViewController {
             help()
         case "Next","N":
             next()
-        case "Video","V":
-            playVideo(with: "TeachingVideos/AGintro", of: "mp4")
         case "Quiz","Q":
             quiz()
         default:
@@ -398,9 +396,6 @@ class Lessons: JSQMessagesViewController {
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         let bubbleFactory = JSQMessagesBubbleImageFactory()
         let message = messages[indexPath.row]
-        if message.isMediaMessage {
-            playVideo(with: "TeachingVideos/AGintro", of: "mp4")
-        }
         switch message.senderId {
         case "2":
             return bubbleFactory?.outgoingMessagesBubbleImage(with: .blue)
@@ -492,26 +487,6 @@ class Lessons: JSQMessagesViewController {
         appendMessage(text: text, senderId: "3", senderDisplayName: "DEBUG")
     }
 
-    /**
-     * This function plays a video from a given path
-     *
-     * @param videoPath the path of the video
-     * @param videoType the type of the video
-     * @sample playVideo(with: "TeachingVideos/AGintro", of: "mp4")
-     */
-    func playVideo(with videoPath:String, of videoType:String) {
-        guard let path = Bundle.main.path(forResource: videoPath, ofType:videoType) else {
-            debugPrint("video notfound not found")
-            return
-        }
-        let player = AVPlayer(url: URL(fileURLWithPath: path))
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        present(playerController, animated: true) {
-            player.play()
-        }
-    }
-    
     
     /**
      * This function shows user a choice betweem two routes that can be appended into the queue

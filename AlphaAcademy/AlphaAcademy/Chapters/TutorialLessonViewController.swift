@@ -26,11 +26,11 @@ class TutorialLessonViewController: Lessons {
     ]
     
     let tutorialMessages:[JSQMessage] = [
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Alpha Academy is a magical school that locates in the programming island."),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Alpha Academy is a magical school that is located on the programming island."),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "In Alpha Academy everything that happens is governed by magical spells, which is the ‘Swift’ Programming Language!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Swift is a safe and fast programming language which is a fantastic way to write programs! "),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "It is also an easy and friendly way for new programmers to start learning programming!"),
-        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Everyday students in Alpha Academy work hard and excel their techniques on using these magical spells!"),
+        JSQMessage(senderId: "1", displayName: "A-Chan", text: "Everyday, students in Alpha Academy work hard and excel their techniques on using these magical spells!"),
         JSQMessage(senderId: "1", displayName: "A-Chan", text: "Here is your beret!")
     ]
     

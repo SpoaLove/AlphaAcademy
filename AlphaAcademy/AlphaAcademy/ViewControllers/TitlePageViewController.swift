@@ -18,7 +18,7 @@ class TitlePageViewController: UIViewController {
      */
     @IBAction func startButton(_ sender: Any) {
         print("Start")
-        if UserDefaults.standard.object(forKey: "userStarted") != nil{
+        if let _ = UserDefaults.standard.object(forKey: "userStarted"){
             performSegue(withIdentifier: "Start", sender: self)
         }else{
             UserDefaults.standard.set(true, forKey: "userStarted")

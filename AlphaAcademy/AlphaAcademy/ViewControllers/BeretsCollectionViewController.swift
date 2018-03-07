@@ -122,7 +122,6 @@ class BeretsCollectionViewController: UIViewController, UIPickerViewDelegate, UI
         
         // setting default currentBeretNumber and update the UI when the view is first loaded
         self.currentBeretNumber = defaults.getBeretNumber()
-        updateBeret(with: currentBeretNumber)
         super.viewDidLoad()
     }
     
