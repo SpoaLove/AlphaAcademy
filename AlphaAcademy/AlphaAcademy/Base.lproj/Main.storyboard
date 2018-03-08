@@ -679,7 +679,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uwg-lL-BDO">
-                                <rect key="frame" x="0.0" y="28" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="678"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BERETS COLLECTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mku-yT-NBl">
                                         <rect key="frame" x="82.666666666666671" y="0.0" width="248.66666666666663" height="45.666666666666664"/>
@@ -687,7 +687,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0White" translatesAutoresizingMaskIntoConstraints="NO" id="I9w-gQ-pNH">
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="0White" translatesAutoresizingMaskIntoConstraints="NO" id="I9w-gQ-pNH">
                                         <rect key="frame" x="0.0" y="45.666666666666686" width="414" height="327"/>
                                         <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
@@ -697,33 +697,40 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQN-PH-Dgg">
-                                        <rect key="frame" x="0.0" y="418.33333333333326" width="414" height="216"/>
+                                    <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="hQN-PH-Dgg">
+                                        <rect key="frame" x="0.0" y="418.33333333333331" width="414" height="214.66666666666669"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.7481003852739726" colorSpace="custom" customColorSpace="sRGB"/>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyY-ft-70d">
-                                        <rect key="frame" x="140.66666666666666" y="634.33333333333337" width="132.99999999999997" height="45"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
-                                        <state key="normal" title="Wear this Beret">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="wearBeretButtonIsPressed:" destination="bd3-wz-aVK" eventType="touchUpInside" id="MBH-8S-QMX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-OX-KWj">
-                                        <rect key="frame" x="186" y="679.33333333333337" width="42" height="20.666666666666629"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <action selector="quitButtonIsTapped:" destination="bd3-wz-aVK" eventType="touchUpInside" id="Cbp-ss-lRq"/>
-                                            <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quitCollection" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="VMW-nI-64W"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-l2-LOZ">
+                                        <rect key="frame" x="0.0" y="633" width="414" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyY-ft-70d">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="45"/>
+                                                <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
+                                                <state key="normal" title="Wear this Beret">
+                                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="wearBeretButtonIsPressed:" destination="bd3-wz-aVK" eventType="touchUpInside" id="MBH-8S-QMX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-OX-KWj">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="45"/>
+                                                <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <action selector="quitButtonIsTapped:" destination="bd3-wz-aVK" eventType="touchUpInside" id="Cbp-ss-lRq"/>
+                                                    <segue destination="4qr-Zz-GBN" kind="presentation" identifier="quitCollection" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="VMW-nI-64W"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hQN-PH-Dgg" firstAttribute="leading" secondItem="uwg-lL-BDO" secondAttribute="leading" id="Esf-Pz-2x5"/>
+                                    <constraint firstItem="rzI-l2-LOZ" firstAttribute="leading" secondItem="uwg-lL-BDO" secondAttribute="leading" id="KYs-gU-FI3"/>
+                                    <constraint firstAttribute="trailing" secondItem="rzI-l2-LOZ" secondAttribute="trailing" id="Szb-Lw-MMp"/>
                                     <constraint firstAttribute="trailing" secondItem="hQN-PH-Dgg" secondAttribute="trailing" id="fKT-oc-VYn"/>
                                 </constraints>
                             </stackView>
@@ -731,7 +738,7 @@
                         <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uwg-lL-BDO" firstAttribute="leading" secondItem="kpL-Xf-aZX" secondAttribute="leading" id="5qk-8w-9dX"/>
-                            <constraint firstItem="LcB-EJ-FMv" firstAttribute="top" secondItem="uwg-lL-BDO" secondAttribute="bottom" constant="8" symbolic="YES" id="6cV-7d-Jh8"/>
+                            <constraint firstItem="LcB-EJ-FMv" firstAttribute="top" secondItem="uwg-lL-BDO" secondAttribute="bottom" constant="30" id="6cV-7d-Jh8"/>
                             <constraint firstItem="uwg-lL-BDO" firstAttribute="top" secondItem="7nz-0E-OHm" secondAttribute="bottom" constant="8" symbolic="YES" id="7lX-mM-jrg"/>
                             <constraint firstAttribute="trailing" secondItem="uwg-lL-BDO" secondAttribute="trailing" id="my7-Fe-n81"/>
                         </constraints>
@@ -919,7 +926,7 @@
         <image name="userBlackBeret" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cSH-p9-l60"/>
+        <segue reference="VMW-nI-64W"/>
         <segue reference="For-Cq-UGP"/>
     </inferredMetricsTieBreakers>
 </document>
