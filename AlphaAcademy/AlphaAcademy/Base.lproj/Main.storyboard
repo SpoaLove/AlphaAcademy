@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Welcome View Controller-->
+        <!--View Controller-->
         <scene sceneID="kqy-SL-GIp">
             <objects>
-                <viewController id="oiv-Wi-KvX" customClass="welcomeViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oiv-Wi-KvX" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vHr-GC-fS5"/>
                         <viewControllerLayoutGuide type="bottom" id="QrE-Sy-sCZ"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="2235" y="-510"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial Lesson View Controller-->
         <scene sceneID="BI8-uF-u80">
             <objects>
-                <viewController id="L2g-MU-gVk" sceneMemberID="viewController">
+                <viewController id="L2g-MU-gVk" customClass="TutorialLessonViewController" customModule="AlphaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lKI-Ko-pMU"/>
                         <viewControllerLayoutGuide type="bottom" id="I4W-2m-Hxh"/>
@@ -109,10 +109,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-gv-qQM">
-                                <rect key="frame" x="81.333333333333314" y="269.33333333333331" width="253" height="198"/>
+                                <rect key="frame" x="80.666666666666686" y="269" width="253" height="198"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI7-Ub-lAI">
-                                        <rect key="frame" x="71.000000000000028" y="0.0" width="111.33333333333334" height="66"/>
+                                        <rect key="frame" x="71" y="0.0" width="111.33333333333331" height="66"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -362,24 +362,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-V1-XdW">
-                                <rect key="frame" x="133.33333333333334" y="289.66666666666669" width="149.00000000000003" height="157.66666666666669"/>
+                                <rect key="frame" x="132.66666666666666" y="289.33333333333331" width="148.99999999999997" height="157.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-Km-kzI">
-                                        <rect key="frame" x="16.333333333333307" y="0.0" width="116.33333333333331" height="46.666666666666664"/>
+                                        <rect key="frame" x="16.333333333333336" y="0.0" width="116.33333333333331" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="var &amp; let" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-S4-xic">
-                                        <rect key="frame" x="0.0" y="46.666666666666629" width="149" height="66"/>
+                                        <rect key="frame" x="0.0" y="46.666666666666686" width="149" height="66"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-MG-L7x">
-                                        <rect key="frame" x="50.666666666666657" y="112.66666666666663" width="48" height="45"/>
+                                        <rect key="frame" x="50.666666666666686" y="112.66666666666669" width="48" height="45"/>
                                         <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="25"/>
                                         <state key="normal" title="Start!"/>
                                         <connections>
@@ -470,105 +470,135 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
-                                <rect key="frame" x="30" y="100" width="354" height="511"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c1T-Cg-bxi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userBlackBeret" translatesAutoresizingMaskIntoConstraints="NO" id="ALy-rj-5eZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="246.33333333333334"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
-                                        <rect key="frame" x="116.66666666666666" y="246.33333333333326" width="121" height="45.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ta-6qX">
-                                        <rect key="frame" x="154" y="292" width="46.333333333333343" height="39"/>
-                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
-                                        <rect key="frame" x="0.0" y="331" width="354" height="36"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Back to Title">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
-                                            <segue destination="i2X-7o-nAP" kind="show" identifier="LogOut" id="fqm-Dw-EAe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-u5-jnL">
-                                        <rect key="frame" x="0.0" y="367" width="354" height="36"/>
-                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Rename">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setNameButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="4WP-b6-t2v"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-RK-ONo">
-                                        <rect key="frame" x="0.0" y="403" width="354" height="36"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Redo Tutorial">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tutorialButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="dSI-Iu-o3J"/>
-                                            <segue destination="L2g-MU-gVk" kind="popoverPresentation" identifier="redoTutorial" popoverAnchorView="L67-RK-ONo" id="For-Cq-UGP">
-                                                <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-Vs-WfR">
-                                        <rect key="frame" x="0.0" y="439" width="354" height="36"/>
-                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Berets Collection">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="beretsCollectionButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="gKu-7c-Y2x"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-hf-4Kp">
-                                        <rect key="frame" x="0.0" y="475" width="354" height="36"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Debug Reset Level">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setLevelButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="K9W-9y-nr0"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-DJ-21l">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="506"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userBlackBeret" translatesAutoresizingMaskIntoConstraints="NO" id="ALy-rj-5eZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="467"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kp2-wi-eG8">
+                                                <rect key="frame" x="0.0" y="467" width="414" height="39"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Y5-XSx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="39"/>
+                                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="35"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lv:0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ta-6qX">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="39"/>
+                                                        <fontDescription key="fontDescription" name="Collegiate" family="Collegiate" pointSize="30"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kp2-wi-eG8" firstAttribute="leading" secondItem="cRW-DJ-21l" secondAttribute="leading" id="0z1-QV-fib"/>
+                                            <constraint firstAttribute="trailing" secondItem="kp2-wi-eG8" secondAttribute="trailing" id="lRw-Jv-P4C"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tG6-zB-YO6">
+                                        <rect key="frame" x="0.0" y="506" width="414" height="180"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-9F-UkT">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-eJ-I49">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Back to Title">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="userDidPressedLogOutButton:" destination="ILP-MS-51z" eventType="touchUpInside" id="caq-oF-ZDs"/>
+                                                            <segue destination="i2X-7o-nAP" kind="show" identifier="LogOut" id="fqm-Dw-EAe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-u5-jnL">
+                                                        <rect key="frame" x="0.0" y="36" width="414" height="36"/>
+                                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Rename">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setNameButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="4WP-b6-t2v"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-RK-ONo">
+                                                        <rect key="frame" x="0.0" y="72" width="414" height="36"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Redo Tutorial">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="tutorialButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="dSI-Iu-o3J"/>
+                                                            <segue destination="L2g-MU-gVk" kind="presentation" identifier="redoTutorial" id="For-Cq-UGP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-Vs-WfR">
+                                                        <rect key="frame" x="0.0" y="108" width="414" height="36"/>
+                                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Berets Collection">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="beretsCollectionButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="gKu-7c-Y2x"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-hf-4Kp">
+                                                        <rect key="frame" x="0.0" y="144" width="414" height="36"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Debug Reset Level">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setLevelButtonDidPressed:" destination="ILP-MS-51z" eventType="touchUpInside" id="K9W-9y-nr0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="L67-RK-ONo" firstAttribute="leading" secondItem="aC2-9F-UkT" secondAttribute="leading" id="CaZ-vs-iAE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aOv-eJ-I49" secondAttribute="trailing" id="H7A-Gn-BVO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="L67-RK-ONo" secondAttribute="trailing" id="ILY-Qd-Mco"/>
+                                                    <constraint firstAttribute="trailing" secondItem="g8A-hf-4Kp" secondAttribute="trailing" id="KwL-ow-WqF"/>
+                                                    <constraint firstItem="g8A-hf-4Kp" firstAttribute="leading" secondItem="aC2-9F-UkT" secondAttribute="leading" id="OjV-yu-scv"/>
+                                                    <constraint firstItem="7t7-u5-jnL" firstAttribute="leading" secondItem="aC2-9F-UkT" secondAttribute="leading" id="XEI-J6-Ha8"/>
+                                                    <constraint firstItem="CEm-Vs-WfR" firstAttribute="leading" secondItem="aC2-9F-UkT" secondAttribute="leading" id="Yau-5m-EwO"/>
+                                                    <constraint firstItem="aOv-eJ-I49" firstAttribute="leading" secondItem="aC2-9F-UkT" secondAttribute="leading" id="cJR-HV-hXd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7t7-u5-jnL" secondAttribute="trailing" id="vMy-al-lln"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CEm-Vs-WfR" secondAttribute="trailing" id="wCH-Ge-Rnb"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aC2-9F-UkT" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="CD9-19-VzU"/>
+                                            <constraint firstAttribute="trailing" secondItem="aC2-9F-UkT" secondAttribute="trailing" id="csj-bG-AhW"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="L67-RK-ONo" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="1e5-78-mDX"/>
-                                    <constraint firstItem="7t7-u5-jnL" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="FUO-He-epU"/>
-                                    <constraint firstAttribute="trailing" secondItem="L67-RK-ONo" secondAttribute="trailing" id="N9Z-nU-ikl"/>
-                                    <constraint firstItem="aOv-eJ-I49" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="PoA-LC-EOe"/>
-                                    <constraint firstAttribute="trailing" secondItem="g8A-hf-4Kp" secondAttribute="trailing" id="S5l-22-tcE"/>
-                                    <constraint firstAttribute="trailing" secondItem="7t7-u5-jnL" secondAttribute="trailing" id="fAY-D5-XAn"/>
-                                    <constraint firstItem="g8A-hf-4Kp" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="fKO-tO-SgX"/>
-                                    <constraint firstAttribute="trailing" secondItem="aOv-eJ-I49" secondAttribute="trailing" id="jgg-18-fAQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="CEm-Vs-WfR" secondAttribute="trailing" id="kV1-Wg-hfI"/>
-                                    <constraint firstItem="CEm-Vs-WfR" firstAttribute="leading" secondItem="tG6-zB-YO6" secondAttribute="leading" id="s0R-Os-ndo"/>
+                                    <constraint firstItem="tG6-zB-YO6" firstAttribute="top" secondItem="c1T-Cg-bxi" secondAttribute="top" constant="506" id="XhC-pr-2fk"/>
+                                    <constraint firstItem="tG6-zB-YO6" firstAttribute="leading" secondItem="c1T-Cg-bxi" secondAttribute="leading" id="Zx3-rn-Gqm"/>
+                                    <constraint firstAttribute="trailing" secondItem="tG6-zB-YO6" secondAttribute="trailing" id="qW5-XS-brT"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="tG6-zB-YO6" secondAttribute="bottom" constant="125" id="1Yg-yg-fVS"/>
-                            <constraint firstItem="tG6-zB-YO6" firstAttribute="centerX" secondItem="KRr-As-RgG" secondAttribute="centerX" id="2kd-PG-Ne9"/>
-                            <constraint firstItem="tG6-zB-YO6" firstAttribute="leading" secondItem="KRr-As-RgG" secondAttribute="leadingMargin" constant="10" id="99V-55-hSV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tG6-zB-YO6" secondAttribute="trailing" constant="10" id="HLw-D4-3ba"/>
-                            <constraint firstItem="tG6-zB-YO6" firstAttribute="top" secondItem="KRr-As-RgG" secondAttribute="top" constant="100" id="xKb-K1-0u3"/>
+                            <constraint firstAttribute="trailing" secondItem="c1T-Cg-bxi" secondAttribute="trailing" id="1t2-YW-2Jd"/>
+                            <constraint firstAttribute="bottom" secondItem="c1T-Cg-bxi" secondAttribute="bottom" constant="50" id="3aR-zO-osa"/>
+                            <constraint firstItem="c1T-Cg-bxi" firstAttribute="top" secondItem="KRr-As-RgG" secondAttribute="top" id="CJr-y9-GDk"/>
+                            <constraint firstItem="c1T-Cg-bxi" firstAttribute="leading" secondItem="KRr-As-RgG" secondAttribute="leading" id="YP6-4a-Fqm"/>
                         </constraints>
                     </view>
                     <connections>
@@ -890,6 +920,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cSH-p9-l60"/>
-        <segue reference="keH-9d-9eY"/>
+        <segue reference="For-Cq-UGP"/>
     </inferredMetricsTieBreakers>
 </document>
